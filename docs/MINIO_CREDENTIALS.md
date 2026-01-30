@@ -2,17 +2,41 @@
 
 This guide explains how to find your MinIO access credentials for uploading sample data.
 
+## 🚀 Automatic Detection (Recommended)
+
+Run the detection script to automatically find your MinIO endpoint and credentials:
+
+```bash
+./scripts/detect-minio-endpoint.sh
+```
+
+This script will:
+- ✅ Test common MinIO endpoints
+- ✅ Try different credential combinations
+- ✅ Show you the working configuration
+- ✅ Provide export commands ready to use
+
+---
+
 ## Quick Answer
 
 For **watsonx.data Developer Edition**, the default MinIO credentials are:
 
 ```bash
-export MINIO_ENDPOINT=https://localhost:9000
+# Try these common endpoints (one should work):
+export MINIO_ENDPOINT=https://localhost:9000   # Standard MinIO port
+# OR
+export MINIO_ENDPOINT=https://localhost:9443   # Alternative port
+# OR
+export MINIO_ENDPOINT=https://localhost:6443   # watsonx.data UI port (may proxy to MinIO)
+
 export MINIO_ACCESS_KEY=admin
 export MINIO_SECRET_KEY=password
 ```
 
 These are the **default credentials** that come with watsonx.data Developer Edition installation.
+
+> ⚠️ **Connection Refused Error?** See [Troubleshooting MinIO Connection](#troubleshooting-minio-connection) below to find your correct endpoint.
 
 ---
 
@@ -132,9 +156,65 @@ mc ls watsonx/
 ### Issue: "Connection Refused"
 
 **Solution**: MinIO service is not running or wrong endpoint
-1. Check watsonx.data is running
-2. Verify endpoint URL (usually port 9000)
-3. Try with/without `https://` prefix
+
+**Step 1: Check if watsonx.data is running**
+```bash
+# Check if watsonx.data UI is accessible
+curl -k https://localhost:6443/api/v2/health
+
+# Check for running containers
+docker ps | grep -E "minio|watsonx"
+```
+
+**Step 2: Find the correct MinIO port**
+
+MinIO in watsonx.data Developer Edition can run on different ports:
+
+```bash
+# Try common ports
+curl -k https://localhost:9000/minio/health/live   # Standard MinIO
+curl -k https://localhost:9443/minio/health/live   # Alternative
+curl -k https://localhost:6443/minio/health/live   # Via watsonx.data proxy
+
+# Check which ports are listening
+lsof -i -P | grep LISTEN | grep -E "9000|9443|6443"
+# OR on Linux:
+netstat -tuln | grep -E "9000|9443|6443"
+```
+
+**Step 3: Check Docker port mappings**
+```bash
+# If running in Docker, check port mappings
+docker ps --format "table {{.Names}}\t{{.Ports}}" | grep minio
+```
+
+**Step 4: Try different endpoints**
+```bash
+# Test with mc client
+mc alias set test1 https://localhost:9000 admin password --insecure
+mc alias set test2 https://localhost:9443 admin password --insecure
+mc alias set test3 http://localhost:9000 admin password --insecure
+mc alias set test4 http://localhost:9443 admin password --insecure
+
+# Check which one works
+mc ls test1/ 2>/dev/null && echo "✓ Port 9000 HTTPS works"
+mc ls test2/ 2>/dev/null && echo "✓ Port 9443 HTTPS works"
+mc ls test3/ 2>/dev/null && echo "✓ Port 9000 HTTP works"
+mc ls test4/ 2>/dev/null && echo "✓ Port 9443 HTTP works"
+```
+
+**Step 5: Check watsonx.data documentation**
+
+The MinIO endpoint depends on your watsonx.data installation method:
+- **Docker Compose**: Check `docker-compose.yml` for port mappings
+- **Kubernetes**: Check service definitions
+- **Standalone**: Check installation logs
+
+**Common Solutions:**
+1. **Use HTTP instead of HTTPS**: `http://localhost:9000`
+2. **Try port 9443**: Some installations use this port
+3. **Access via watsonx.data proxy**: Use port 6443
+4. **Check if MinIO is embedded**: May not have separate endpoint
 
 ### Issue: "Bucket Not Found"
 
