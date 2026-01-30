@@ -27,9 +27,13 @@ node --version  # Should show v18 or higher
 
 ✅ **Sample Data** (optional but recommended)
 ```bash
+# Generate sample data locally
 ./scripts/generate-data.sh
+
+# Upload to MinIO/S3 (optional)
+./scripts/upload-sample-data.sh
 ```
-This script automatically creates a Python virtual environment, installs dependencies, and generates sample data.
+These scripts automatically handle data generation and upload to watsonx.data storage.
 
 ---
 
@@ -200,9 +204,10 @@ Target: iceberg_data.sales.transactions
 **Objective**: Load sample data into watsonx.data
 
 **Steps**:
-1. Generate sample data:
+1. Generate and upload sample data:
    ```bash
-   python3 scripts/generate-sample-data.py
+   ./scripts/generate-data.sh
+   ./scripts/upload-sample-data.sh
    ```
 
 2. Navigate to **Ingestion** page

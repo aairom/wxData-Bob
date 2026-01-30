@@ -1,0 +1,5002 @@
+[
+  {
+    "customer_id": "CUST7609",
+    "first_name": "Lisa",
+    "last_name": "Jones",
+    "email": "user7756@example.com",
+    "phone": "+1-555-644-4219",
+    "registration_date": "2026-01-20T15:48:36.271860",
+    "loyalty_points": 8995,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST5530",
+    "first_name": "Lisa",
+    "last_name": "Williams",
+    "email": "user1118@example.com",
+    "phone": "+1-555-203-8903",
+    "registration_date": "2024-03-30T15:48:36.271876",
+    "loyalty_points": 2989,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST1833",
+    "first_name": "Michael",
+    "last_name": "Williams",
+    "email": "user9221@example.com",
+    "phone": "+1-555-177-1562",
+    "registration_date": "2024-05-04T15:48:36.271883",
+    "loyalty_points": 5209,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST9482",
+    "first_name": "Sarah",
+    "last_name": "Smith",
+    "email": "user7799@example.com",
+    "phone": "+1-555-537-1835",
+    "registration_date": "2025-06-20T15:48:36.271887",
+    "loyalty_points": 3927,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST3867",
+    "first_name": "David",
+    "last_name": "Williams",
+    "email": "user4869@example.com",
+    "phone": "+1-555-470-1751",
+    "registration_date": "2025-03-04T15:48:36.271891",
+    "loyalty_points": 7823,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST9301",
+    "first_name": "Emily",
+    "last_name": "Smith",
+    "email": "user6915@example.com",
+    "phone": "+1-555-535-1769",
+    "registration_date": "2025-11-25T15:48:36.271894",
+    "loyalty_points": 6656,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST6387",
+    "first_name": "David",
+    "last_name": "Jones",
+    "email": "user7882@example.com",
+    "phone": "+1-555-605-7722",
+    "registration_date": "2024-05-19T15:48:36.271897",
+    "loyalty_points": 5051,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST2177",
+    "first_name": "Sarah",
+    "last_name": "Williams",
+    "email": "user6371@example.com",
+    "phone": "+1-555-637-4613",
+    "registration_date": "2025-01-08T15:48:36.271901",
+    "loyalty_points": 6388,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST4131",
+    "first_name": "Robert",
+    "last_name": "Jones",
+    "email": "user2714@example.com",
+    "phone": "+1-555-921-9982",
+    "registration_date": "2025-10-19T15:48:36.271904",
+    "loyalty_points": 6705,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST2074",
+    "first_name": "Sarah",
+    "last_name": "Williams",
+    "email": "user2828@example.com",
+    "phone": "+1-555-464-4001",
+    "registration_date": "2024-08-13T15:48:36.271907",
+    "loyalty_points": 8286,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST3427",
+    "first_name": "Robert",
+    "last_name": "Williams",
+    "email": "user7351@example.com",
+    "phone": "+1-555-238-8395",
+    "registration_date": "2025-10-06T15:48:36.271911",
+    "loyalty_points": 8318,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST6378",
+    "first_name": "Robert",
+    "last_name": "Garcia",
+    "email": "user8865@example.com",
+    "phone": "+1-555-374-8115",
+    "registration_date": "2024-02-17T15:48:36.271914",
+    "loyalty_points": 3566,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST7696",
+    "first_name": "John",
+    "last_name": "Davis",
+    "email": "user903@example.com",
+    "phone": "+1-555-738-4915",
+    "registration_date": "2025-07-03T15:48:36.271918",
+    "loyalty_points": 5450,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST8268",
+    "first_name": "David",
+    "last_name": "Brown",
+    "email": "user8290@example.com",
+    "phone": "+1-555-779-8992",
+    "registration_date": "2024-11-11T15:48:36.271921",
+    "loyalty_points": 4123,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST7676",
+    "first_name": "Jane",
+    "last_name": "Williams",
+    "email": "user3009@example.com",
+    "phone": "+1-555-618-5677",
+    "registration_date": "2025-10-12T15:48:36.271924",
+    "loyalty_points": 7266,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST5319",
+    "first_name": "Robert",
+    "last_name": "Garcia",
+    "email": "user2354@example.com",
+    "phone": "+1-555-980-8812",
+    "registration_date": "2025-03-16T15:48:36.271927",
+    "loyalty_points": 6958,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST2468",
+    "first_name": "Robert",
+    "last_name": "Jones",
+    "email": "user8035@example.com",
+    "phone": "+1-555-636-6885",
+    "registration_date": "2024-05-13T15:48:36.271930",
+    "loyalty_points": 9904,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST6879",
+    "first_name": "Sarah",
+    "last_name": "Williams",
+    "email": "user9018@example.com",
+    "phone": "+1-555-905-2486",
+    "registration_date": "2025-02-06T15:48:36.271933",
+    "loyalty_points": 6402,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST2373",
+    "first_name": "Emily",
+    "last_name": "Smith",
+    "email": "user9463@example.com",
+    "phone": "+1-555-258-8276",
+    "registration_date": "2025-12-05T15:48:36.271936",
+    "loyalty_points": 4308,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST5426",
+    "first_name": "Michael",
+    "last_name": "Smith",
+    "email": "user8962@example.com",
+    "phone": "+1-555-681-5078",
+    "registration_date": "2024-04-20T15:48:36.271940",
+    "loyalty_points": 4497,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST2903",
+    "first_name": "David",
+    "last_name": "Garcia",
+    "email": "user822@example.com",
+    "phone": "+1-555-177-2236",
+    "registration_date": "2025-12-22T15:48:36.271943",
+    "loyalty_points": 2797,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST2814",
+    "first_name": "Emily",
+    "last_name": "Davis",
+    "email": "user6904@example.com",
+    "phone": "+1-555-413-7968",
+    "registration_date": "2024-12-07T15:48:36.271946",
+    "loyalty_points": 131,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST2441",
+    "first_name": "Sarah",
+    "last_name": "Miller",
+    "email": "user8198@example.com",
+    "phone": "+1-555-540-5380",
+    "registration_date": "2025-10-25T15:48:36.271949",
+    "loyalty_points": 9891,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST8643",
+    "first_name": "Lisa",
+    "last_name": "Jones",
+    "email": "user8355@example.com",
+    "phone": "+1-555-261-2227",
+    "registration_date": "2024-04-25T15:48:36.271953",
+    "loyalty_points": 3262,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST9165",
+    "first_name": "John",
+    "last_name": "Johnson",
+    "email": "user4797@example.com",
+    "phone": "+1-555-758-3422",
+    "registration_date": "2025-09-08T15:48:36.271956",
+    "loyalty_points": 1263,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST4092",
+    "first_name": "Sarah",
+    "last_name": "Smith",
+    "email": "user8213@example.com",
+    "phone": "+1-555-653-5909",
+    "registration_date": "2024-10-14T15:48:36.271959",
+    "loyalty_points": 154,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST4944",
+    "first_name": "Jane",
+    "last_name": "Brown",
+    "email": "user5876@example.com",
+    "phone": "+1-555-778-7031",
+    "registration_date": "2024-03-27T15:48:36.271962",
+    "loyalty_points": 3863,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST6814",
+    "first_name": "John",
+    "last_name": "Davis",
+    "email": "user9942@example.com",
+    "phone": "+1-555-242-7771",
+    "registration_date": "2025-04-29T15:48:36.271965",
+    "loyalty_points": 1344,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST7383",
+    "first_name": "Sarah",
+    "last_name": "Jones",
+    "email": "user665@example.com",
+    "phone": "+1-555-529-7867",
+    "registration_date": "2024-12-01T15:48:36.271969",
+    "loyalty_points": 4680,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST5228",
+    "first_name": "David",
+    "last_name": "Jones",
+    "email": "user5498@example.com",
+    "phone": "+1-555-887-8454",
+    "registration_date": "2024-08-16T15:48:36.271972",
+    "loyalty_points": 2752,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST3956",
+    "first_name": "Lisa",
+    "last_name": "Jones",
+    "email": "user8897@example.com",
+    "phone": "+1-555-933-2625",
+    "registration_date": "2024-09-11T15:48:36.271975",
+    "loyalty_points": 1131,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST6441",
+    "first_name": "Robert",
+    "last_name": "Smith",
+    "email": "user4891@example.com",
+    "phone": "+1-555-540-1084",
+    "registration_date": "2025-12-01T15:48:36.271978",
+    "loyalty_points": 7754,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST7963",
+    "first_name": "Emily",
+    "last_name": "Davis",
+    "email": "user4732@example.com",
+    "phone": "+1-555-481-5742",
+    "registration_date": "2024-02-22T15:48:36.271981",
+    "loyalty_points": 2328,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST2965",
+    "first_name": "Emily",
+    "last_name": "Jones",
+    "email": "user7133@example.com",
+    "phone": "+1-555-973-9890",
+    "registration_date": "2025-10-15T15:48:36.271985",
+    "loyalty_points": 5599,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST8145",
+    "first_name": "Robert",
+    "last_name": "Davis",
+    "email": "user1733@example.com",
+    "phone": "+1-555-799-8250",
+    "registration_date": "2024-07-31T15:48:36.271987",
+    "loyalty_points": 8152,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST9923",
+    "first_name": "Lisa",
+    "last_name": "Garcia",
+    "email": "user9499@example.com",
+    "phone": "+1-555-229-4252",
+    "registration_date": "2024-02-02T15:48:36.271991",
+    "loyalty_points": 7249,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST9210",
+    "first_name": "John",
+    "last_name": "Williams",
+    "email": "user3995@example.com",
+    "phone": "+1-555-968-1659",
+    "registration_date": "2024-09-12T15:48:36.271993",
+    "loyalty_points": 5552,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST1092",
+    "first_name": "Jane",
+    "last_name": "Brown",
+    "email": "user7529@example.com",
+    "phone": "+1-555-576-6075",
+    "registration_date": "2024-10-02T15:48:36.271996",
+    "loyalty_points": 3913,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST4386",
+    "first_name": "Lisa",
+    "last_name": "Smith",
+    "email": "user5204@example.com",
+    "phone": "+1-555-909-1086",
+    "registration_date": "2025-07-17T15:48:36.272000",
+    "loyalty_points": 4924,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST2409",
+    "first_name": "Michael",
+    "last_name": "Williams",
+    "email": "user3491@example.com",
+    "phone": "+1-555-355-6191",
+    "registration_date": "2026-01-12T15:48:36.272003",
+    "loyalty_points": 1812,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST4455",
+    "first_name": "Lisa",
+    "last_name": "Brown",
+    "email": "user5729@example.com",
+    "phone": "+1-555-540-8777",
+    "registration_date": "2025-04-26T15:48:36.272006",
+    "loyalty_points": 6192,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST4838",
+    "first_name": "Emily",
+    "last_name": "Smith",
+    "email": "user294@example.com",
+    "phone": "+1-555-652-4728",
+    "registration_date": "2024-03-15T15:48:36.272009",
+    "loyalty_points": 1738,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST5168",
+    "first_name": "Robert",
+    "last_name": "Garcia",
+    "email": "user7682@example.com",
+    "phone": "+1-555-665-3539",
+    "registration_date": "2025-12-12T15:48:36.272012",
+    "loyalty_points": 7901,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST5189",
+    "first_name": "Emily",
+    "last_name": "Davis",
+    "email": "user4037@example.com",
+    "phone": "+1-555-772-2595",
+    "registration_date": "2025-09-18T15:48:36.272015",
+    "loyalty_points": 1513,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST8414",
+    "first_name": "Sarah",
+    "last_name": "Jones",
+    "email": "user663@example.com",
+    "phone": "+1-555-443-9956",
+    "registration_date": "2024-04-10T15:48:36.272018",
+    "loyalty_points": 8732,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST4248",
+    "first_name": "David",
+    "last_name": "Davis",
+    "email": "user3633@example.com",
+    "phone": "+1-555-715-6415",
+    "registration_date": "2025-03-17T15:48:36.272021",
+    "loyalty_points": 3263,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST6692",
+    "first_name": "Jane",
+    "last_name": "Brown",
+    "email": "user2395@example.com",
+    "phone": "+1-555-478-2116",
+    "registration_date": "2025-08-06T15:48:36.272024",
+    "loyalty_points": 6811,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST8473",
+    "first_name": "Lisa",
+    "last_name": "Miller",
+    "email": "user8934@example.com",
+    "phone": "+1-555-557-6691",
+    "registration_date": "2024-03-09T15:48:36.272027",
+    "loyalty_points": 2095,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST7431",
+    "first_name": "Robert",
+    "last_name": "Jones",
+    "email": "user802@example.com",
+    "phone": "+1-555-580-6230",
+    "registration_date": "2024-12-22T15:48:36.272031",
+    "loyalty_points": 6047,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST9062",
+    "first_name": "David",
+    "last_name": "Jones",
+    "email": "user7913@example.com",
+    "phone": "+1-555-918-5457",
+    "registration_date": "2024-02-11T15:48:36.272034",
+    "loyalty_points": 3376,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST2020",
+    "first_name": "Robert",
+    "last_name": "Miller",
+    "email": "user1567@example.com",
+    "phone": "+1-555-181-6789",
+    "registration_date": "2024-03-06T15:48:36.272037",
+    "loyalty_points": 732,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST2241",
+    "first_name": "Jane",
+    "last_name": "Jones",
+    "email": "user8725@example.com",
+    "phone": "+1-555-767-9616",
+    "registration_date": "2025-10-17T15:48:36.272040",
+    "loyalty_points": 8186,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST6339",
+    "first_name": "Michael",
+    "last_name": "Miller",
+    "email": "user9451@example.com",
+    "phone": "+1-555-957-1597",
+    "registration_date": "2024-03-25T15:48:36.272043",
+    "loyalty_points": 2190,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST2778",
+    "first_name": "Sarah",
+    "last_name": "Garcia",
+    "email": "user6238@example.com",
+    "phone": "+1-555-757-3001",
+    "registration_date": "2024-07-07T15:48:36.272047",
+    "loyalty_points": 1872,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST6246",
+    "first_name": "David",
+    "last_name": "Garcia",
+    "email": "user7417@example.com",
+    "phone": "+1-555-440-5463",
+    "registration_date": "2024-06-06T15:48:36.272050",
+    "loyalty_points": 9153,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST8392",
+    "first_name": "Lisa",
+    "last_name": "Miller",
+    "email": "user8932@example.com",
+    "phone": "+1-555-703-1920",
+    "registration_date": "2025-07-09T15:48:36.272053",
+    "loyalty_points": 7209,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST3448",
+    "first_name": "John",
+    "last_name": "Jones",
+    "email": "user8939@example.com",
+    "phone": "+1-555-648-3145",
+    "registration_date": "2025-11-23T15:48:36.272056",
+    "loyalty_points": 2162,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST1940",
+    "first_name": "Lisa",
+    "last_name": "Brown",
+    "email": "user7829@example.com",
+    "phone": "+1-555-873-6483",
+    "registration_date": "2024-07-18T15:48:36.272059",
+    "loyalty_points": 8556,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST6521",
+    "first_name": "David",
+    "last_name": "Garcia",
+    "email": "user5445@example.com",
+    "phone": "+1-555-729-9351",
+    "registration_date": "2025-01-12T15:48:36.272062",
+    "loyalty_points": 2084,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST4056",
+    "first_name": "John",
+    "last_name": "Johnson",
+    "email": "user9995@example.com",
+    "phone": "+1-555-306-1070",
+    "registration_date": "2025-08-28T15:48:36.272065",
+    "loyalty_points": 9393,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST1678",
+    "first_name": "Lisa",
+    "last_name": "Garcia",
+    "email": "user2484@example.com",
+    "phone": "+1-555-253-7858",
+    "registration_date": "2025-09-10T15:48:36.272069",
+    "loyalty_points": 1753,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST7154",
+    "first_name": "Sarah",
+    "last_name": "Brown",
+    "email": "user6957@example.com",
+    "phone": "+1-555-402-4036",
+    "registration_date": "2025-02-04T15:48:36.272071",
+    "loyalty_points": 3099,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST1952",
+    "first_name": "Emily",
+    "last_name": "Brown",
+    "email": "user2260@example.com",
+    "phone": "+1-555-577-2830",
+    "registration_date": "2025-04-03T15:48:36.272074",
+    "loyalty_points": 4995,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST7246",
+    "first_name": "Sarah",
+    "last_name": "Smith",
+    "email": "user4177@example.com",
+    "phone": "+1-555-947-8335",
+    "registration_date": "2025-02-09T15:48:36.272077",
+    "loyalty_points": 4004,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST2147",
+    "first_name": "Emily",
+    "last_name": "Jones",
+    "email": "user5102@example.com",
+    "phone": "+1-555-476-6145",
+    "registration_date": "2025-10-13T15:48:36.272080",
+    "loyalty_points": 4776,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST6703",
+    "first_name": "Emily",
+    "last_name": "Brown",
+    "email": "user5391@example.com",
+    "phone": "+1-555-872-7255",
+    "registration_date": "2025-10-14T15:48:36.272084",
+    "loyalty_points": 1269,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST9350",
+    "first_name": "Michael",
+    "last_name": "Johnson",
+    "email": "user5449@example.com",
+    "phone": "+1-555-593-2400",
+    "registration_date": "2025-10-13T15:48:36.272087",
+    "loyalty_points": 9109,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST6403",
+    "first_name": "Sarah",
+    "last_name": "Miller",
+    "email": "user133@example.com",
+    "phone": "+1-555-204-6023",
+    "registration_date": "2025-08-08T15:48:36.272090",
+    "loyalty_points": 9260,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST7335",
+    "first_name": "Michael",
+    "last_name": "Smith",
+    "email": "user8470@example.com",
+    "phone": "+1-555-881-8360",
+    "registration_date": "2025-07-08T15:48:36.272094",
+    "loyalty_points": 1553,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST4436",
+    "first_name": "John",
+    "last_name": "Johnson",
+    "email": "user3277@example.com",
+    "phone": "+1-555-594-3828",
+    "registration_date": "2024-10-25T15:48:36.272096",
+    "loyalty_points": 8926,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST5779",
+    "first_name": "Robert",
+    "last_name": "Jones",
+    "email": "user9726@example.com",
+    "phone": "+1-555-545-6983",
+    "registration_date": "2026-01-14T15:48:36.272100",
+    "loyalty_points": 3808,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST9447",
+    "first_name": "Lisa",
+    "last_name": "Miller",
+    "email": "user9061@example.com",
+    "phone": "+1-555-961-2783",
+    "registration_date": "2024-02-25T15:48:36.272103",
+    "loyalty_points": 4505,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST9284",
+    "first_name": "Michael",
+    "last_name": "Miller",
+    "email": "user9148@example.com",
+    "phone": "+1-555-381-6296",
+    "registration_date": "2024-04-24T15:48:36.272105",
+    "loyalty_points": 2686,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST8591",
+    "first_name": "Emily",
+    "last_name": "Garcia",
+    "email": "user4869@example.com",
+    "phone": "+1-555-325-5292",
+    "registration_date": "2025-07-26T15:48:36.272108",
+    "loyalty_points": 6991,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST3613",
+    "first_name": "Robert",
+    "last_name": "Smith",
+    "email": "user1047@example.com",
+    "phone": "+1-555-426-8098",
+    "registration_date": "2025-05-23T15:48:36.272111",
+    "loyalty_points": 5477,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST8656",
+    "first_name": "David",
+    "last_name": "Garcia",
+    "email": "user3561@example.com",
+    "phone": "+1-555-369-9438",
+    "registration_date": "2025-12-30T15:48:36.272114",
+    "loyalty_points": 236,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST5597",
+    "first_name": "David",
+    "last_name": "Garcia",
+    "email": "user9181@example.com",
+    "phone": "+1-555-265-7282",
+    "registration_date": "2025-06-24T15:48:36.272117",
+    "loyalty_points": 8689,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST8772",
+    "first_name": "Lisa",
+    "last_name": "Brown",
+    "email": "user4873@example.com",
+    "phone": "+1-555-993-6547",
+    "registration_date": "2024-12-10T15:48:36.272121",
+    "loyalty_points": 886,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST4509",
+    "first_name": "Robert",
+    "last_name": "Smith",
+    "email": "user240@example.com",
+    "phone": "+1-555-329-6911",
+    "registration_date": "2025-08-15T15:48:36.272124",
+    "loyalty_points": 1492,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST2250",
+    "first_name": "Jane",
+    "last_name": "Jones",
+    "email": "user6048@example.com",
+    "phone": "+1-555-597-8596",
+    "registration_date": "2025-04-13T15:48:36.272127",
+    "loyalty_points": 4433,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST3961",
+    "first_name": "Robert",
+    "last_name": "Smith",
+    "email": "user2856@example.com",
+    "phone": "+1-555-295-7071",
+    "registration_date": "2024-08-15T15:48:36.272130",
+    "loyalty_points": 673,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST9031",
+    "first_name": "Robert",
+    "last_name": "Johnson",
+    "email": "user1188@example.com",
+    "phone": "+1-555-128-4967",
+    "registration_date": "2024-10-12T15:48:36.272133",
+    "loyalty_points": 4844,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST3892",
+    "first_name": "John",
+    "last_name": "Smith",
+    "email": "user8885@example.com",
+    "phone": "+1-555-367-6849",
+    "registration_date": "2025-07-26T15:48:36.272136",
+    "loyalty_points": 1021,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST2550",
+    "first_name": "John",
+    "last_name": "Jones",
+    "email": "user9235@example.com",
+    "phone": "+1-555-214-2050",
+    "registration_date": "2024-12-08T15:48:36.272139",
+    "loyalty_points": 7030,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST1549",
+    "first_name": "John",
+    "last_name": "Jones",
+    "email": "user3612@example.com",
+    "phone": "+1-555-114-6767",
+    "registration_date": "2025-03-01T15:48:36.272143",
+    "loyalty_points": 3967,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST5848",
+    "first_name": "Michael",
+    "last_name": "Brown",
+    "email": "user9105@example.com",
+    "phone": "+1-555-536-6484",
+    "registration_date": "2024-05-15T15:48:36.272146",
+    "loyalty_points": 2636,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST7300",
+    "first_name": "John",
+    "last_name": "Williams",
+    "email": "user869@example.com",
+    "phone": "+1-555-856-4176",
+    "registration_date": "2024-09-28T15:48:36.272149",
+    "loyalty_points": 222,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST7845",
+    "first_name": "Emily",
+    "last_name": "Smith",
+    "email": "user9727@example.com",
+    "phone": "+1-555-912-9750",
+    "registration_date": "2024-12-27T15:48:36.272152",
+    "loyalty_points": 1794,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST9660",
+    "first_name": "Robert",
+    "last_name": "Smith",
+    "email": "user785@example.com",
+    "phone": "+1-555-871-1156",
+    "registration_date": "2024-03-14T15:48:36.272155",
+    "loyalty_points": 8012,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST3788",
+    "first_name": "John",
+    "last_name": "Jones",
+    "email": "user3474@example.com",
+    "phone": "+1-555-717-2610",
+    "registration_date": "2025-10-13T15:48:36.272158",
+    "loyalty_points": 8744,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST7613",
+    "first_name": "Lisa",
+    "last_name": "Brown",
+    "email": "user6970@example.com",
+    "phone": "+1-555-594-7172",
+    "registration_date": "2025-06-04T15:48:36.272161",
+    "loyalty_points": 2244,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST6670",
+    "first_name": "Sarah",
+    "last_name": "Smith",
+    "email": "user3254@example.com",
+    "phone": "+1-555-937-4743",
+    "registration_date": "2025-09-20T15:48:36.272164",
+    "loyalty_points": 7904,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST6155",
+    "first_name": "Michael",
+    "last_name": "Jones",
+    "email": "user2112@example.com",
+    "phone": "+1-555-973-9314",
+    "registration_date": "2024-08-01T15:48:36.272167",
+    "loyalty_points": 6778,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST2680",
+    "first_name": "Michael",
+    "last_name": "Williams",
+    "email": "user791@example.com",
+    "phone": "+1-555-278-7457",
+    "registration_date": "2024-07-21T15:48:36.272171",
+    "loyalty_points": 8702,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST7306",
+    "first_name": "David",
+    "last_name": "Miller",
+    "email": "user6994@example.com",
+    "phone": "+1-555-685-1437",
+    "registration_date": "2025-01-24T15:48:36.272174",
+    "loyalty_points": 9179,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST9195",
+    "first_name": "Sarah",
+    "last_name": "Smith",
+    "email": "user2613@example.com",
+    "phone": "+1-555-829-1449",
+    "registration_date": "2024-10-15T15:48:36.272177",
+    "loyalty_points": 1099,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST9581",
+    "first_name": "Robert",
+    "last_name": "Johnson",
+    "email": "user6288@example.com",
+    "phone": "+1-555-866-1760",
+    "registration_date": "2024-02-01T15:48:36.272180",
+    "loyalty_points": 1440,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST2706",
+    "first_name": "Sarah",
+    "last_name": "Johnson",
+    "email": "user6393@example.com",
+    "phone": "+1-555-910-4159",
+    "registration_date": "2025-11-26T15:48:36.272183",
+    "loyalty_points": 7510,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST6988",
+    "first_name": "John",
+    "last_name": "Jones",
+    "email": "user2882@example.com",
+    "phone": "+1-555-718-9715",
+    "registration_date": "2024-12-15T15:48:36.272186",
+    "loyalty_points": 569,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST3957",
+    "first_name": "Robert",
+    "last_name": "Jones",
+    "email": "user3842@example.com",
+    "phone": "+1-555-861-7429",
+    "registration_date": "2025-10-14T15:48:36.272189",
+    "loyalty_points": 3059,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST3869",
+    "first_name": "Lisa",
+    "last_name": "Garcia",
+    "email": "user6949@example.com",
+    "phone": "+1-555-898-3514",
+    "registration_date": "2025-04-28T15:48:36.272192",
+    "loyalty_points": 9948,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST1106",
+    "first_name": "David",
+    "last_name": "Smith",
+    "email": "user7085@example.com",
+    "phone": "+1-555-838-4606",
+    "registration_date": "2025-10-19T15:48:36.272195",
+    "loyalty_points": 1781,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST1476",
+    "first_name": "Robert",
+    "last_name": "Davis",
+    "email": "user8634@example.com",
+    "phone": "+1-555-214-7950",
+    "registration_date": "2025-05-16T15:48:36.272198",
+    "loyalty_points": 8472,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST3995",
+    "first_name": "David",
+    "last_name": "Williams",
+    "email": "user1981@example.com",
+    "phone": "+1-555-319-3344",
+    "registration_date": "2026-01-29T15:48:36.272201",
+    "loyalty_points": 2341,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST9192",
+    "first_name": "Emily",
+    "last_name": "Jones",
+    "email": "user2971@example.com",
+    "phone": "+1-555-724-9903",
+    "registration_date": "2024-06-16T15:48:36.272205",
+    "loyalty_points": 5661,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST1534",
+    "first_name": "Michael",
+    "last_name": "Jones",
+    "email": "user1006@example.com",
+    "phone": "+1-555-718-5298",
+    "registration_date": "2024-03-21T15:48:36.272208",
+    "loyalty_points": 517,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST9784",
+    "first_name": "Lisa",
+    "last_name": "Davis",
+    "email": "user2376@example.com",
+    "phone": "+1-555-716-5378",
+    "registration_date": "2024-08-11T15:48:36.272211",
+    "loyalty_points": 9709,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST4220",
+    "first_name": "David",
+    "last_name": "Davis",
+    "email": "user9040@example.com",
+    "phone": "+1-555-477-9431",
+    "registration_date": "2024-06-14T15:48:36.272214",
+    "loyalty_points": 2345,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST7374",
+    "first_name": "Jane",
+    "last_name": "Garcia",
+    "email": "user517@example.com",
+    "phone": "+1-555-258-9065",
+    "registration_date": "2024-04-24T15:48:36.272217",
+    "loyalty_points": 139,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST1000",
+    "first_name": "Michael",
+    "last_name": "Brown",
+    "email": "user5282@example.com",
+    "phone": "+1-555-617-2901",
+    "registration_date": "2025-06-12T15:48:36.272220",
+    "loyalty_points": 931,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST1246",
+    "first_name": "Emily",
+    "last_name": "Johnson",
+    "email": "user5900@example.com",
+    "phone": "+1-555-375-4726",
+    "registration_date": "2025-03-10T15:48:36.272223",
+    "loyalty_points": 2080,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST2385",
+    "first_name": "Sarah",
+    "last_name": "Williams",
+    "email": "user7548@example.com",
+    "phone": "+1-555-955-3345",
+    "registration_date": "2025-01-19T15:48:36.272226",
+    "loyalty_points": 5359,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST5367",
+    "first_name": "Sarah",
+    "last_name": "Williams",
+    "email": "user2944@example.com",
+    "phone": "+1-555-499-4593",
+    "registration_date": "2024-08-06T15:48:36.272229",
+    "loyalty_points": 2226,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST2467",
+    "first_name": "Emily",
+    "last_name": "Davis",
+    "email": "user5253@example.com",
+    "phone": "+1-555-488-2251",
+    "registration_date": "2025-03-23T15:48:36.272232",
+    "loyalty_points": 7628,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST9807",
+    "first_name": "Michael",
+    "last_name": "Smith",
+    "email": "user3055@example.com",
+    "phone": "+1-555-174-3733",
+    "registration_date": "2024-02-25T15:48:36.272235",
+    "loyalty_points": 278,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST3332",
+    "first_name": "Robert",
+    "last_name": "Brown",
+    "email": "user7414@example.com",
+    "phone": "+1-555-746-7328",
+    "registration_date": "2026-01-11T15:48:36.272238",
+    "loyalty_points": 4806,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST4062",
+    "first_name": "John",
+    "last_name": "Davis",
+    "email": "user5162@example.com",
+    "phone": "+1-555-117-3245",
+    "registration_date": "2024-03-24T15:48:36.272241",
+    "loyalty_points": 7205,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST9676",
+    "first_name": "Jane",
+    "last_name": "Johnson",
+    "email": "user1781@example.com",
+    "phone": "+1-555-958-5773",
+    "registration_date": "2024-06-08T15:48:36.272244",
+    "loyalty_points": 4100,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST6176",
+    "first_name": "Lisa",
+    "last_name": "Williams",
+    "email": "user7817@example.com",
+    "phone": "+1-555-426-3417",
+    "registration_date": "2025-04-01T15:48:36.272247",
+    "loyalty_points": 6657,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST3684",
+    "first_name": "Lisa",
+    "last_name": "Jones",
+    "email": "user8855@example.com",
+    "phone": "+1-555-448-7008",
+    "registration_date": "2024-02-01T15:48:36.272250",
+    "loyalty_points": 3049,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST1788",
+    "first_name": "Jane",
+    "last_name": "Smith",
+    "email": "user1412@example.com",
+    "phone": "+1-555-722-7953",
+    "registration_date": "2024-11-22T15:48:36.272253",
+    "loyalty_points": 3624,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST1954",
+    "first_name": "Jane",
+    "last_name": "Davis",
+    "email": "user2461@example.com",
+    "phone": "+1-555-397-5622",
+    "registration_date": "2024-12-24T15:48:36.272256",
+    "loyalty_points": 2072,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST8137",
+    "first_name": "Robert",
+    "last_name": "Miller",
+    "email": "user2843@example.com",
+    "phone": "+1-555-230-3449",
+    "registration_date": "2025-02-13T15:48:36.272259",
+    "loyalty_points": 3904,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST9523",
+    "first_name": "John",
+    "last_name": "Davis",
+    "email": "user2679@example.com",
+    "phone": "+1-555-424-8462",
+    "registration_date": "2024-06-11T15:48:36.272262",
+    "loyalty_points": 8939,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST4454",
+    "first_name": "Sarah",
+    "last_name": "Davis",
+    "email": "user5453@example.com",
+    "phone": "+1-555-115-5402",
+    "registration_date": "2025-10-13T15:48:36.272265",
+    "loyalty_points": 9847,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST5687",
+    "first_name": "Emily",
+    "last_name": "Davis",
+    "email": "user7304@example.com",
+    "phone": "+1-555-709-6485",
+    "registration_date": "2026-01-10T15:48:36.272268",
+    "loyalty_points": 6312,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST1829",
+    "first_name": "Sarah",
+    "last_name": "Williams",
+    "email": "user7148@example.com",
+    "phone": "+1-555-210-4530",
+    "registration_date": "2024-10-07T15:48:36.272271",
+    "loyalty_points": 3780,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST4716",
+    "first_name": "David",
+    "last_name": "Miller",
+    "email": "user4325@example.com",
+    "phone": "+1-555-515-9909",
+    "registration_date": "2025-12-20T15:48:36.272274",
+    "loyalty_points": 8595,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST9593",
+    "first_name": "David",
+    "last_name": "Miller",
+    "email": "user5662@example.com",
+    "phone": "+1-555-515-6044",
+    "registration_date": "2024-09-17T15:48:36.272277",
+    "loyalty_points": 2552,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST1456",
+    "first_name": "Jane",
+    "last_name": "Brown",
+    "email": "user7383@example.com",
+    "phone": "+1-555-813-1658",
+    "registration_date": "2025-08-29T15:48:36.272281",
+    "loyalty_points": 3146,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST8428",
+    "first_name": "David",
+    "last_name": "Johnson",
+    "email": "user7263@example.com",
+    "phone": "+1-555-296-6161",
+    "registration_date": "2025-01-18T15:48:36.272284",
+    "loyalty_points": 1611,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST6310",
+    "first_name": "Sarah",
+    "last_name": "Smith",
+    "email": "user4088@example.com",
+    "phone": "+1-555-333-4382",
+    "registration_date": "2024-07-07T15:48:36.272287",
+    "loyalty_points": 7163,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST1872",
+    "first_name": "Emily",
+    "last_name": "Smith",
+    "email": "user6239@example.com",
+    "phone": "+1-555-416-9847",
+    "registration_date": "2025-04-25T15:48:36.272290",
+    "loyalty_points": 259,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST2047",
+    "first_name": "David",
+    "last_name": "Garcia",
+    "email": "user8596@example.com",
+    "phone": "+1-555-390-4245",
+    "registration_date": "2024-12-04T15:48:36.272293",
+    "loyalty_points": 4362,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST1728",
+    "first_name": "David",
+    "last_name": "Smith",
+    "email": "user4076@example.com",
+    "phone": "+1-555-761-3671",
+    "registration_date": "2024-03-18T15:48:36.272296",
+    "loyalty_points": 114,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST1423",
+    "first_name": "Jane",
+    "last_name": "Miller",
+    "email": "user5773@example.com",
+    "phone": "+1-555-867-6526",
+    "registration_date": "2025-07-28T15:48:36.272300",
+    "loyalty_points": 1824,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST3063",
+    "first_name": "Emily",
+    "last_name": "Brown",
+    "email": "user8843@example.com",
+    "phone": "+1-555-510-6549",
+    "registration_date": "2025-06-15T15:48:36.272303",
+    "loyalty_points": 8080,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST6131",
+    "first_name": "Lisa",
+    "last_name": "Miller",
+    "email": "user9638@example.com",
+    "phone": "+1-555-255-4192",
+    "registration_date": "2025-08-17T15:48:36.272306",
+    "loyalty_points": 731,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST8400",
+    "first_name": "Robert",
+    "last_name": "Williams",
+    "email": "user4388@example.com",
+    "phone": "+1-555-188-6711",
+    "registration_date": "2024-09-28T15:48:36.272309",
+    "loyalty_points": 5579,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST4852",
+    "first_name": "Lisa",
+    "last_name": "Miller",
+    "email": "user8411@example.com",
+    "phone": "+1-555-227-7796",
+    "registration_date": "2025-05-08T15:48:36.272312",
+    "loyalty_points": 7775,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST8055",
+    "first_name": "John",
+    "last_name": "Brown",
+    "email": "user2265@example.com",
+    "phone": "+1-555-160-7327",
+    "registration_date": "2025-09-09T15:48:36.272315",
+    "loyalty_points": 5725,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST2920",
+    "first_name": "Emily",
+    "last_name": "Miller",
+    "email": "user9632@example.com",
+    "phone": "+1-555-975-7002",
+    "registration_date": "2025-11-22T15:48:36.272318",
+    "loyalty_points": 7593,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST5715",
+    "first_name": "Michael",
+    "last_name": "Brown",
+    "email": "user8204@example.com",
+    "phone": "+1-555-195-9324",
+    "registration_date": "2024-02-09T15:48:36.272322",
+    "loyalty_points": 9405,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST7718",
+    "first_name": "Robert",
+    "last_name": "Garcia",
+    "email": "user8743@example.com",
+    "phone": "+1-555-169-9857",
+    "registration_date": "2025-02-07T15:48:36.272325",
+    "loyalty_points": 8855,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST3191",
+    "first_name": "Sarah",
+    "last_name": "Brown",
+    "email": "user5975@example.com",
+    "phone": "+1-555-698-3828",
+    "registration_date": "2024-06-22T15:48:36.272328",
+    "loyalty_points": 6624,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST9740",
+    "first_name": "Emily",
+    "last_name": "Smith",
+    "email": "user983@example.com",
+    "phone": "+1-555-830-7668",
+    "registration_date": "2025-08-25T15:48:36.272331",
+    "loyalty_points": 7455,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST9789",
+    "first_name": "Emily",
+    "last_name": "Jones",
+    "email": "user5774@example.com",
+    "phone": "+1-555-649-1055",
+    "registration_date": "2024-04-20T15:48:36.272334",
+    "loyalty_points": 73,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST9045",
+    "first_name": "Lisa",
+    "last_name": "Williams",
+    "email": "user2428@example.com",
+    "phone": "+1-555-867-8134",
+    "registration_date": "2025-04-25T15:48:36.272338",
+    "loyalty_points": 6782,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST9253",
+    "first_name": "Emily",
+    "last_name": "Jones",
+    "email": "user7287@example.com",
+    "phone": "+1-555-393-7616",
+    "registration_date": "2026-01-03T15:48:36.272341",
+    "loyalty_points": 6463,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST9040",
+    "first_name": "David",
+    "last_name": "Brown",
+    "email": "user4482@example.com",
+    "phone": "+1-555-551-8786",
+    "registration_date": "2025-07-23T15:48:36.272344",
+    "loyalty_points": 3595,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST4874",
+    "first_name": "Jane",
+    "last_name": "Garcia",
+    "email": "user2645@example.com",
+    "phone": "+1-555-259-9717",
+    "registration_date": "2025-08-04T15:48:36.272348",
+    "loyalty_points": 9480,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST6812",
+    "first_name": "Michael",
+    "last_name": "Miller",
+    "email": "user8491@example.com",
+    "phone": "+1-555-120-1152",
+    "registration_date": "2024-07-28T15:48:36.272351",
+    "loyalty_points": 2358,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST2522",
+    "first_name": "Sarah",
+    "last_name": "Miller",
+    "email": "user3425@example.com",
+    "phone": "+1-555-808-7632",
+    "registration_date": "2025-03-15T15:48:36.272353",
+    "loyalty_points": 6792,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST5841",
+    "first_name": "David",
+    "last_name": "Brown",
+    "email": "user7220@example.com",
+    "phone": "+1-555-361-6466",
+    "registration_date": "2025-07-30T15:48:36.272356",
+    "loyalty_points": 3040,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST9899",
+    "first_name": "Lisa",
+    "last_name": "Brown",
+    "email": "user2034@example.com",
+    "phone": "+1-555-591-5046",
+    "registration_date": "2024-11-02T15:48:36.272360",
+    "loyalty_points": 1482,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST5684",
+    "first_name": "John",
+    "last_name": "Brown",
+    "email": "user7888@example.com",
+    "phone": "+1-555-126-8722",
+    "registration_date": "2025-02-18T15:48:36.272363",
+    "loyalty_points": 4584,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST1757",
+    "first_name": "Sarah",
+    "last_name": "Williams",
+    "email": "user2011@example.com",
+    "phone": "+1-555-573-6734",
+    "registration_date": "2024-03-20T15:48:36.272366",
+    "loyalty_points": 3475,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST6270",
+    "first_name": "Sarah",
+    "last_name": "Smith",
+    "email": "user5062@example.com",
+    "phone": "+1-555-869-1923",
+    "registration_date": "2025-07-30T15:48:36.272369",
+    "loyalty_points": 3754,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST7046",
+    "first_name": "Sarah",
+    "last_name": "Miller",
+    "email": "user5324@example.com",
+    "phone": "+1-555-407-8771",
+    "registration_date": "2024-02-04T15:48:36.272372",
+    "loyalty_points": 564,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST1250",
+    "first_name": "David",
+    "last_name": "Miller",
+    "email": "user9282@example.com",
+    "phone": "+1-555-498-9537",
+    "registration_date": "2024-09-07T15:48:36.272375",
+    "loyalty_points": 4422,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST3542",
+    "first_name": "John",
+    "last_name": "Jones",
+    "email": "user2148@example.com",
+    "phone": "+1-555-927-6344",
+    "registration_date": "2024-02-28T15:48:36.272378",
+    "loyalty_points": 8312,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST8039",
+    "first_name": "Jane",
+    "last_name": "Davis",
+    "email": "user3495@example.com",
+    "phone": "+1-555-430-7786",
+    "registration_date": "2025-06-04T15:48:36.272382",
+    "loyalty_points": 991,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST5822",
+    "first_name": "David",
+    "last_name": "Garcia",
+    "email": "user1339@example.com",
+    "phone": "+1-555-297-4030",
+    "registration_date": "2024-10-21T15:48:36.272385",
+    "loyalty_points": 5002,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST8403",
+    "first_name": "David",
+    "last_name": "Smith",
+    "email": "user4394@example.com",
+    "phone": "+1-555-269-1200",
+    "registration_date": "2024-05-16T15:48:36.272388",
+    "loyalty_points": 5246,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST7779",
+    "first_name": "Emily",
+    "last_name": "Miller",
+    "email": "user9904@example.com",
+    "phone": "+1-555-619-3300",
+    "registration_date": "2024-06-16T15:48:36.272391",
+    "loyalty_points": 3519,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST8728",
+    "first_name": "David",
+    "last_name": "Johnson",
+    "email": "user1616@example.com",
+    "phone": "+1-555-677-5635",
+    "registration_date": "2025-05-24T15:48:36.272394",
+    "loyalty_points": 5845,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST3549",
+    "first_name": "Lisa",
+    "last_name": "Jones",
+    "email": "user3651@example.com",
+    "phone": "+1-555-256-9941",
+    "registration_date": "2025-07-31T15:48:36.272397",
+    "loyalty_points": 1734,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST4613",
+    "first_name": "Lisa",
+    "last_name": "Miller",
+    "email": "user5331@example.com",
+    "phone": "+1-555-206-3977",
+    "registration_date": "2025-08-01T15:48:36.272400",
+    "loyalty_points": 2226,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST5359",
+    "first_name": "John",
+    "last_name": "Johnson",
+    "email": "user6960@example.com",
+    "phone": "+1-555-730-6225",
+    "registration_date": "2024-07-23T15:48:36.272403",
+    "loyalty_points": 4291,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST1595",
+    "first_name": "Sarah",
+    "last_name": "Miller",
+    "email": "user6293@example.com",
+    "phone": "+1-555-911-2496",
+    "registration_date": "2024-03-22T15:48:36.272406",
+    "loyalty_points": 2108,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST6060",
+    "first_name": "Jane",
+    "last_name": "Garcia",
+    "email": "user502@example.com",
+    "phone": "+1-555-927-2984",
+    "registration_date": "2024-05-07T15:48:36.272409",
+    "loyalty_points": 5398,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST5038",
+    "first_name": "John",
+    "last_name": "Jones",
+    "email": "user9005@example.com",
+    "phone": "+1-555-214-5425",
+    "registration_date": "2025-12-16T15:48:36.272412",
+    "loyalty_points": 4,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST4342",
+    "first_name": "Sarah",
+    "last_name": "Williams",
+    "email": "user1448@example.com",
+    "phone": "+1-555-858-1577",
+    "registration_date": "2025-11-14T15:48:36.272415",
+    "loyalty_points": 578,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST6420",
+    "first_name": "Sarah",
+    "last_name": "Smith",
+    "email": "user1386@example.com",
+    "phone": "+1-555-892-7919",
+    "registration_date": "2024-06-17T15:48:36.272418",
+    "loyalty_points": 5401,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST5878",
+    "first_name": "Emily",
+    "last_name": "Williams",
+    "email": "user4635@example.com",
+    "phone": "+1-555-706-6943",
+    "registration_date": "2024-04-14T15:48:36.272421",
+    "loyalty_points": 1959,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST1266",
+    "first_name": "Michael",
+    "last_name": "Garcia",
+    "email": "user687@example.com",
+    "phone": "+1-555-410-4171",
+    "registration_date": "2024-09-26T15:48:36.272424",
+    "loyalty_points": 8970,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST8484",
+    "first_name": "Lisa",
+    "last_name": "Garcia",
+    "email": "user8790@example.com",
+    "phone": "+1-555-732-7667",
+    "registration_date": "2024-08-02T15:48:36.272427",
+    "loyalty_points": 2320,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST6942",
+    "first_name": "Sarah",
+    "last_name": "Smith",
+    "email": "user5827@example.com",
+    "phone": "+1-555-635-7204",
+    "registration_date": "2025-04-12T15:48:36.272430",
+    "loyalty_points": 1882,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST9945",
+    "first_name": "Emily",
+    "last_name": "Davis",
+    "email": "user5299@example.com",
+    "phone": "+1-555-736-4098",
+    "registration_date": "2024-12-02T15:48:36.272433",
+    "loyalty_points": 4730,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST2161",
+    "first_name": "Sarah",
+    "last_name": "Jones",
+    "email": "user9504@example.com",
+    "phone": "+1-555-787-1447",
+    "registration_date": "2024-11-26T15:48:36.272436",
+    "loyalty_points": 9770,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST6530",
+    "first_name": "Lisa",
+    "last_name": "Jones",
+    "email": "user5259@example.com",
+    "phone": "+1-555-164-4545",
+    "registration_date": "2026-01-21T15:48:36.272439",
+    "loyalty_points": 7233,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST7529",
+    "first_name": "John",
+    "last_name": "Davis",
+    "email": "user3583@example.com",
+    "phone": "+1-555-473-8936",
+    "registration_date": "2026-01-19T15:48:36.272442",
+    "loyalty_points": 2264,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST9575",
+    "first_name": "Emily",
+    "last_name": "Smith",
+    "email": "user9655@example.com",
+    "phone": "+1-555-493-7478",
+    "registration_date": "2024-10-28T15:48:36.272445",
+    "loyalty_points": 8920,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST7005",
+    "first_name": "Michael",
+    "last_name": "Brown",
+    "email": "user5423@example.com",
+    "phone": "+1-555-567-3094",
+    "registration_date": "2025-01-09T15:48:36.272448",
+    "loyalty_points": 6982,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST3869",
+    "first_name": "Michael",
+    "last_name": "Garcia",
+    "email": "user2342@example.com",
+    "phone": "+1-555-434-6160",
+    "registration_date": "2025-11-09T15:48:36.272451",
+    "loyalty_points": 1377,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST7349",
+    "first_name": "Emily",
+    "last_name": "Garcia",
+    "email": "user4279@example.com",
+    "phone": "+1-555-827-5215",
+    "registration_date": "2024-09-19T15:48:36.272454",
+    "loyalty_points": 4208,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST5139",
+    "first_name": "David",
+    "last_name": "Davis",
+    "email": "user1269@example.com",
+    "phone": "+1-555-209-5675",
+    "registration_date": "2024-11-21T15:48:36.272457",
+    "loyalty_points": 54,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST3615",
+    "first_name": "Jane",
+    "last_name": "Jones",
+    "email": "user5047@example.com",
+    "phone": "+1-555-719-1076",
+    "registration_date": "2024-09-19T15:48:36.272460",
+    "loyalty_points": 1930,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST6845",
+    "first_name": "Emily",
+    "last_name": "Williams",
+    "email": "user4084@example.com",
+    "phone": "+1-555-858-1198",
+    "registration_date": "2025-10-17T15:48:36.272463",
+    "loyalty_points": 7792,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST4798",
+    "first_name": "Michael",
+    "last_name": "Miller",
+    "email": "user7378@example.com",
+    "phone": "+1-555-452-7941",
+    "registration_date": "2025-07-13T15:48:36.272466",
+    "loyalty_points": 3984,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST9573",
+    "first_name": "Sarah",
+    "last_name": "Williams",
+    "email": "user4281@example.com",
+    "phone": "+1-555-684-4623",
+    "registration_date": "2024-08-08T15:48:36.272469",
+    "loyalty_points": 6808,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST2226",
+    "first_name": "Emily",
+    "last_name": "Brown",
+    "email": "user6567@example.com",
+    "phone": "+1-555-206-3257",
+    "registration_date": "2025-01-01T15:48:36.272472",
+    "loyalty_points": 4702,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST6458",
+    "first_name": "Michael",
+    "last_name": "Brown",
+    "email": "user4685@example.com",
+    "phone": "+1-555-446-9277",
+    "registration_date": "2025-01-05T15:48:36.272475",
+    "loyalty_points": 1019,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST4151",
+    "first_name": "David",
+    "last_name": "Brown",
+    "email": "user22@example.com",
+    "phone": "+1-555-422-4197",
+    "registration_date": "2025-06-18T15:48:36.272478",
+    "loyalty_points": 4914,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST7018",
+    "first_name": "Emily",
+    "last_name": "Jones",
+    "email": "user9054@example.com",
+    "phone": "+1-555-652-8571",
+    "registration_date": "2024-05-05T15:48:36.272481",
+    "loyalty_points": 8897,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST1649",
+    "first_name": "Lisa",
+    "last_name": "Smith",
+    "email": "user8512@example.com",
+    "phone": "+1-555-647-5133",
+    "registration_date": "2024-12-05T15:48:36.272484",
+    "loyalty_points": 2503,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST6178",
+    "first_name": "Emily",
+    "last_name": "Jones",
+    "email": "user8124@example.com",
+    "phone": "+1-555-930-6887",
+    "registration_date": "2024-10-11T15:48:36.272487",
+    "loyalty_points": 620,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST7267",
+    "first_name": "Michael",
+    "last_name": "Jones",
+    "email": "user8813@example.com",
+    "phone": "+1-555-326-4357",
+    "registration_date": "2024-07-16T15:48:36.272490",
+    "loyalty_points": 7252,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST2929",
+    "first_name": "Lisa",
+    "last_name": "Jones",
+    "email": "user818@example.com",
+    "phone": "+1-555-226-8474",
+    "registration_date": "2025-08-07T15:48:36.272493",
+    "loyalty_points": 9917,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST7564",
+    "first_name": "Robert",
+    "last_name": "Williams",
+    "email": "user3577@example.com",
+    "phone": "+1-555-973-6068",
+    "registration_date": "2024-08-30T15:48:36.272496",
+    "loyalty_points": 6869,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST9854",
+    "first_name": "Michael",
+    "last_name": "Miller",
+    "email": "user5281@example.com",
+    "phone": "+1-555-388-2834",
+    "registration_date": "2024-12-28T15:48:36.272499",
+    "loyalty_points": 5497,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST4348",
+    "first_name": "Jane",
+    "last_name": "Brown",
+    "email": "user8022@example.com",
+    "phone": "+1-555-913-7550",
+    "registration_date": "2025-12-13T15:48:36.272502",
+    "loyalty_points": 2602,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST5303",
+    "first_name": "Lisa",
+    "last_name": "Johnson",
+    "email": "user5206@example.com",
+    "phone": "+1-555-929-1050",
+    "registration_date": "2025-03-11T15:48:36.272505",
+    "loyalty_points": 8646,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST9561",
+    "first_name": "John",
+    "last_name": "Williams",
+    "email": "user3108@example.com",
+    "phone": "+1-555-881-1626",
+    "registration_date": "2025-07-17T15:48:36.272508",
+    "loyalty_points": 324,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST7017",
+    "first_name": "Lisa",
+    "last_name": "Jones",
+    "email": "user6400@example.com",
+    "phone": "+1-555-690-6683",
+    "registration_date": "2025-12-19T15:48:36.272512",
+    "loyalty_points": 7246,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST4720",
+    "first_name": "Jane",
+    "last_name": "Williams",
+    "email": "user4768@example.com",
+    "phone": "+1-555-838-9596",
+    "registration_date": "2024-11-20T15:48:36.272515",
+    "loyalty_points": 5792,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST5494",
+    "first_name": "Robert",
+    "last_name": "Garcia",
+    "email": "user196@example.com",
+    "phone": "+1-555-851-6202",
+    "registration_date": "2025-09-30T15:48:36.272517",
+    "loyalty_points": 4654,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST1302",
+    "first_name": "Lisa",
+    "last_name": "Brown",
+    "email": "user6623@example.com",
+    "phone": "+1-555-906-3305",
+    "registration_date": "2025-01-20T15:48:36.272520",
+    "loyalty_points": 6891,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST8863",
+    "first_name": "David",
+    "last_name": "Jones",
+    "email": "user6255@example.com",
+    "phone": "+1-555-886-9152",
+    "registration_date": "2024-11-01T15:48:36.272524",
+    "loyalty_points": 7594,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST6507",
+    "first_name": "Sarah",
+    "last_name": "Garcia",
+    "email": "user9691@example.com",
+    "phone": "+1-555-298-9293",
+    "registration_date": "2024-02-08T15:48:36.272527",
+    "loyalty_points": 7174,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST5332",
+    "first_name": "Lisa",
+    "last_name": "Garcia",
+    "email": "user9396@example.com",
+    "phone": "+1-555-662-9146",
+    "registration_date": "2025-04-21T15:48:36.272531",
+    "loyalty_points": 6239,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST2094",
+    "first_name": "Sarah",
+    "last_name": "Miller",
+    "email": "user7419@example.com",
+    "phone": "+1-555-264-2466",
+    "registration_date": "2026-01-10T15:48:36.272534",
+    "loyalty_points": 4917,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST8506",
+    "first_name": "John",
+    "last_name": "Johnson",
+    "email": "user5682@example.com",
+    "phone": "+1-555-905-2142",
+    "registration_date": "2024-10-08T15:48:36.272537",
+    "loyalty_points": 493,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST9491",
+    "first_name": "Sarah",
+    "last_name": "Smith",
+    "email": "user8702@example.com",
+    "phone": "+1-555-342-6560",
+    "registration_date": "2025-02-23T15:48:36.272540",
+    "loyalty_points": 4984,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST1420",
+    "first_name": "Sarah",
+    "last_name": "Jones",
+    "email": "user1381@example.com",
+    "phone": "+1-555-959-9478",
+    "registration_date": "2025-10-27T15:48:36.272543",
+    "loyalty_points": 5553,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST3043",
+    "first_name": "Sarah",
+    "last_name": "Garcia",
+    "email": "user7094@example.com",
+    "phone": "+1-555-980-3295",
+    "registration_date": "2025-02-07T15:48:36.272546",
+    "loyalty_points": 3563,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST6326",
+    "first_name": "John",
+    "last_name": "Jones",
+    "email": "user979@example.com",
+    "phone": "+1-555-154-6870",
+    "registration_date": "2026-01-07T15:48:36.272549",
+    "loyalty_points": 1733,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST7562",
+    "first_name": "Michael",
+    "last_name": "Brown",
+    "email": "user9474@example.com",
+    "phone": "+1-555-663-3309",
+    "registration_date": "2025-03-06T15:48:36.272552",
+    "loyalty_points": 4116,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST3089",
+    "first_name": "David",
+    "last_name": "Jones",
+    "email": "user1724@example.com",
+    "phone": "+1-555-675-8556",
+    "registration_date": "2025-02-22T15:48:36.272556",
+    "loyalty_points": 4079,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST1123",
+    "first_name": "Michael",
+    "last_name": "Miller",
+    "email": "user1772@example.com",
+    "phone": "+1-555-630-2888",
+    "registration_date": "2025-10-08T15:48:36.272561",
+    "loyalty_points": 5135,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST9436",
+    "first_name": "Robert",
+    "last_name": "Johnson",
+    "email": "user5869@example.com",
+    "phone": "+1-555-212-8833",
+    "registration_date": "2024-10-30T15:48:36.272565",
+    "loyalty_points": 523,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST2187",
+    "first_name": "David",
+    "last_name": "Williams",
+    "email": "user3910@example.com",
+    "phone": "+1-555-792-3996",
+    "registration_date": "2025-04-07T15:48:36.272568",
+    "loyalty_points": 4088,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST7323",
+    "first_name": "Lisa",
+    "last_name": "Brown",
+    "email": "user6425@example.com",
+    "phone": "+1-555-177-2979",
+    "registration_date": "2025-11-12T15:48:36.272571",
+    "loyalty_points": 905,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST8738",
+    "first_name": "Sarah",
+    "last_name": "Miller",
+    "email": "user2955@example.com",
+    "phone": "+1-555-931-7968",
+    "registration_date": "2025-09-17T15:48:36.272574",
+    "loyalty_points": 5690,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST4927",
+    "first_name": "Sarah",
+    "last_name": "Brown",
+    "email": "user553@example.com",
+    "phone": "+1-555-783-9545",
+    "registration_date": "2025-01-08T15:48:36.272577",
+    "loyalty_points": 9445,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST1154",
+    "first_name": "Michael",
+    "last_name": "Miller",
+    "email": "user306@example.com",
+    "phone": "+1-555-972-4644",
+    "registration_date": "2025-06-06T15:48:36.272580",
+    "loyalty_points": 6735,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST8299",
+    "first_name": "Jane",
+    "last_name": "Miller",
+    "email": "user7620@example.com",
+    "phone": "+1-555-266-4341",
+    "registration_date": "2025-03-31T15:48:36.272583",
+    "loyalty_points": 4648,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST2983",
+    "first_name": "Emily",
+    "last_name": "Johnson",
+    "email": "user2088@example.com",
+    "phone": "+1-555-377-2400",
+    "registration_date": "2024-06-08T15:48:36.272586",
+    "loyalty_points": 7438,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST9056",
+    "first_name": "Sarah",
+    "last_name": "Garcia",
+    "email": "user5208@example.com",
+    "phone": "+1-555-601-6063",
+    "registration_date": "2025-03-18T15:48:36.272589",
+    "loyalty_points": 2992,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST7493",
+    "first_name": "Michael",
+    "last_name": "Johnson",
+    "email": "user9736@example.com",
+    "phone": "+1-555-424-9867",
+    "registration_date": "2025-11-04T15:48:36.272592",
+    "loyalty_points": 6040,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST7084",
+    "first_name": "John",
+    "last_name": "Garcia",
+    "email": "user1167@example.com",
+    "phone": "+1-555-310-3860",
+    "registration_date": "2025-12-25T15:48:36.272595",
+    "loyalty_points": 4740,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST1275",
+    "first_name": "David",
+    "last_name": "Williams",
+    "email": "user5356@example.com",
+    "phone": "+1-555-654-7084",
+    "registration_date": "2025-09-14T15:48:36.272598",
+    "loyalty_points": 4584,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST9539",
+    "first_name": "John",
+    "last_name": "Brown",
+    "email": "user2022@example.com",
+    "phone": "+1-555-268-3222",
+    "registration_date": "2024-02-23T15:48:36.272602",
+    "loyalty_points": 7130,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST6455",
+    "first_name": "David",
+    "last_name": "Smith",
+    "email": "user83@example.com",
+    "phone": "+1-555-513-3963",
+    "registration_date": "2025-08-28T15:48:36.272605",
+    "loyalty_points": 8317,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST6983",
+    "first_name": "John",
+    "last_name": "Garcia",
+    "email": "user9053@example.com",
+    "phone": "+1-555-739-3718",
+    "registration_date": "2025-11-15T15:48:36.272608",
+    "loyalty_points": 1778,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST1532",
+    "first_name": "Michael",
+    "last_name": "Davis",
+    "email": "user8205@example.com",
+    "phone": "+1-555-245-1660",
+    "registration_date": "2024-06-07T15:48:36.272611",
+    "loyalty_points": 1786,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST1616",
+    "first_name": "Emily",
+    "last_name": "Davis",
+    "email": "user4983@example.com",
+    "phone": "+1-555-442-2905",
+    "registration_date": "2024-03-04T15:48:36.272614",
+    "loyalty_points": 658,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST4642",
+    "first_name": "John",
+    "last_name": "Miller",
+    "email": "user3715@example.com",
+    "phone": "+1-555-679-4903",
+    "registration_date": "2024-06-22T15:48:36.272617",
+    "loyalty_points": 2365,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST3710",
+    "first_name": "Robert",
+    "last_name": "Williams",
+    "email": "user6501@example.com",
+    "phone": "+1-555-395-9520",
+    "registration_date": "2025-10-14T15:48:36.272620",
+    "loyalty_points": 4903,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST8568",
+    "first_name": "Emily",
+    "last_name": "Davis",
+    "email": "user7250@example.com",
+    "phone": "+1-555-756-1519",
+    "registration_date": "2025-02-23T15:48:36.272623",
+    "loyalty_points": 2959,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST8989",
+    "first_name": "David",
+    "last_name": "Williams",
+    "email": "user4695@example.com",
+    "phone": "+1-555-752-8576",
+    "registration_date": "2025-06-08T15:48:36.272626",
+    "loyalty_points": 4438,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST7497",
+    "first_name": "Robert",
+    "last_name": "Brown",
+    "email": "user2360@example.com",
+    "phone": "+1-555-941-4083",
+    "registration_date": "2024-07-15T15:48:36.272629",
+    "loyalty_points": 8041,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST5287",
+    "first_name": "Sarah",
+    "last_name": "Jones",
+    "email": "user1712@example.com",
+    "phone": "+1-555-499-2289",
+    "registration_date": "2025-08-16T15:48:36.272632",
+    "loyalty_points": 23,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST6047",
+    "first_name": "Lisa",
+    "last_name": "Smith",
+    "email": "user1666@example.com",
+    "phone": "+1-555-836-3693",
+    "registration_date": "2025-08-14T15:48:36.272635",
+    "loyalty_points": 2307,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST1534",
+    "first_name": "Emily",
+    "last_name": "Garcia",
+    "email": "user6005@example.com",
+    "phone": "+1-555-802-1499",
+    "registration_date": "2025-01-13T15:48:36.272638",
+    "loyalty_points": 8273,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST9618",
+    "first_name": "Sarah",
+    "last_name": "Brown",
+    "email": "user6735@example.com",
+    "phone": "+1-555-983-9094",
+    "registration_date": "2024-11-10T15:48:36.272642",
+    "loyalty_points": 8349,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST6746",
+    "first_name": "Emily",
+    "last_name": "Jones",
+    "email": "user2124@example.com",
+    "phone": "+1-555-240-5472",
+    "registration_date": "2025-08-21T15:48:36.272644",
+    "loyalty_points": 4492,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST1798",
+    "first_name": "Emily",
+    "last_name": "Williams",
+    "email": "user5626@example.com",
+    "phone": "+1-555-327-4240",
+    "registration_date": "2025-12-20T15:48:36.272647",
+    "loyalty_points": 666,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST1828",
+    "first_name": "Jane",
+    "last_name": "Brown",
+    "email": "user324@example.com",
+    "phone": "+1-555-609-6666",
+    "registration_date": "2025-12-31T15:48:36.272650",
+    "loyalty_points": 2372,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST8293",
+    "first_name": "Sarah",
+    "last_name": "Garcia",
+    "email": "user3253@example.com",
+    "phone": "+1-555-596-1575",
+    "registration_date": "2025-09-28T15:48:36.272654",
+    "loyalty_points": 6315,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST5822",
+    "first_name": "Emily",
+    "last_name": "Miller",
+    "email": "user764@example.com",
+    "phone": "+1-555-184-3975",
+    "registration_date": "2025-10-16T15:48:36.272657",
+    "loyalty_points": 910,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST9818",
+    "first_name": "Emily",
+    "last_name": "Garcia",
+    "email": "user8306@example.com",
+    "phone": "+1-555-899-8145",
+    "registration_date": "2024-05-12T15:48:36.272660",
+    "loyalty_points": 38,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST5350",
+    "first_name": "John",
+    "last_name": "Smith",
+    "email": "user7354@example.com",
+    "phone": "+1-555-582-3403",
+    "registration_date": "2024-08-02T15:48:36.272663",
+    "loyalty_points": 8171,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST1419",
+    "first_name": "John",
+    "last_name": "Garcia",
+    "email": "user1134@example.com",
+    "phone": "+1-555-981-3772",
+    "registration_date": "2024-04-17T15:48:36.272666",
+    "loyalty_points": 8289,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST9077",
+    "first_name": "Sarah",
+    "last_name": "Smith",
+    "email": "user4688@example.com",
+    "phone": "+1-555-517-5355",
+    "registration_date": "2025-11-10T15:48:36.272668",
+    "loyalty_points": 177,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST6337",
+    "first_name": "John",
+    "last_name": "Jones",
+    "email": "user1086@example.com",
+    "phone": "+1-555-877-8070",
+    "registration_date": "2024-11-16T15:48:36.272671",
+    "loyalty_points": 7587,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST1934",
+    "first_name": "David",
+    "last_name": "Williams",
+    "email": "user7135@example.com",
+    "phone": "+1-555-581-3513",
+    "registration_date": "2024-11-10T15:48:36.272674",
+    "loyalty_points": 2735,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST4436",
+    "first_name": "Robert",
+    "last_name": "Smith",
+    "email": "user2184@example.com",
+    "phone": "+1-555-347-2561",
+    "registration_date": "2024-10-29T15:48:36.272677",
+    "loyalty_points": 4061,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST7320",
+    "first_name": "Sarah",
+    "last_name": "Davis",
+    "email": "user6433@example.com",
+    "phone": "+1-555-976-7298",
+    "registration_date": "2025-01-17T15:48:36.272680",
+    "loyalty_points": 8450,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST9097",
+    "first_name": "Michael",
+    "last_name": "Williams",
+    "email": "user699@example.com",
+    "phone": "+1-555-454-6439",
+    "registration_date": "2024-05-22T15:48:36.272684",
+    "loyalty_points": 1774,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST7404",
+    "first_name": "David",
+    "last_name": "Jones",
+    "email": "user5178@example.com",
+    "phone": "+1-555-117-2968",
+    "registration_date": "2024-05-07T15:48:36.272687",
+    "loyalty_points": 8083,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST9686",
+    "first_name": "Robert",
+    "last_name": "Jones",
+    "email": "user9225@example.com",
+    "phone": "+1-555-723-7358",
+    "registration_date": "2024-05-14T15:48:36.272690",
+    "loyalty_points": 5012,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST1389",
+    "first_name": "Lisa",
+    "last_name": "Miller",
+    "email": "user7189@example.com",
+    "phone": "+1-555-602-8596",
+    "registration_date": "2025-01-10T15:48:36.272693",
+    "loyalty_points": 5908,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST1752",
+    "first_name": "Sarah",
+    "last_name": "Miller",
+    "email": "user5360@example.com",
+    "phone": "+1-555-711-9851",
+    "registration_date": "2024-10-11T15:48:36.272696",
+    "loyalty_points": 7687,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST1227",
+    "first_name": "Emily",
+    "last_name": "Smith",
+    "email": "user5017@example.com",
+    "phone": "+1-555-142-6891",
+    "registration_date": "2024-02-06T15:48:36.272699",
+    "loyalty_points": 7588,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST2974",
+    "first_name": "Robert",
+    "last_name": "Williams",
+    "email": "user7418@example.com",
+    "phone": "+1-555-938-1599",
+    "registration_date": "2025-09-03T15:48:36.272702",
+    "loyalty_points": 5201,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST7973",
+    "first_name": "Jane",
+    "last_name": "Miller",
+    "email": "user6284@example.com",
+    "phone": "+1-555-527-9645",
+    "registration_date": "2025-07-11T15:48:36.272705",
+    "loyalty_points": 536,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST6317",
+    "first_name": "Michael",
+    "last_name": "Garcia",
+    "email": "user938@example.com",
+    "phone": "+1-555-698-6972",
+    "registration_date": "2025-08-19T15:48:36.272708",
+    "loyalty_points": 9496,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST1150",
+    "first_name": "Lisa",
+    "last_name": "Williams",
+    "email": "user6756@example.com",
+    "phone": "+1-555-368-4608",
+    "registration_date": "2024-07-28T15:48:36.272711",
+    "loyalty_points": 4130,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST5699",
+    "first_name": "Lisa",
+    "last_name": "Smith",
+    "email": "user6126@example.com",
+    "phone": "+1-555-130-8590",
+    "registration_date": "2025-03-02T15:48:36.272714",
+    "loyalty_points": 1620,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST8382",
+    "first_name": "Emily",
+    "last_name": "Davis",
+    "email": "user8017@example.com",
+    "phone": "+1-555-216-7611",
+    "registration_date": "2025-01-06T15:48:36.272717",
+    "loyalty_points": 105,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST1880",
+    "first_name": "Jane",
+    "last_name": "Williams",
+    "email": "user6073@example.com",
+    "phone": "+1-555-701-8333",
+    "registration_date": "2024-12-06T15:48:36.272720",
+    "loyalty_points": 6751,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST9820",
+    "first_name": "Emily",
+    "last_name": "Williams",
+    "email": "user1819@example.com",
+    "phone": "+1-555-557-2103",
+    "registration_date": "2025-07-13T15:48:36.272723",
+    "loyalty_points": 8709,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST4736",
+    "first_name": "David",
+    "last_name": "Smith",
+    "email": "user2325@example.com",
+    "phone": "+1-555-586-5007",
+    "registration_date": "2025-03-26T15:48:36.272726",
+    "loyalty_points": 8869,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST6001",
+    "first_name": "Jane",
+    "last_name": "Brown",
+    "email": "user1791@example.com",
+    "phone": "+1-555-404-6509",
+    "registration_date": "2024-07-21T15:48:36.272729",
+    "loyalty_points": 2309,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST3384",
+    "first_name": "Lisa",
+    "last_name": "Garcia",
+    "email": "user5406@example.com",
+    "phone": "+1-555-992-5287",
+    "registration_date": "2024-11-21T15:48:36.272732",
+    "loyalty_points": 3292,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST5629",
+    "first_name": "Emily",
+    "last_name": "Miller",
+    "email": "user1550@example.com",
+    "phone": "+1-555-423-3645",
+    "registration_date": "2024-03-14T15:48:36.272734",
+    "loyalty_points": 153,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST5313",
+    "first_name": "Robert",
+    "last_name": "Miller",
+    "email": "user139@example.com",
+    "phone": "+1-555-442-8196",
+    "registration_date": "2025-02-20T15:48:36.272737",
+    "loyalty_points": 1138,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST1193",
+    "first_name": "Jane",
+    "last_name": "Garcia",
+    "email": "user3915@example.com",
+    "phone": "+1-555-737-1659",
+    "registration_date": "2024-04-15T15:48:36.272740",
+    "loyalty_points": 2753,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST9248",
+    "first_name": "Sarah",
+    "last_name": "Davis",
+    "email": "user8354@example.com",
+    "phone": "+1-555-356-3548",
+    "registration_date": "2025-06-21T15:48:36.272743",
+    "loyalty_points": 7874,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST7599",
+    "first_name": "David",
+    "last_name": "Williams",
+    "email": "user9126@example.com",
+    "phone": "+1-555-995-6782",
+    "registration_date": "2024-07-12T15:48:36.272746",
+    "loyalty_points": 6799,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST9634",
+    "first_name": "Emily",
+    "last_name": "Johnson",
+    "email": "user6987@example.com",
+    "phone": "+1-555-973-8307",
+    "registration_date": "2026-01-16T15:48:36.272749",
+    "loyalty_points": 6426,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST6122",
+    "first_name": "Jane",
+    "last_name": "Garcia",
+    "email": "user8125@example.com",
+    "phone": "+1-555-960-3256",
+    "registration_date": "2024-04-06T15:48:36.272753",
+    "loyalty_points": 9221,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST2798",
+    "first_name": "John",
+    "last_name": "Garcia",
+    "email": "user6137@example.com",
+    "phone": "+1-555-826-4053",
+    "registration_date": "2025-05-02T15:48:36.272756",
+    "loyalty_points": 2119,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST9802",
+    "first_name": "Robert",
+    "last_name": "Brown",
+    "email": "user48@example.com",
+    "phone": "+1-555-365-7422",
+    "registration_date": "2025-12-12T15:48:36.272759",
+    "loyalty_points": 4803,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST6990",
+    "first_name": "Robert",
+    "last_name": "Smith",
+    "email": "user3097@example.com",
+    "phone": "+1-555-748-6911",
+    "registration_date": "2025-02-12T15:48:36.272762",
+    "loyalty_points": 7803,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST6630",
+    "first_name": "David",
+    "last_name": "Smith",
+    "email": "user3948@example.com",
+    "phone": "+1-555-823-7677",
+    "registration_date": "2025-05-19T15:48:36.272765",
+    "loyalty_points": 9624,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST9492",
+    "first_name": "Lisa",
+    "last_name": "Garcia",
+    "email": "user2448@example.com",
+    "phone": "+1-555-639-7453",
+    "registration_date": "2025-11-02T15:48:36.272768",
+    "loyalty_points": 6245,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST9383",
+    "first_name": "John",
+    "last_name": "Smith",
+    "email": "user1272@example.com",
+    "phone": "+1-555-567-6554",
+    "registration_date": "2024-02-26T15:48:36.272771",
+    "loyalty_points": 2972,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST8677",
+    "first_name": "Jane",
+    "last_name": "Davis",
+    "email": "user8617@example.com",
+    "phone": "+1-555-875-1554",
+    "registration_date": "2024-12-09T15:48:36.272774",
+    "loyalty_points": 8392,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST2559",
+    "first_name": "John",
+    "last_name": "Brown",
+    "email": "user1604@example.com",
+    "phone": "+1-555-144-3546",
+    "registration_date": "2025-06-23T15:48:36.272777",
+    "loyalty_points": 5777,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST6358",
+    "first_name": "Michael",
+    "last_name": "Brown",
+    "email": "user4333@example.com",
+    "phone": "+1-555-251-8335",
+    "registration_date": "2025-11-04T15:48:36.272781",
+    "loyalty_points": 2362,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST4041",
+    "first_name": "Sarah",
+    "last_name": "Smith",
+    "email": "user242@example.com",
+    "phone": "+1-555-605-3542",
+    "registration_date": "2025-11-10T15:48:36.272784",
+    "loyalty_points": 6342,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST6707",
+    "first_name": "Jane",
+    "last_name": "Miller",
+    "email": "user9679@example.com",
+    "phone": "+1-555-548-6574",
+    "registration_date": "2024-09-16T15:48:36.272787",
+    "loyalty_points": 9577,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST1974",
+    "first_name": "Robert",
+    "last_name": "Miller",
+    "email": "user8731@example.com",
+    "phone": "+1-555-681-1781",
+    "registration_date": "2026-01-17T15:48:36.272790",
+    "loyalty_points": 7115,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST5926",
+    "first_name": "Jane",
+    "last_name": "Davis",
+    "email": "user9772@example.com",
+    "phone": "+1-555-855-4699",
+    "registration_date": "2025-04-27T15:48:36.272793",
+    "loyalty_points": 7590,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST1998",
+    "first_name": "Michael",
+    "last_name": "Davis",
+    "email": "user5397@example.com",
+    "phone": "+1-555-854-2767",
+    "registration_date": "2026-01-07T15:48:36.272796",
+    "loyalty_points": 2541,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST3108",
+    "first_name": "David",
+    "last_name": "Jones",
+    "email": "user4326@example.com",
+    "phone": "+1-555-267-8433",
+    "registration_date": "2025-12-07T15:48:36.272799",
+    "loyalty_points": 6085,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST9641",
+    "first_name": "Robert",
+    "last_name": "Garcia",
+    "email": "user6646@example.com",
+    "phone": "+1-555-108-8950",
+    "registration_date": "2024-05-09T15:48:36.272802",
+    "loyalty_points": 7343,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST9211",
+    "first_name": "Michael",
+    "last_name": "Johnson",
+    "email": "user3796@example.com",
+    "phone": "+1-555-881-1346",
+    "registration_date": "2024-04-25T15:48:36.272806",
+    "loyalty_points": 5320,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST4991",
+    "first_name": "Emily",
+    "last_name": "Johnson",
+    "email": "user2847@example.com",
+    "phone": "+1-555-800-2808",
+    "registration_date": "2024-02-25T15:48:36.272809",
+    "loyalty_points": 5376,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST1907",
+    "first_name": "Emily",
+    "last_name": "Smith",
+    "email": "user6253@example.com",
+    "phone": "+1-555-255-2336",
+    "registration_date": "2026-01-04T15:48:36.272812",
+    "loyalty_points": 9667,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST2741",
+    "first_name": "Robert",
+    "last_name": "Johnson",
+    "email": "user5478@example.com",
+    "phone": "+1-555-902-1952",
+    "registration_date": "2025-02-05T15:48:36.272814",
+    "loyalty_points": 5367,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST2649",
+    "first_name": "Michael",
+    "last_name": "Brown",
+    "email": "user9946@example.com",
+    "phone": "+1-555-213-7016",
+    "registration_date": "2024-09-22T15:48:36.272817",
+    "loyalty_points": 5220,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST2543",
+    "first_name": "Robert",
+    "last_name": "Miller",
+    "email": "user3631@example.com",
+    "phone": "+1-555-150-9000",
+    "registration_date": "2024-05-11T15:48:36.272820",
+    "loyalty_points": 764,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST4450",
+    "first_name": "Emily",
+    "last_name": "Smith",
+    "email": "user4595@example.com",
+    "phone": "+1-555-683-4533",
+    "registration_date": "2025-09-03T15:48:36.272824",
+    "loyalty_points": 7516,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST9614",
+    "first_name": "David",
+    "last_name": "Davis",
+    "email": "user4962@example.com",
+    "phone": "+1-555-313-7785",
+    "registration_date": "2024-06-19T15:48:36.272827",
+    "loyalty_points": 4430,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST6160",
+    "first_name": "Michael",
+    "last_name": "Davis",
+    "email": "user5256@example.com",
+    "phone": "+1-555-435-4818",
+    "registration_date": "2025-05-09T15:48:36.272830",
+    "loyalty_points": 9328,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST3011",
+    "first_name": "Emily",
+    "last_name": "Davis",
+    "email": "user38@example.com",
+    "phone": "+1-555-457-9217",
+    "registration_date": "2025-12-12T15:48:36.272832",
+    "loyalty_points": 2978,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST9077",
+    "first_name": "Robert",
+    "last_name": "Jones",
+    "email": "user8845@example.com",
+    "phone": "+1-555-180-9994",
+    "registration_date": "2024-07-06T15:48:36.272836",
+    "loyalty_points": 2816,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST8819",
+    "first_name": "Sarah",
+    "last_name": "Brown",
+    "email": "user2964@example.com",
+    "phone": "+1-555-948-2883",
+    "registration_date": "2024-02-18T15:48:36.272839",
+    "loyalty_points": 7910,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST9915",
+    "first_name": "Lisa",
+    "last_name": "Smith",
+    "email": "user8153@example.com",
+    "phone": "+1-555-773-4472",
+    "registration_date": "2024-03-13T15:48:36.272842",
+    "loyalty_points": 4919,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST6919",
+    "first_name": "Michael",
+    "last_name": "Johnson",
+    "email": "user3151@example.com",
+    "phone": "+1-555-537-5594",
+    "registration_date": "2025-04-20T15:48:36.272845",
+    "loyalty_points": 3848,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST8087",
+    "first_name": "Michael",
+    "last_name": "Garcia",
+    "email": "user5093@example.com",
+    "phone": "+1-555-270-2306",
+    "registration_date": "2025-10-25T15:48:36.272848",
+    "loyalty_points": 8929,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST1334",
+    "first_name": "John",
+    "last_name": "Johnson",
+    "email": "user2425@example.com",
+    "phone": "+1-555-684-1736",
+    "registration_date": "2025-03-02T15:48:36.272851",
+    "loyalty_points": 2093,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST8992",
+    "first_name": "Jane",
+    "last_name": "Miller",
+    "email": "user9357@example.com",
+    "phone": "+1-555-435-8179",
+    "registration_date": "2025-11-05T15:48:36.272854",
+    "loyalty_points": 6649,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST5585",
+    "first_name": "Robert",
+    "last_name": "Brown",
+    "email": "user5342@example.com",
+    "phone": "+1-555-445-1751",
+    "registration_date": "2025-03-24T15:48:36.272857",
+    "loyalty_points": 5040,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST5666",
+    "first_name": "Jane",
+    "last_name": "Garcia",
+    "email": "user6326@example.com",
+    "phone": "+1-555-677-9084",
+    "registration_date": "2026-01-28T15:48:36.272860",
+    "loyalty_points": 1304,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST1913",
+    "first_name": "Sarah",
+    "last_name": "Johnson",
+    "email": "user5747@example.com",
+    "phone": "+1-555-179-7940",
+    "registration_date": "2025-05-19T15:48:36.272864",
+    "loyalty_points": 6029,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST7836",
+    "first_name": "Lisa",
+    "last_name": "Williams",
+    "email": "user4625@example.com",
+    "phone": "+1-555-833-5963",
+    "registration_date": "2024-11-29T15:48:36.272867",
+    "loyalty_points": 3081,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST9085",
+    "first_name": "Emily",
+    "last_name": "Miller",
+    "email": "user5792@example.com",
+    "phone": "+1-555-947-1816",
+    "registration_date": "2024-07-06T15:48:36.272870",
+    "loyalty_points": 9139,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST3977",
+    "first_name": "Emily",
+    "last_name": "Jones",
+    "email": "user7498@example.com",
+    "phone": "+1-555-322-8698",
+    "registration_date": "2025-12-19T15:48:36.272873",
+    "loyalty_points": 400,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST2829",
+    "first_name": "John",
+    "last_name": "Garcia",
+    "email": "user1792@example.com",
+    "phone": "+1-555-893-4745",
+    "registration_date": "2025-09-03T15:48:36.272876",
+    "loyalty_points": 5445,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST8653",
+    "first_name": "John",
+    "last_name": "Williams",
+    "email": "user953@example.com",
+    "phone": "+1-555-895-1000",
+    "registration_date": "2025-05-25T15:48:36.272879",
+    "loyalty_points": 140,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST2958",
+    "first_name": "Sarah",
+    "last_name": "Brown",
+    "email": "user4637@example.com",
+    "phone": "+1-555-375-9217",
+    "registration_date": "2025-05-22T15:48:36.272882",
+    "loyalty_points": 8897,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST8910",
+    "first_name": "John",
+    "last_name": "Williams",
+    "email": "user8295@example.com",
+    "phone": "+1-555-647-7334",
+    "registration_date": "2024-12-04T15:48:36.272885",
+    "loyalty_points": 3077,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST5050",
+    "first_name": "Robert",
+    "last_name": "Davis",
+    "email": "user3334@example.com",
+    "phone": "+1-555-450-6562",
+    "registration_date": "2025-09-06T15:48:36.272888",
+    "loyalty_points": 4155,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST5814",
+    "first_name": "Lisa",
+    "last_name": "Williams",
+    "email": "user858@example.com",
+    "phone": "+1-555-678-1588",
+    "registration_date": "2024-12-22T15:48:36.272891",
+    "loyalty_points": 7311,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST3832",
+    "first_name": "Jane",
+    "last_name": "Brown",
+    "email": "user4798@example.com",
+    "phone": "+1-555-822-5985",
+    "registration_date": "2025-01-21T15:48:36.272894",
+    "loyalty_points": 9787,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST6010",
+    "first_name": "Emily",
+    "last_name": "Brown",
+    "email": "user7554@example.com",
+    "phone": "+1-555-732-9222",
+    "registration_date": "2025-06-18T15:48:36.272897",
+    "loyalty_points": 2092,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST2588",
+    "first_name": "Lisa",
+    "last_name": "Miller",
+    "email": "user6036@example.com",
+    "phone": "+1-555-794-4806",
+    "registration_date": "2024-11-28T15:48:36.272901",
+    "loyalty_points": 2523,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST2794",
+    "first_name": "Emily",
+    "last_name": "Davis",
+    "email": "user1475@example.com",
+    "phone": "+1-555-969-8369",
+    "registration_date": "2025-03-02T15:48:36.272904",
+    "loyalty_points": 1720,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST2226",
+    "first_name": "Michael",
+    "last_name": "Johnson",
+    "email": "user7952@example.com",
+    "phone": "+1-555-781-2966",
+    "registration_date": "2024-10-27T15:48:36.272907",
+    "loyalty_points": 8900,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST9193",
+    "first_name": "Michael",
+    "last_name": "Brown",
+    "email": "user2064@example.com",
+    "phone": "+1-555-300-3818",
+    "registration_date": "2025-10-22T15:48:36.272910",
+    "loyalty_points": 8014,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST7888",
+    "first_name": "David",
+    "last_name": "Garcia",
+    "email": "user4437@example.com",
+    "phone": "+1-555-676-7787",
+    "registration_date": "2025-06-08T15:48:36.272913",
+    "loyalty_points": 25,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST4564",
+    "first_name": "Sarah",
+    "last_name": "Miller",
+    "email": "user64@example.com",
+    "phone": "+1-555-308-7929",
+    "registration_date": "2025-06-18T15:48:36.272916",
+    "loyalty_points": 6833,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST9819",
+    "first_name": "David",
+    "last_name": "Jones",
+    "email": "user1102@example.com",
+    "phone": "+1-555-738-4594",
+    "registration_date": "2025-05-21T15:48:36.272920",
+    "loyalty_points": 9791,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST3976",
+    "first_name": "David",
+    "last_name": "Williams",
+    "email": "user1846@example.com",
+    "phone": "+1-555-346-7286",
+    "registration_date": "2024-12-11T15:48:36.272922",
+    "loyalty_points": 9115,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST9269",
+    "first_name": "Sarah",
+    "last_name": "Davis",
+    "email": "user6058@example.com",
+    "phone": "+1-555-441-7990",
+    "registration_date": "2025-06-15T15:48:36.272926",
+    "loyalty_points": 2384,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST4166",
+    "first_name": "Sarah",
+    "last_name": "Miller",
+    "email": "user1042@example.com",
+    "phone": "+1-555-379-5796",
+    "registration_date": "2025-07-09T15:48:36.272928",
+    "loyalty_points": 9957,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST5522",
+    "first_name": "Robert",
+    "last_name": "Miller",
+    "email": "user4701@example.com",
+    "phone": "+1-555-134-4696",
+    "registration_date": "2025-03-03T15:48:36.272932",
+    "loyalty_points": 1609,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST2674",
+    "first_name": "Jane",
+    "last_name": "Jones",
+    "email": "user7690@example.com",
+    "phone": "+1-555-440-6895",
+    "registration_date": "2025-09-20T15:48:36.272935",
+    "loyalty_points": 5818,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST4973",
+    "first_name": "Lisa",
+    "last_name": "Williams",
+    "email": "user9083@example.com",
+    "phone": "+1-555-457-9994",
+    "registration_date": "2025-09-18T15:48:36.272937",
+    "loyalty_points": 8983,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST3540",
+    "first_name": "Sarah",
+    "last_name": "Brown",
+    "email": "user2892@example.com",
+    "phone": "+1-555-903-4227",
+    "registration_date": "2024-06-13T15:48:36.272940",
+    "loyalty_points": 4497,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST4720",
+    "first_name": "Emily",
+    "last_name": "Brown",
+    "email": "user2407@example.com",
+    "phone": "+1-555-358-4304",
+    "registration_date": "2025-08-17T15:48:36.272944",
+    "loyalty_points": 7514,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST7106",
+    "first_name": "Robert",
+    "last_name": "Williams",
+    "email": "user7611@example.com",
+    "phone": "+1-555-230-3592",
+    "registration_date": "2024-09-22T15:48:36.272947",
+    "loyalty_points": 7044,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST9746",
+    "first_name": "John",
+    "last_name": "Johnson",
+    "email": "user709@example.com",
+    "phone": "+1-555-824-3998",
+    "registration_date": "2025-03-04T15:48:36.272950",
+    "loyalty_points": 7273,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST3943",
+    "first_name": "John",
+    "last_name": "Smith",
+    "email": "user8756@example.com",
+    "phone": "+1-555-401-7305",
+    "registration_date": "2026-01-23T15:48:36.272953",
+    "loyalty_points": 279,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST1468",
+    "first_name": "Emily",
+    "last_name": "Davis",
+    "email": "user1155@example.com",
+    "phone": "+1-555-516-3774",
+    "registration_date": "2024-07-06T15:48:36.272955",
+    "loyalty_points": 8923,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST8793",
+    "first_name": "John",
+    "last_name": "Garcia",
+    "email": "user8295@example.com",
+    "phone": "+1-555-831-2273",
+    "registration_date": "2024-08-21T15:48:36.272958",
+    "loyalty_points": 7141,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST5021",
+    "first_name": "Michael",
+    "last_name": "Garcia",
+    "email": "user523@example.com",
+    "phone": "+1-555-328-2481",
+    "registration_date": "2026-01-07T15:48:36.272962",
+    "loyalty_points": 3098,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST5534",
+    "first_name": "Lisa",
+    "last_name": "Johnson",
+    "email": "user2560@example.com",
+    "phone": "+1-555-570-6391",
+    "registration_date": "2025-12-30T15:48:36.272965",
+    "loyalty_points": 617,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST3975",
+    "first_name": "Michael",
+    "last_name": "Brown",
+    "email": "user1103@example.com",
+    "phone": "+1-555-704-7678",
+    "registration_date": "2024-04-10T15:48:36.272968",
+    "loyalty_points": 1801,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST2999",
+    "first_name": "Michael",
+    "last_name": "Williams",
+    "email": "user2430@example.com",
+    "phone": "+1-555-311-8797",
+    "registration_date": "2024-10-12T15:48:36.272972",
+    "loyalty_points": 1626,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST4643",
+    "first_name": "Michael",
+    "last_name": "Davis",
+    "email": "user3766@example.com",
+    "phone": "+1-555-246-6743",
+    "registration_date": "2024-08-18T15:48:36.272974",
+    "loyalty_points": 5770,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST4844",
+    "first_name": "David",
+    "last_name": "Miller",
+    "email": "user8177@example.com",
+    "phone": "+1-555-418-6141",
+    "registration_date": "2025-04-01T15:48:36.272977",
+    "loyalty_points": 9037,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST7404",
+    "first_name": "Michael",
+    "last_name": "Williams",
+    "email": "user6768@example.com",
+    "phone": "+1-555-911-3521",
+    "registration_date": "2024-03-18T15:48:36.272980",
+    "loyalty_points": 1083,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST3948",
+    "first_name": "Jane",
+    "last_name": "Williams",
+    "email": "user4435@example.com",
+    "phone": "+1-555-204-4847",
+    "registration_date": "2025-10-26T15:48:36.272983",
+    "loyalty_points": 7541,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST4092",
+    "first_name": "John",
+    "last_name": "Garcia",
+    "email": "user4853@example.com",
+    "phone": "+1-555-726-2404",
+    "registration_date": "2025-04-16T15:48:36.272986",
+    "loyalty_points": 3426,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST9504",
+    "first_name": "John",
+    "last_name": "Jones",
+    "email": "user6829@example.com",
+    "phone": "+1-555-111-2749",
+    "registration_date": "2025-07-19T15:48:36.272989",
+    "loyalty_points": 8005,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST8185",
+    "first_name": "David",
+    "last_name": "Brown",
+    "email": "user6739@example.com",
+    "phone": "+1-555-110-4312",
+    "registration_date": "2024-08-06T15:48:36.272992",
+    "loyalty_points": 9958,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST1016",
+    "first_name": "Sarah",
+    "last_name": "Garcia",
+    "email": "user1475@example.com",
+    "phone": "+1-555-292-8483",
+    "registration_date": "2024-11-28T15:48:36.272995",
+    "loyalty_points": 2271,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST2584",
+    "first_name": "John",
+    "last_name": "Garcia",
+    "email": "user3119@example.com",
+    "phone": "+1-555-876-2828",
+    "registration_date": "2024-02-23T15:48:36.272998",
+    "loyalty_points": 9067,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST1641",
+    "first_name": "Sarah",
+    "last_name": "Johnson",
+    "email": "user7600@example.com",
+    "phone": "+1-555-971-9620",
+    "registration_date": "2025-12-15T15:48:36.273001",
+    "loyalty_points": 6710,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST8226",
+    "first_name": "John",
+    "last_name": "Williams",
+    "email": "user4100@example.com",
+    "phone": "+1-555-723-1596",
+    "registration_date": "2025-08-06T15:48:36.273005",
+    "loyalty_points": 6245,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST6427",
+    "first_name": "Michael",
+    "last_name": "Davis",
+    "email": "user3985@example.com",
+    "phone": "+1-555-270-9131",
+    "registration_date": "2024-04-21T15:48:36.273008",
+    "loyalty_points": 5919,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST1350",
+    "first_name": "Jane",
+    "last_name": "Johnson",
+    "email": "user1371@example.com",
+    "phone": "+1-555-843-6605",
+    "registration_date": "2025-05-21T15:48:36.273011",
+    "loyalty_points": 6221,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST9711",
+    "first_name": "Emily",
+    "last_name": "Garcia",
+    "email": "user5302@example.com",
+    "phone": "+1-555-614-8717",
+    "registration_date": "2025-11-19T15:48:36.273014",
+    "loyalty_points": 3763,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST7421",
+    "first_name": "Emily",
+    "last_name": "Miller",
+    "email": "user7847@example.com",
+    "phone": "+1-555-248-8306",
+    "registration_date": "2025-09-28T15:48:36.273016",
+    "loyalty_points": 7841,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST5077",
+    "first_name": "Lisa",
+    "last_name": "Johnson",
+    "email": "user8540@example.com",
+    "phone": "+1-555-979-1493",
+    "registration_date": "2024-03-04T15:48:36.273019",
+    "loyalty_points": 6156,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST5381",
+    "first_name": "Michael",
+    "last_name": "Davis",
+    "email": "user1989@example.com",
+    "phone": "+1-555-387-1690",
+    "registration_date": "2024-07-27T15:48:36.273022",
+    "loyalty_points": 7782,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST3767",
+    "first_name": "Emily",
+    "last_name": "Johnson",
+    "email": "user2338@example.com",
+    "phone": "+1-555-512-8195",
+    "registration_date": "2025-03-19T15:48:36.273025",
+    "loyalty_points": 3754,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST9193",
+    "first_name": "John",
+    "last_name": "Garcia",
+    "email": "user2297@example.com",
+    "phone": "+1-555-952-4921",
+    "registration_date": "2024-12-01T15:48:36.273028",
+    "loyalty_points": 4108,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST4035",
+    "first_name": "Jane",
+    "last_name": "Williams",
+    "email": "user3415@example.com",
+    "phone": "+1-555-777-1341",
+    "registration_date": "2025-05-12T15:48:36.273031",
+    "loyalty_points": 8809,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST7721",
+    "first_name": "Jane",
+    "last_name": "Miller",
+    "email": "user7647@example.com",
+    "phone": "+1-555-337-2392",
+    "registration_date": "2024-11-13T15:48:36.273034",
+    "loyalty_points": 3349,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST5340",
+    "first_name": "Emily",
+    "last_name": "Miller",
+    "email": "user5961@example.com",
+    "phone": "+1-555-494-1604",
+    "registration_date": "2025-05-27T15:48:36.273038",
+    "loyalty_points": 2581,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST7999",
+    "first_name": "John",
+    "last_name": "Brown",
+    "email": "user3722@example.com",
+    "phone": "+1-555-523-7381",
+    "registration_date": "2024-08-15T15:48:36.273041",
+    "loyalty_points": 2357,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST3408",
+    "first_name": "Robert",
+    "last_name": "Smith",
+    "email": "user25@example.com",
+    "phone": "+1-555-305-4546",
+    "registration_date": "2025-06-29T15:48:36.273044",
+    "loyalty_points": 2784,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST6563",
+    "first_name": "David",
+    "last_name": "Williams",
+    "email": "user5846@example.com",
+    "phone": "+1-555-590-7683",
+    "registration_date": "2025-04-07T15:48:36.273047",
+    "loyalty_points": 3348,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST7098",
+    "first_name": "John",
+    "last_name": "Smith",
+    "email": "user9736@example.com",
+    "phone": "+1-555-962-3371",
+    "registration_date": "2024-04-21T15:48:36.273050",
+    "loyalty_points": 2888,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST3719",
+    "first_name": "John",
+    "last_name": "Brown",
+    "email": "user8842@example.com",
+    "phone": "+1-555-285-3670",
+    "registration_date": "2024-05-12T15:48:36.273053",
+    "loyalty_points": 98,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST9796",
+    "first_name": "Lisa",
+    "last_name": "Garcia",
+    "email": "user9760@example.com",
+    "phone": "+1-555-667-3955",
+    "registration_date": "2025-07-24T15:48:36.273056",
+    "loyalty_points": 926,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST3671",
+    "first_name": "John",
+    "last_name": "Brown",
+    "email": "user3056@example.com",
+    "phone": "+1-555-165-4601",
+    "registration_date": "2024-05-09T15:48:36.273059",
+    "loyalty_points": 3628,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST9967",
+    "first_name": "Sarah",
+    "last_name": "Johnson",
+    "email": "user2339@example.com",
+    "phone": "+1-555-311-2306",
+    "registration_date": "2025-12-25T15:48:36.273062",
+    "loyalty_points": 5774,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST2927",
+    "first_name": "Robert",
+    "last_name": "Johnson",
+    "email": "user5788@example.com",
+    "phone": "+1-555-359-7902",
+    "registration_date": "2024-04-06T15:48:36.273065",
+    "loyalty_points": 3189,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST1242",
+    "first_name": "David",
+    "last_name": "Jones",
+    "email": "user5318@example.com",
+    "phone": "+1-555-287-3867",
+    "registration_date": "2024-06-03T15:48:36.273068",
+    "loyalty_points": 8913,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST4771",
+    "first_name": "Jane",
+    "last_name": "Brown",
+    "email": "user1410@example.com",
+    "phone": "+1-555-864-5364",
+    "registration_date": "2024-06-01T15:48:36.273071",
+    "loyalty_points": 3103,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST8426",
+    "first_name": "John",
+    "last_name": "Smith",
+    "email": "user9405@example.com",
+    "phone": "+1-555-828-4181",
+    "registration_date": "2024-08-01T15:48:36.273074",
+    "loyalty_points": 3652,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST1133",
+    "first_name": "Jane",
+    "last_name": "Williams",
+    "email": "user6446@example.com",
+    "phone": "+1-555-281-1860",
+    "registration_date": "2024-06-18T15:48:36.273077",
+    "loyalty_points": 5472,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST6028",
+    "first_name": "John",
+    "last_name": "Johnson",
+    "email": "user4835@example.com",
+    "phone": "+1-555-160-4199",
+    "registration_date": "2024-11-03T15:48:36.273080",
+    "loyalty_points": 221,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST8306",
+    "first_name": "Sarah",
+    "last_name": "Garcia",
+    "email": "user1681@example.com",
+    "phone": "+1-555-755-1612",
+    "registration_date": "2024-08-17T15:48:36.273083",
+    "loyalty_points": 7586,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST5364",
+    "first_name": "Sarah",
+    "last_name": "Brown",
+    "email": "user9971@example.com",
+    "phone": "+1-555-756-4848",
+    "registration_date": "2025-10-10T15:48:36.273086",
+    "loyalty_points": 7037,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST4286",
+    "first_name": "Sarah",
+    "last_name": "Brown",
+    "email": "user8832@example.com",
+    "phone": "+1-555-834-2748",
+    "registration_date": "2025-03-15T15:48:36.273090",
+    "loyalty_points": 1374,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST6685",
+    "first_name": "Sarah",
+    "last_name": "Davis",
+    "email": "user7092@example.com",
+    "phone": "+1-555-219-6543",
+    "registration_date": "2025-09-20T15:48:36.273093",
+    "loyalty_points": 1149,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST6982",
+    "first_name": "Jane",
+    "last_name": "Garcia",
+    "email": "user6464@example.com",
+    "phone": "+1-555-193-1711",
+    "registration_date": "2025-10-07T15:48:36.273096",
+    "loyalty_points": 74,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST8590",
+    "first_name": "Emily",
+    "last_name": "Brown",
+    "email": "user3518@example.com",
+    "phone": "+1-555-508-1790",
+    "registration_date": "2024-10-20T15:48:36.273099",
+    "loyalty_points": 9423,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST4049",
+    "first_name": "Emily",
+    "last_name": "Miller",
+    "email": "user4552@example.com",
+    "phone": "+1-555-667-9098",
+    "registration_date": "2025-11-04T15:48:36.273102",
+    "loyalty_points": 2819,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST2965",
+    "first_name": "Jane",
+    "last_name": "Williams",
+    "email": "user1884@example.com",
+    "phone": "+1-555-738-9561",
+    "registration_date": "2024-08-03T15:48:36.273105",
+    "loyalty_points": 3994,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST7799",
+    "first_name": "Jane",
+    "last_name": "Garcia",
+    "email": "user4607@example.com",
+    "phone": "+1-555-594-8358",
+    "registration_date": "2024-05-05T15:48:36.273108",
+    "loyalty_points": 2475,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST6748",
+    "first_name": "John",
+    "last_name": "Brown",
+    "email": "user3984@example.com",
+    "phone": "+1-555-463-4311",
+    "registration_date": "2025-03-27T15:48:36.273111",
+    "loyalty_points": 2934,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST1465",
+    "first_name": "Jane",
+    "last_name": "Smith",
+    "email": "user874@example.com",
+    "phone": "+1-555-544-3269",
+    "registration_date": "2024-02-28T15:48:36.273114",
+    "loyalty_points": 2160,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST1768",
+    "first_name": "Robert",
+    "last_name": "Smith",
+    "email": "user5256@example.com",
+    "phone": "+1-555-937-1843",
+    "registration_date": "2024-05-24T15:48:36.273117",
+    "loyalty_points": 3870,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST8446",
+    "first_name": "Jane",
+    "last_name": "Brown",
+    "email": "user1@example.com",
+    "phone": "+1-555-778-1171",
+    "registration_date": "2025-09-01T15:48:36.273120",
+    "loyalty_points": 3728,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST6941",
+    "first_name": "Jane",
+    "last_name": "Smith",
+    "email": "user8375@example.com",
+    "phone": "+1-555-917-2968",
+    "registration_date": "2024-06-22T15:48:36.273124",
+    "loyalty_points": 3140,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST7825",
+    "first_name": "John",
+    "last_name": "Williams",
+    "email": "user4396@example.com",
+    "phone": "+1-555-168-5426",
+    "registration_date": "2024-06-11T15:48:36.273126",
+    "loyalty_points": 6473,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST2946",
+    "first_name": "Emily",
+    "last_name": "Brown",
+    "email": "user1120@example.com",
+    "phone": "+1-555-702-4800",
+    "registration_date": "2025-09-13T15:48:36.273130",
+    "loyalty_points": 4286,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST1003",
+    "first_name": "Michael",
+    "last_name": "Johnson",
+    "email": "user3801@example.com",
+    "phone": "+1-555-582-6963",
+    "registration_date": "2025-10-13T15:48:36.273132",
+    "loyalty_points": 7829,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST4499",
+    "first_name": "Lisa",
+    "last_name": "Jones",
+    "email": "user1743@example.com",
+    "phone": "+1-555-734-4545",
+    "registration_date": "2024-04-13T15:48:36.273136",
+    "loyalty_points": 987,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST5117",
+    "first_name": "David",
+    "last_name": "Garcia",
+    "email": "user8153@example.com",
+    "phone": "+1-555-188-9708",
+    "registration_date": "2026-01-19T15:48:36.273138",
+    "loyalty_points": 93,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST9590",
+    "first_name": "Michael",
+    "last_name": "Davis",
+    "email": "user5260@example.com",
+    "phone": "+1-555-319-6202",
+    "registration_date": "2025-10-01T15:48:36.273142",
+    "loyalty_points": 4066,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST8490",
+    "first_name": "Emily",
+    "last_name": "Garcia",
+    "email": "user9288@example.com",
+    "phone": "+1-555-459-4879",
+    "registration_date": "2024-07-03T15:48:36.273145",
+    "loyalty_points": 1032,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST4916",
+    "first_name": "Lisa",
+    "last_name": "Williams",
+    "email": "user1305@example.com",
+    "phone": "+1-555-344-2245",
+    "registration_date": "2025-11-05T15:48:36.273148",
+    "loyalty_points": 7624,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST7180",
+    "first_name": "John",
+    "last_name": "Brown",
+    "email": "user1721@example.com",
+    "phone": "+1-555-922-2679",
+    "registration_date": "2025-08-26T15:48:36.273151",
+    "loyalty_points": 3213,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST4651",
+    "first_name": "Michael",
+    "last_name": "Johnson",
+    "email": "user7889@example.com",
+    "phone": "+1-555-419-1004",
+    "registration_date": "2025-06-20T15:48:36.273154",
+    "loyalty_points": 4463,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST2260",
+    "first_name": "Lisa",
+    "last_name": "Johnson",
+    "email": "user3799@example.com",
+    "phone": "+1-555-873-9475",
+    "registration_date": "2025-04-08T15:48:36.273157",
+    "loyalty_points": 2790,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST5987",
+    "first_name": "Lisa",
+    "last_name": "Brown",
+    "email": "user4391@example.com",
+    "phone": "+1-555-293-7440",
+    "registration_date": "2025-03-31T15:48:36.273160",
+    "loyalty_points": 5144,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST4352",
+    "first_name": "David",
+    "last_name": "Jones",
+    "email": "user3575@example.com",
+    "phone": "+1-555-469-5302",
+    "registration_date": "2024-12-15T15:48:36.273163",
+    "loyalty_points": 8752,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST6599",
+    "first_name": "David",
+    "last_name": "Miller",
+    "email": "user4521@example.com",
+    "phone": "+1-555-401-6043",
+    "registration_date": "2024-12-01T15:48:36.273166",
+    "loyalty_points": 2498,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST3027",
+    "first_name": "John",
+    "last_name": "Garcia",
+    "email": "user987@example.com",
+    "phone": "+1-555-135-8273",
+    "registration_date": "2025-12-11T15:48:36.273169",
+    "loyalty_points": 9218,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST7037",
+    "first_name": "Michael",
+    "last_name": "Brown",
+    "email": "user8022@example.com",
+    "phone": "+1-555-575-1901",
+    "registration_date": "2025-01-06T15:48:36.273172",
+    "loyalty_points": 5114,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST5043",
+    "first_name": "Michael",
+    "last_name": "Miller",
+    "email": "user9817@example.com",
+    "phone": "+1-555-149-9394",
+    "registration_date": "2024-09-03T15:48:36.273175",
+    "loyalty_points": 1128,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST5559",
+    "first_name": "Michael",
+    "last_name": "Brown",
+    "email": "user7066@example.com",
+    "phone": "+1-555-681-1174",
+    "registration_date": "2024-03-15T15:48:36.273178",
+    "loyalty_points": 4107,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST9571",
+    "first_name": "Sarah",
+    "last_name": "Miller",
+    "email": "user9660@example.com",
+    "phone": "+1-555-502-6749",
+    "registration_date": "2024-07-23T15:48:36.273181",
+    "loyalty_points": 5803,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST6714",
+    "first_name": "Emily",
+    "last_name": "Davis",
+    "email": "user4411@example.com",
+    "phone": "+1-555-240-9102",
+    "registration_date": "2024-06-13T15:48:36.273184",
+    "loyalty_points": 3361,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST5608",
+    "first_name": "Jane",
+    "last_name": "Davis",
+    "email": "user1688@example.com",
+    "phone": "+1-555-206-7353",
+    "registration_date": "2025-03-19T15:48:36.273187",
+    "loyalty_points": 8419,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST3910",
+    "first_name": "Lisa",
+    "last_name": "Williams",
+    "email": "user86@example.com",
+    "phone": "+1-555-974-4364",
+    "registration_date": "2024-08-23T15:48:36.273190",
+    "loyalty_points": 9002,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST4892",
+    "first_name": "Sarah",
+    "last_name": "Williams",
+    "email": "user5018@example.com",
+    "phone": "+1-555-276-4070",
+    "registration_date": "2024-12-27T15:48:36.273193",
+    "loyalty_points": 4236,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST5185",
+    "first_name": "Robert",
+    "last_name": "Miller",
+    "email": "user7377@example.com",
+    "phone": "+1-555-900-7502",
+    "registration_date": "2024-07-17T15:48:36.273196",
+    "loyalty_points": 4998,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST4785",
+    "first_name": "Lisa",
+    "last_name": "Williams",
+    "email": "user8339@example.com",
+    "phone": "+1-555-750-8451",
+    "registration_date": "2025-03-06T15:48:36.273199",
+    "loyalty_points": 6633,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST6148",
+    "first_name": "Lisa",
+    "last_name": "Jones",
+    "email": "user1720@example.com",
+    "phone": "+1-555-505-3686",
+    "registration_date": "2024-07-05T15:48:36.273202",
+    "loyalty_points": 7644,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST7834",
+    "first_name": "Jane",
+    "last_name": "Jones",
+    "email": "user4208@example.com",
+    "phone": "+1-555-937-5865",
+    "registration_date": "2025-11-21T15:48:36.273205",
+    "loyalty_points": 7931,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST6570",
+    "first_name": "Jane",
+    "last_name": "Brown",
+    "email": "user4277@example.com",
+    "phone": "+1-555-712-3329",
+    "registration_date": "2025-07-14T15:48:36.273208",
+    "loyalty_points": 5383,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST7080",
+    "first_name": "Robert",
+    "last_name": "Garcia",
+    "email": "user2786@example.com",
+    "phone": "+1-555-906-8527",
+    "registration_date": "2024-09-16T15:48:36.273211",
+    "loyalty_points": 8419,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST9718",
+    "first_name": "John",
+    "last_name": "Smith",
+    "email": "user5776@example.com",
+    "phone": "+1-555-825-6495",
+    "registration_date": "2024-04-20T15:48:36.273215",
+    "loyalty_points": 7482,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST8932",
+    "first_name": "Robert",
+    "last_name": "Miller",
+    "email": "user9023@example.com",
+    "phone": "+1-555-880-7120",
+    "registration_date": "2024-04-12T15:48:36.273218",
+    "loyalty_points": 6671,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST8764",
+    "first_name": "David",
+    "last_name": "Williams",
+    "email": "user128@example.com",
+    "phone": "+1-555-855-2122",
+    "registration_date": "2025-03-28T15:48:36.273221",
+    "loyalty_points": 3707,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST2380",
+    "first_name": "Robert",
+    "last_name": "Williams",
+    "email": "user8321@example.com",
+    "phone": "+1-555-787-3831",
+    "registration_date": "2024-11-04T15:48:36.273223",
+    "loyalty_points": 5429,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST2782",
+    "first_name": "Sarah",
+    "last_name": "Smith",
+    "email": "user6079@example.com",
+    "phone": "+1-555-160-7438",
+    "registration_date": "2024-09-10T15:48:36.273226",
+    "loyalty_points": 9610,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST6390",
+    "first_name": "Lisa",
+    "last_name": "Miller",
+    "email": "user5187@example.com",
+    "phone": "+1-555-921-3342",
+    "registration_date": "2024-09-20T15:48:36.273229",
+    "loyalty_points": 2345,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST2294",
+    "first_name": "Lisa",
+    "last_name": "Smith",
+    "email": "user3522@example.com",
+    "phone": "+1-555-305-9045",
+    "registration_date": "2025-12-07T15:48:36.273232",
+    "loyalty_points": 6436,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST9084",
+    "first_name": "David",
+    "last_name": "Williams",
+    "email": "user2535@example.com",
+    "phone": "+1-555-200-4776",
+    "registration_date": "2024-06-15T15:48:36.273235",
+    "loyalty_points": 3513,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST9865",
+    "first_name": "Michael",
+    "last_name": "Johnson",
+    "email": "user7353@example.com",
+    "phone": "+1-555-987-8380",
+    "registration_date": "2025-06-08T15:48:36.273238",
+    "loyalty_points": 4920,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST4397",
+    "first_name": "Lisa",
+    "last_name": "Johnson",
+    "email": "user9520@example.com",
+    "phone": "+1-555-123-4796",
+    "registration_date": "2025-01-20T15:48:36.273241",
+    "loyalty_points": 4726,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST9283",
+    "first_name": "Emily",
+    "last_name": "Davis",
+    "email": "user4151@example.com",
+    "phone": "+1-555-529-7935",
+    "registration_date": "2024-10-27T15:48:36.273244",
+    "loyalty_points": 7923,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST6736",
+    "first_name": "Jane",
+    "last_name": "Jones",
+    "email": "user3733@example.com",
+    "phone": "+1-555-891-8028",
+    "registration_date": "2025-03-10T15:48:36.273247",
+    "loyalty_points": 7223,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST8784",
+    "first_name": "Robert",
+    "last_name": "Brown",
+    "email": "user6742@example.com",
+    "phone": "+1-555-886-5624",
+    "registration_date": "2025-10-12T15:48:36.273251",
+    "loyalty_points": 4706,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST6143",
+    "first_name": "David",
+    "last_name": "Garcia",
+    "email": "user9686@example.com",
+    "phone": "+1-555-231-9334",
+    "registration_date": "2025-09-14T15:48:36.273254",
+    "loyalty_points": 5025,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST2456",
+    "first_name": "Robert",
+    "last_name": "Jones",
+    "email": "user2854@example.com",
+    "phone": "+1-555-688-1189",
+    "registration_date": "2024-09-08T15:48:36.273257",
+    "loyalty_points": 7299,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST1958",
+    "first_name": "Michael",
+    "last_name": "Smith",
+    "email": "user1709@example.com",
+    "phone": "+1-555-116-7454",
+    "registration_date": "2025-08-02T15:48:36.273260",
+    "loyalty_points": 1569,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST3181",
+    "first_name": "Robert",
+    "last_name": "Jones",
+    "email": "user9182@example.com",
+    "phone": "+1-555-933-2826",
+    "registration_date": "2025-07-22T15:48:36.273263",
+    "loyalty_points": 8640,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST5361",
+    "first_name": "Robert",
+    "last_name": "Smith",
+    "email": "user2098@example.com",
+    "phone": "+1-555-617-2646",
+    "registration_date": "2025-12-28T15:48:36.273266",
+    "loyalty_points": 2342,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST4998",
+    "first_name": "David",
+    "last_name": "Brown",
+    "email": "user4587@example.com",
+    "phone": "+1-555-181-4185",
+    "registration_date": "2025-03-31T15:48:36.273269",
+    "loyalty_points": 7651,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST3021",
+    "first_name": "Robert",
+    "last_name": "Smith",
+    "email": "user3470@example.com",
+    "phone": "+1-555-936-4320",
+    "registration_date": "2025-10-21T15:48:36.273272",
+    "loyalty_points": 1507,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST7231",
+    "first_name": "David",
+    "last_name": "Davis",
+    "email": "user603@example.com",
+    "phone": "+1-555-177-7600",
+    "registration_date": "2024-08-21T15:48:36.273275",
+    "loyalty_points": 9385,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST6493",
+    "first_name": "David",
+    "last_name": "Smith",
+    "email": "user5556@example.com",
+    "phone": "+1-555-145-4568",
+    "registration_date": "2025-06-06T15:48:36.273277",
+    "loyalty_points": 1876,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST8065",
+    "first_name": "Lisa",
+    "last_name": "Williams",
+    "email": "user3301@example.com",
+    "phone": "+1-555-771-8110",
+    "registration_date": "2024-04-29T15:48:36.273281",
+    "loyalty_points": 1793,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST6604",
+    "first_name": "David",
+    "last_name": "Smith",
+    "email": "user1573@example.com",
+    "phone": "+1-555-291-8539",
+    "registration_date": "2025-01-30T15:48:36.273284",
+    "loyalty_points": 276,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST3381",
+    "first_name": "John",
+    "last_name": "Brown",
+    "email": "user4681@example.com",
+    "phone": "+1-555-497-4973",
+    "registration_date": "2025-09-19T15:48:36.273288",
+    "loyalty_points": 6240,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST4436",
+    "first_name": "Michael",
+    "last_name": "Johnson",
+    "email": "user3512@example.com",
+    "phone": "+1-555-107-2067",
+    "registration_date": "2024-12-02T15:48:36.273291",
+    "loyalty_points": 5863,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST5258",
+    "first_name": "Sarah",
+    "last_name": "Johnson",
+    "email": "user6467@example.com",
+    "phone": "+1-555-523-1049",
+    "registration_date": "2025-10-02T15:48:36.273295",
+    "loyalty_points": 4492,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST5158",
+    "first_name": "John",
+    "last_name": "Williams",
+    "email": "user4963@example.com",
+    "phone": "+1-555-856-1905",
+    "registration_date": "2024-11-27T15:48:36.273298",
+    "loyalty_points": 1270,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST9763",
+    "first_name": "Lisa",
+    "last_name": "Williams",
+    "email": "user7565@example.com",
+    "phone": "+1-555-105-4732",
+    "registration_date": "2024-11-01T15:48:36.273301",
+    "loyalty_points": 866,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST3661",
+    "first_name": "Lisa",
+    "last_name": "Smith",
+    "email": "user5106@example.com",
+    "phone": "+1-555-345-3358",
+    "registration_date": "2024-10-14T15:48:36.273304",
+    "loyalty_points": 7597,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST9436",
+    "first_name": "Jane",
+    "last_name": "Williams",
+    "email": "user3584@example.com",
+    "phone": "+1-555-517-2866",
+    "registration_date": "2025-04-26T15:48:36.273307",
+    "loyalty_points": 560,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST7323",
+    "first_name": "Robert",
+    "last_name": "Williams",
+    "email": "user3277@example.com",
+    "phone": "+1-555-309-9488",
+    "registration_date": "2024-11-02T15:48:36.273310",
+    "loyalty_points": 6738,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST5354",
+    "first_name": "John",
+    "last_name": "Davis",
+    "email": "user9107@example.com",
+    "phone": "+1-555-174-6445",
+    "registration_date": "2025-01-03T15:48:36.273313",
+    "loyalty_points": 4543,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST2003",
+    "first_name": "Jane",
+    "last_name": "Johnson",
+    "email": "user831@example.com",
+    "phone": "+1-555-155-4120",
+    "registration_date": "2024-06-14T15:48:36.273317",
+    "loyalty_points": 8208,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST3042",
+    "first_name": "David",
+    "last_name": "Miller",
+    "email": "user9036@example.com",
+    "phone": "+1-555-694-6631",
+    "registration_date": "2024-10-21T15:48:36.273320",
+    "loyalty_points": 3191,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST3731",
+    "first_name": "David",
+    "last_name": "Williams",
+    "email": "user9808@example.com",
+    "phone": "+1-555-748-1278",
+    "registration_date": "2024-10-23T15:48:36.273323",
+    "loyalty_points": 5201,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST6444",
+    "first_name": "Sarah",
+    "last_name": "Davis",
+    "email": "user2509@example.com",
+    "phone": "+1-555-863-5859",
+    "registration_date": "2024-04-05T15:48:36.273326",
+    "loyalty_points": 7784,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST2500",
+    "first_name": "Michael",
+    "last_name": "Williams",
+    "email": "user3209@example.com",
+    "phone": "+1-555-900-7541",
+    "registration_date": "2024-08-03T15:48:36.273329",
+    "loyalty_points": 2653,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST8801",
+    "first_name": "Jane",
+    "last_name": "Williams",
+    "email": "user384@example.com",
+    "phone": "+1-555-815-1605",
+    "registration_date": "2025-04-17T15:48:36.273332",
+    "loyalty_points": 2236,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST5590",
+    "first_name": "Jane",
+    "last_name": "Johnson",
+    "email": "user196@example.com",
+    "phone": "+1-555-207-4248",
+    "registration_date": "2024-09-12T15:48:36.273335",
+    "loyalty_points": 4941,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST3459",
+    "first_name": "Robert",
+    "last_name": "Smith",
+    "email": "user561@example.com",
+    "phone": "+1-555-988-8384",
+    "registration_date": "2024-03-12T15:48:36.273338",
+    "loyalty_points": 9418,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST4317",
+    "first_name": "Sarah",
+    "last_name": "Miller",
+    "email": "user4014@example.com",
+    "phone": "+1-555-331-8995",
+    "registration_date": "2025-04-03T15:48:36.273341",
+    "loyalty_points": 4886,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST6145",
+    "first_name": "Emily",
+    "last_name": "Johnson",
+    "email": "user6858@example.com",
+    "phone": "+1-555-170-6318",
+    "registration_date": "2025-10-10T15:48:36.273344",
+    "loyalty_points": 1528,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST6315",
+    "first_name": "Jane",
+    "last_name": "Williams",
+    "email": "user5523@example.com",
+    "phone": "+1-555-791-4207",
+    "registration_date": "2025-08-21T15:48:36.273347",
+    "loyalty_points": 7501,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST9904",
+    "first_name": "Robert",
+    "last_name": "Smith",
+    "email": "user8869@example.com",
+    "phone": "+1-555-127-3193",
+    "registration_date": "2025-03-08T15:48:36.273351",
+    "loyalty_points": 8135,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST1318",
+    "first_name": "David",
+    "last_name": "Garcia",
+    "email": "user8497@example.com",
+    "phone": "+1-555-178-1677",
+    "registration_date": "2025-05-07T15:48:36.273354",
+    "loyalty_points": 1222,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST5298",
+    "first_name": "John",
+    "last_name": "Smith",
+    "email": "user5610@example.com",
+    "phone": "+1-555-811-1490",
+    "registration_date": "2025-12-19T15:48:36.273356",
+    "loyalty_points": 13,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST6990",
+    "first_name": "Robert",
+    "last_name": "Johnson",
+    "email": "user8350@example.com",
+    "phone": "+1-555-804-4169",
+    "registration_date": "2025-07-16T15:48:36.273359",
+    "loyalty_points": 4352,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST5219",
+    "first_name": "Robert",
+    "last_name": "Williams",
+    "email": "user9999@example.com",
+    "phone": "+1-555-289-4361",
+    "registration_date": "2024-01-31T15:48:36.273362",
+    "loyalty_points": 6008,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST2910",
+    "first_name": "David",
+    "last_name": "Miller",
+    "email": "user7243@example.com",
+    "phone": "+1-555-913-8455",
+    "registration_date": "2025-03-11T15:48:36.273365",
+    "loyalty_points": 1178,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST5358",
+    "first_name": "David",
+    "last_name": "Williams",
+    "email": "user8075@example.com",
+    "phone": "+1-555-221-7019",
+    "registration_date": "2025-10-13T15:48:36.273368",
+    "loyalty_points": 681,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST3833",
+    "first_name": "Emily",
+    "last_name": "Williams",
+    "email": "user5352@example.com",
+    "phone": "+1-555-679-4510",
+    "registration_date": "2024-05-15T15:48:36.273371",
+    "loyalty_points": 9814,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST8640",
+    "first_name": "Jane",
+    "last_name": "Jones",
+    "email": "user3826@example.com",
+    "phone": "+1-555-663-2550",
+    "registration_date": "2025-01-04T15:48:36.273375",
+    "loyalty_points": 8323,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST7296",
+    "first_name": "John",
+    "last_name": "Johnson",
+    "email": "user1367@example.com",
+    "phone": "+1-555-576-6600",
+    "registration_date": "2024-09-05T15:48:36.273377",
+    "loyalty_points": 1216,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST9175",
+    "first_name": "John",
+    "last_name": "Davis",
+    "email": "user7346@example.com",
+    "phone": "+1-555-591-6293",
+    "registration_date": "2025-11-08T15:48:36.273380",
+    "loyalty_points": 1747,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST6416",
+    "first_name": "Emily",
+    "last_name": "Williams",
+    "email": "user1245@example.com",
+    "phone": "+1-555-492-4649",
+    "registration_date": "2024-07-07T15:48:36.273383",
+    "loyalty_points": 7819,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST7062",
+    "first_name": "Robert",
+    "last_name": "Davis",
+    "email": "user7652@example.com",
+    "phone": "+1-555-134-1189",
+    "registration_date": "2024-05-10T15:48:36.273386",
+    "loyalty_points": 9831,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST3726",
+    "first_name": "Michael",
+    "last_name": "Smith",
+    "email": "user3272@example.com",
+    "phone": "+1-555-414-1729",
+    "registration_date": "2025-03-25T15:48:36.273389",
+    "loyalty_points": 2618,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST5579",
+    "first_name": "David",
+    "last_name": "Jones",
+    "email": "user2506@example.com",
+    "phone": "+1-555-904-3023",
+    "registration_date": "2025-07-07T15:48:36.273392",
+    "loyalty_points": 5135,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST2000",
+    "first_name": "Robert",
+    "last_name": "Garcia",
+    "email": "user4458@example.com",
+    "phone": "+1-555-503-4056",
+    "registration_date": "2024-02-22T15:48:36.273395",
+    "loyalty_points": 2228,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST6203",
+    "first_name": "Sarah",
+    "last_name": "Miller",
+    "email": "user2545@example.com",
+    "phone": "+1-555-580-2750",
+    "registration_date": "2024-08-21T15:48:36.273398",
+    "loyalty_points": 6214,
+    "status": "active"
+  },
+  {
+    "customer_id": "CUST3485",
+    "first_name": "John",
+    "last_name": "Williams",
+    "email": "user6043@example.com",
+    "phone": "+1-555-644-3748",
+    "registration_date": "2025-11-25T15:48:36.273401",
+    "loyalty_points": 7996,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST2624",
+    "first_name": "David",
+    "last_name": "Davis",
+    "email": "user5330@example.com",
+    "phone": "+1-555-862-3837",
+    "registration_date": "2025-11-10T15:48:36.273404",
+    "loyalty_points": 9235,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST8077",
+    "first_name": "Jane",
+    "last_name": "Johnson",
+    "email": "user7853@example.com",
+    "phone": "+1-555-643-1701",
+    "registration_date": "2024-09-28T15:48:36.273407",
+    "loyalty_points": 3676,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST9006",
+    "first_name": "Sarah",
+    "last_name": "Brown",
+    "email": "user1695@example.com",
+    "phone": "+1-555-488-5575",
+    "registration_date": "2025-08-20T15:48:36.273410",
+    "loyalty_points": 7875,
+    "status": "suspended"
+  },
+  {
+    "customer_id": "CUST1632",
+    "first_name": "Sarah",
+    "last_name": "Miller",
+    "email": "user4917@example.com",
+    "phone": "+1-555-393-7229",
+    "registration_date": "2024-10-30T15:48:36.273413",
+    "loyalty_points": 7728,
+    "status": "inactive"
+  },
+  {
+    "customer_id": "CUST7560",
+    "first_name": "Michael",
+    "last_name": "Miller",
+    "email": "user8575@example.com",
+    "phone": "+1-555-200-2227",
+    "registration_date": "2025-07-05T15:48:36.273416",
+    "loyalty_points": 9281,
+    "status": "inactive"
+  }
+]

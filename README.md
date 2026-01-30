@@ -109,6 +109,9 @@ chmod +x scripts/*.sh
 
 # Generate sample data (optional but recommended)
 ./scripts/generate-data.sh
+
+# Upload sample data to MinIO (optional)
+./scripts/upload-sample-data.sh
 ```
 
 ### 2. Start the Application

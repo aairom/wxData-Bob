@@ -1,0 +1,2002 @@
+[
+  {
+    "product_id": "PROD231",
+    "name": "Product 57",
+    "category": "Food",
+    "price": 379.83,
+    "stock_quantity": 316,
+    "supplier_id": "SUP42",
+    "rating": 1.0,
+    "created_date": "2023-10-11T15:48:36.282346"
+  },
+  {
+    "product_id": "PROD247",
+    "name": "Product 84",
+    "category": "Food",
+    "price": 260.87,
+    "stock_quantity": 724,
+    "supplier_id": "SUP97",
+    "rating": 3.7,
+    "created_date": "2023-10-14T15:48:36.282360"
+  },
+  {
+    "product_id": "PROD487",
+    "name": "Product 20",
+    "category": "Clothing",
+    "price": 208.74,
+    "stock_quantity": 360,
+    "supplier_id": "SUP95",
+    "rating": 2.2,
+    "created_date": "2025-06-26T15:48:36.282367"
+  },
+  {
+    "product_id": "PROD884",
+    "name": "Product 23",
+    "category": "Clothing",
+    "price": 352.77,
+    "stock_quantity": 955,
+    "supplier_id": "SUP18",
+    "rating": 1.5,
+    "created_date": "2024-10-16T15:48:36.282372"
+  },
+  {
+    "product_id": "PROD199",
+    "name": "Product 1",
+    "category": "Sports",
+    "price": 77.75,
+    "stock_quantity": 223,
+    "supplier_id": "SUP15",
+    "rating": 3.5,
+    "created_date": "2023-02-01T15:48:36.282376"
+  },
+  {
+    "product_id": "PROD879",
+    "name": "Product 64",
+    "category": "Home",
+    "price": 49.95,
+    "stock_quantity": 929,
+    "supplier_id": "SUP74",
+    "rating": 2.6,
+    "created_date": "2024-09-27T15:48:36.282381"
+  },
+  {
+    "product_id": "PROD535",
+    "name": "Product 21",
+    "category": "Electronics",
+    "price": 193.64,
+    "stock_quantity": 838,
+    "supplier_id": "SUP19",
+    "rating": 1.2,
+    "created_date": "2024-12-01T15:48:36.282385"
+  },
+  {
+    "product_id": "PROD160",
+    "name": "Product 92",
+    "category": "Books",
+    "price": 86.9,
+    "stock_quantity": 863,
+    "supplier_id": "SUP85",
+    "rating": 4.9,
+    "created_date": "2023-08-10T15:48:36.282389"
+  },
+  {
+    "product_id": "PROD607",
+    "name": "Product 5",
+    "category": "Food",
+    "price": 18.4,
+    "stock_quantity": 526,
+    "supplier_id": "SUP80",
+    "rating": 1.0,
+    "created_date": "2023-06-19T15:48:36.282393"
+  },
+  {
+    "product_id": "PROD701",
+    "name": "Product 94",
+    "category": "Electronics",
+    "price": 46.11,
+    "stock_quantity": 856,
+    "supplier_id": "SUP15",
+    "rating": 4.9,
+    "created_date": "2025-03-31T15:48:36.282396"
+  },
+  {
+    "product_id": "PROD194",
+    "name": "Product 83",
+    "category": "Sports",
+    "price": 195.52,
+    "stock_quantity": 454,
+    "supplier_id": "SUP22",
+    "rating": 2.2,
+    "created_date": "2024-11-02T15:48:36.282399"
+  },
+  {
+    "product_id": "PROD467",
+    "name": "Product 50",
+    "category": "Sports",
+    "price": 151.77,
+    "stock_quantity": 419,
+    "supplier_id": "SUP16",
+    "rating": 4.4,
+    "created_date": "2025-06-13T15:48:36.282402"
+  },
+  {
+    "product_id": "PROD812",
+    "name": "Product 48",
+    "category": "Clothing",
+    "price": 238.71,
+    "stock_quantity": 386,
+    "supplier_id": "SUP61",
+    "rating": 2.8,
+    "created_date": "2024-08-12T15:48:36.282405"
+  },
+  {
+    "product_id": "PROD975",
+    "name": "Product 78",
+    "category": "Home",
+    "price": 409.64,
+    "stock_quantity": 858,
+    "supplier_id": "SUP35",
+    "rating": 2.3,
+    "created_date": "2025-03-28T15:48:36.282408"
+  },
+  {
+    "product_id": "PROD323",
+    "name": "Product 68",
+    "category": "Sports",
+    "price": 143.3,
+    "stock_quantity": 608,
+    "supplier_id": "SUP80",
+    "rating": 1.0,
+    "created_date": "2025-11-12T15:48:36.282411"
+  },
+  {
+    "product_id": "PROD780",
+    "name": "Product 36",
+    "category": "Home",
+    "price": 226.83,
+    "stock_quantity": 111,
+    "supplier_id": "SUP19",
+    "rating": 3.8,
+    "created_date": "2023-12-17T15:48:36.282414"
+  },
+  {
+    "product_id": "PROD409",
+    "name": "Product 64",
+    "category": "Food",
+    "price": 91.85,
+    "stock_quantity": 216,
+    "supplier_id": "SUP82",
+    "rating": 1.5,
+    "created_date": "2023-08-24T15:48:36.282417"
+  },
+  {
+    "product_id": "PROD808",
+    "name": "Product 29",
+    "category": "Books",
+    "price": 47.52,
+    "stock_quantity": 703,
+    "supplier_id": "SUP70",
+    "rating": 2.9,
+    "created_date": "2025-11-01T15:48:36.282421"
+  },
+  {
+    "product_id": "PROD686",
+    "name": "Product 83",
+    "category": "Electronics",
+    "price": 371.17,
+    "stock_quantity": 545,
+    "supplier_id": "SUP41",
+    "rating": 1.9,
+    "created_date": "2024-08-07T15:48:36.282424"
+  },
+  {
+    "product_id": "PROD992",
+    "name": "Product 5",
+    "category": "Electronics",
+    "price": 455.07,
+    "stock_quantity": 413,
+    "supplier_id": "SUP46",
+    "rating": 3.0,
+    "created_date": "2024-04-25T15:48:36.282427"
+  },
+  {
+    "product_id": "PROD133",
+    "name": "Product 74",
+    "category": "Clothing",
+    "price": 22.16,
+    "stock_quantity": 797,
+    "supplier_id": "SUP85",
+    "rating": 3.7,
+    "created_date": "2023-06-03T15:48:36.282429"
+  },
+  {
+    "product_id": "PROD919",
+    "name": "Product 100",
+    "category": "Food",
+    "price": 488.96,
+    "stock_quantity": 92,
+    "supplier_id": "SUP45",
+    "rating": 4.9,
+    "created_date": "2024-05-29T15:48:36.282432"
+  },
+  {
+    "product_id": "PROD249",
+    "name": "Product 75",
+    "category": "Sports",
+    "price": 451.22,
+    "stock_quantity": 533,
+    "supplier_id": "SUP59",
+    "rating": 3.6,
+    "created_date": "2025-11-21T15:48:36.282435"
+  },
+  {
+    "product_id": "PROD728",
+    "name": "Product 62",
+    "category": "Clothing",
+    "price": 231.53,
+    "stock_quantity": 285,
+    "supplier_id": "SUP64",
+    "rating": 1.4,
+    "created_date": "2023-07-18T15:48:36.282438"
+  },
+  {
+    "product_id": "PROD191",
+    "name": "Product 45",
+    "category": "Food",
+    "price": 130.69,
+    "stock_quantity": 195,
+    "supplier_id": "SUP73",
+    "rating": 2.6,
+    "created_date": "2024-11-12T15:48:36.282441"
+  },
+  {
+    "product_id": "PROD386",
+    "name": "Product 56",
+    "category": "Home",
+    "price": 300.74,
+    "stock_quantity": 886,
+    "supplier_id": "SUP56",
+    "rating": 3.2,
+    "created_date": "2025-09-05T15:48:36.282444"
+  },
+  {
+    "product_id": "PROD957",
+    "name": "Product 95",
+    "category": "Clothing",
+    "price": 264.34,
+    "stock_quantity": 438,
+    "supplier_id": "SUP32",
+    "rating": 4.8,
+    "created_date": "2024-01-23T15:48:36.282447"
+  },
+  {
+    "product_id": "PROD595",
+    "name": "Product 53",
+    "category": "Electronics",
+    "price": 222.94,
+    "stock_quantity": 214,
+    "supplier_id": "SUP44",
+    "rating": 2.5,
+    "created_date": "2023-11-03T15:48:36.282450"
+  },
+  {
+    "product_id": "PROD125",
+    "name": "Product 73",
+    "category": "Sports",
+    "price": 241.63,
+    "stock_quantity": 857,
+    "supplier_id": "SUP11",
+    "rating": 3.0,
+    "created_date": "2026-01-02T15:48:36.282453"
+  },
+  {
+    "product_id": "PROD222",
+    "name": "Product 52",
+    "category": "Books",
+    "price": 278.51,
+    "stock_quantity": 948,
+    "supplier_id": "SUP23",
+    "rating": 3.4,
+    "created_date": "2024-09-02T15:48:36.282456"
+  },
+  {
+    "product_id": "PROD435",
+    "name": "Product 71",
+    "category": "Books",
+    "price": 264.53,
+    "stock_quantity": 598,
+    "supplier_id": "SUP90",
+    "rating": 2.3,
+    "created_date": "2024-11-29T15:48:36.282459"
+  },
+  {
+    "product_id": "PROD342",
+    "name": "Product 81",
+    "category": "Books",
+    "price": 98.83,
+    "stock_quantity": 134,
+    "supplier_id": "SUP93",
+    "rating": 3.7,
+    "created_date": "2024-05-07T15:48:36.282462"
+  },
+  {
+    "product_id": "PROD706",
+    "name": "Product 96",
+    "category": "Electronics",
+    "price": 228.14,
+    "stock_quantity": 447,
+    "supplier_id": "SUP16",
+    "rating": 3.7,
+    "created_date": "2025-05-15T15:48:36.282465"
+  },
+  {
+    "product_id": "PROD589",
+    "name": "Product 59",
+    "category": "Food",
+    "price": 351.47,
+    "stock_quantity": 609,
+    "supplier_id": "SUP81",
+    "rating": 2.3,
+    "created_date": "2024-04-08T15:48:36.282468"
+  },
+  {
+    "product_id": "PROD462",
+    "name": "Product 15",
+    "category": "Books",
+    "price": 72.76,
+    "stock_quantity": 768,
+    "supplier_id": "SUP12",
+    "rating": 1.8,
+    "created_date": "2025-01-04T15:48:36.282471"
+  },
+  {
+    "product_id": "PROD407",
+    "name": "Product 66",
+    "category": "Electronics",
+    "price": 194.76,
+    "stock_quantity": 616,
+    "supplier_id": "SUP64",
+    "rating": 2.2,
+    "created_date": "2025-09-23T15:48:36.282474"
+  },
+  {
+    "product_id": "PROD368",
+    "name": "Product 64",
+    "category": "Electronics",
+    "price": 210.76,
+    "stock_quantity": 395,
+    "supplier_id": "SUP69",
+    "rating": 2.1,
+    "created_date": "2024-10-16T15:48:36.282476"
+  },
+  {
+    "product_id": "PROD771",
+    "name": "Product 44",
+    "category": "Electronics",
+    "price": 20.96,
+    "stock_quantity": 531,
+    "supplier_id": "SUP50",
+    "rating": 1.2,
+    "created_date": "2024-07-01T15:48:36.282480"
+  },
+  {
+    "product_id": "PROD666",
+    "name": "Product 27",
+    "category": "Home",
+    "price": 336.29,
+    "stock_quantity": 958,
+    "supplier_id": "SUP95",
+    "rating": 1.7,
+    "created_date": "2023-10-16T15:48:36.282482"
+  },
+  {
+    "product_id": "PROD965",
+    "name": "Product 80",
+    "category": "Electronics",
+    "price": 219.56,
+    "stock_quantity": 557,
+    "supplier_id": "SUP21",
+    "rating": 3.3,
+    "created_date": "2023-05-09T15:48:36.282485"
+  },
+  {
+    "product_id": "PROD708",
+    "name": "Product 75",
+    "category": "Food",
+    "price": 283.4,
+    "stock_quantity": 601,
+    "supplier_id": "SUP17",
+    "rating": 3.4,
+    "created_date": "2025-09-22T15:48:36.282488"
+  },
+  {
+    "product_id": "PROD934",
+    "name": "Product 2",
+    "category": "Home",
+    "price": 296.32,
+    "stock_quantity": 605,
+    "supplier_id": "SUP37",
+    "rating": 2.3,
+    "created_date": "2023-02-01T15:48:36.282491"
+  },
+  {
+    "product_id": "PROD962",
+    "name": "Product 12",
+    "category": "Sports",
+    "price": 285.34,
+    "stock_quantity": 194,
+    "supplier_id": "SUP21",
+    "rating": 1.3,
+    "created_date": "2025-04-20T15:48:36.282494"
+  },
+  {
+    "product_id": "PROD677",
+    "name": "Product 77",
+    "category": "Clothing",
+    "price": 65.08,
+    "stock_quantity": 222,
+    "supplier_id": "SUP61",
+    "rating": 1.8,
+    "created_date": "2025-10-07T15:48:36.282497"
+  },
+  {
+    "product_id": "PROD732",
+    "name": "Product 87",
+    "category": "Food",
+    "price": 110.44,
+    "stock_quantity": 280,
+    "supplier_id": "SUP27",
+    "rating": 3.4,
+    "created_date": "2024-09-06T15:48:36.282500"
+  },
+  {
+    "product_id": "PROD508",
+    "name": "Product 23",
+    "category": "Food",
+    "price": 316.37,
+    "stock_quantity": 314,
+    "supplier_id": "SUP68",
+    "rating": 5.0,
+    "created_date": "2023-06-14T15:48:36.282503"
+  },
+  {
+    "product_id": "PROD341",
+    "name": "Product 74",
+    "category": "Food",
+    "price": 268.66,
+    "stock_quantity": 659,
+    "supplier_id": "SUP83",
+    "rating": 2.0,
+    "created_date": "2023-11-13T15:48:36.282506"
+  },
+  {
+    "product_id": "PROD793",
+    "name": "Product 7",
+    "category": "Books",
+    "price": 248.63,
+    "stock_quantity": 830,
+    "supplier_id": "SUP47",
+    "rating": 4.9,
+    "created_date": "2024-08-14T15:48:36.282509"
+  },
+  {
+    "product_id": "PROD753",
+    "name": "Product 56",
+    "category": "Books",
+    "price": 21.1,
+    "stock_quantity": 496,
+    "supplier_id": "SUP69",
+    "rating": 2.5,
+    "created_date": "2025-09-13T15:48:36.282511"
+  },
+  {
+    "product_id": "PROD457",
+    "name": "Product 66",
+    "category": "Home",
+    "price": 335.19,
+    "stock_quantity": 289,
+    "supplier_id": "SUP28",
+    "rating": 3.4,
+    "created_date": "2024-04-12T15:48:36.282514"
+  },
+  {
+    "product_id": "PROD287",
+    "name": "Product 44",
+    "category": "Electronics",
+    "price": 108.81,
+    "stock_quantity": 548,
+    "supplier_id": "SUP29",
+    "rating": 2.7,
+    "created_date": "2024-07-11T15:48:36.282517"
+  },
+  {
+    "product_id": "PROD104",
+    "name": "Product 98",
+    "category": "Books",
+    "price": 178.73,
+    "stock_quantity": 767,
+    "supplier_id": "SUP26",
+    "rating": 2.8,
+    "created_date": "2024-05-01T15:48:36.282520"
+  },
+  {
+    "product_id": "PROD481",
+    "name": "Product 77",
+    "category": "Food",
+    "price": 128.33,
+    "stock_quantity": 154,
+    "supplier_id": "SUP43",
+    "rating": 4.8,
+    "created_date": "2024-03-13T15:48:36.282523"
+  },
+  {
+    "product_id": "PROD871",
+    "name": "Product 49",
+    "category": "Electronics",
+    "price": 270.41,
+    "stock_quantity": 233,
+    "supplier_id": "SUP78",
+    "rating": 3.8,
+    "created_date": "2024-10-28T15:48:36.282526"
+  },
+  {
+    "product_id": "PROD167",
+    "name": "Product 16",
+    "category": "Electronics",
+    "price": 25.4,
+    "stock_quantity": 153,
+    "supplier_id": "SUP92",
+    "rating": 4.0,
+    "created_date": "2025-08-13T15:48:36.282529"
+  },
+  {
+    "product_id": "PROD948",
+    "name": "Product 84",
+    "category": "Home",
+    "price": 129.04,
+    "stock_quantity": 201,
+    "supplier_id": "SUP11",
+    "rating": 2.7,
+    "created_date": "2024-04-17T15:48:36.282531"
+  },
+  {
+    "product_id": "PROD828",
+    "name": "Product 97",
+    "category": "Home",
+    "price": 79.55,
+    "stock_quantity": 16,
+    "supplier_id": "SUP92",
+    "rating": 1.9,
+    "created_date": "2023-04-21T15:48:36.282534"
+  },
+  {
+    "product_id": "PROD901",
+    "name": "Product 65",
+    "category": "Books",
+    "price": 35.18,
+    "stock_quantity": 23,
+    "supplier_id": "SUP12",
+    "rating": 4.7,
+    "created_date": "2024-02-06T15:48:36.282537"
+  },
+  {
+    "product_id": "PROD360",
+    "name": "Product 56",
+    "category": "Electronics",
+    "price": 8.45,
+    "stock_quantity": 697,
+    "supplier_id": "SUP92",
+    "rating": 2.6,
+    "created_date": "2023-12-20T15:48:36.282540"
+  },
+  {
+    "product_id": "PROD740",
+    "name": "Product 1",
+    "category": "Clothing",
+    "price": 487.23,
+    "stock_quantity": 175,
+    "supplier_id": "SUP49",
+    "rating": 3.9,
+    "created_date": "2025-08-20T15:48:36.282543"
+  },
+  {
+    "product_id": "PROD506",
+    "name": "Product 20",
+    "category": "Electronics",
+    "price": 151.62,
+    "stock_quantity": 63,
+    "supplier_id": "SUP17",
+    "rating": 3.2,
+    "created_date": "2025-10-07T15:48:36.282546"
+  },
+  {
+    "product_id": "PROD713",
+    "name": "Product 33",
+    "category": "Sports",
+    "price": 19.34,
+    "stock_quantity": 1000,
+    "supplier_id": "SUP71",
+    "rating": 1.5,
+    "created_date": "2025-12-14T15:48:36.282549"
+  },
+  {
+    "product_id": "PROD560",
+    "name": "Product 71",
+    "category": "Clothing",
+    "price": 249.51,
+    "stock_quantity": 781,
+    "supplier_id": "SUP93",
+    "rating": 4.0,
+    "created_date": "2023-05-31T15:48:36.282552"
+  },
+  {
+    "product_id": "PROD836",
+    "name": "Product 11",
+    "category": "Electronics",
+    "price": 88.4,
+    "stock_quantity": 328,
+    "supplier_id": "SUP66",
+    "rating": 4.1,
+    "created_date": "2023-02-14T15:48:36.282555"
+  },
+  {
+    "product_id": "PROD809",
+    "name": "Product 68",
+    "category": "Sports",
+    "price": 280.47,
+    "stock_quantity": 581,
+    "supplier_id": "SUP11",
+    "rating": 3.9,
+    "created_date": "2025-11-24T15:48:36.282558"
+  },
+  {
+    "product_id": "PROD574",
+    "name": "Product 72",
+    "category": "Home",
+    "price": 456.64,
+    "stock_quantity": 420,
+    "supplier_id": "SUP69",
+    "rating": 1.7,
+    "created_date": "2025-02-28T15:48:36.282561"
+  },
+  {
+    "product_id": "PROD303",
+    "name": "Product 82",
+    "category": "Clothing",
+    "price": 210.89,
+    "stock_quantity": 216,
+    "supplier_id": "SUP69",
+    "rating": 1.4,
+    "created_date": "2024-01-29T15:48:36.282564"
+  },
+  {
+    "product_id": "PROD183",
+    "name": "Product 1",
+    "category": "Books",
+    "price": 420.12,
+    "stock_quantity": 627,
+    "supplier_id": "SUP89",
+    "rating": 3.8,
+    "created_date": "2025-06-17T15:48:36.282567"
+  },
+  {
+    "product_id": "PROD586",
+    "name": "Product 66",
+    "category": "Home",
+    "price": 128.26,
+    "stock_quantity": 342,
+    "supplier_id": "SUP91",
+    "rating": 1.3,
+    "created_date": "2023-12-29T15:48:36.282569"
+  },
+  {
+    "product_id": "PROD251",
+    "name": "Product 11",
+    "category": "Food",
+    "price": 125.34,
+    "stock_quantity": 12,
+    "supplier_id": "SUP77",
+    "rating": 1.3,
+    "created_date": "2026-01-11T15:48:36.282573"
+  },
+  {
+    "product_id": "PROD673",
+    "name": "Product 29",
+    "category": "Sports",
+    "price": 372.56,
+    "stock_quantity": 774,
+    "supplier_id": "SUP48",
+    "rating": 2.9,
+    "created_date": "2024-01-02T15:48:36.282576"
+  },
+  {
+    "product_id": "PROD979",
+    "name": "Product 53",
+    "category": "Books",
+    "price": 36.7,
+    "stock_quantity": 664,
+    "supplier_id": "SUP93",
+    "rating": 2.8,
+    "created_date": "2025-01-23T15:48:36.282578"
+  },
+  {
+    "product_id": "PROD130",
+    "name": "Product 42",
+    "category": "Clothing",
+    "price": 407.94,
+    "stock_quantity": 210,
+    "supplier_id": "SUP43",
+    "rating": 2.4,
+    "created_date": "2023-08-22T15:48:36.282581"
+  },
+  {
+    "product_id": "PROD988",
+    "name": "Product 7",
+    "category": "Home",
+    "price": 455.8,
+    "stock_quantity": 675,
+    "supplier_id": "SUP37",
+    "rating": 1.5,
+    "created_date": "2023-12-17T15:48:36.282584"
+  },
+  {
+    "product_id": "PROD320",
+    "name": "Product 14",
+    "category": "Food",
+    "price": 184.13,
+    "stock_quantity": 600,
+    "supplier_id": "SUP57",
+    "rating": 5.0,
+    "created_date": "2023-04-04T15:48:36.282587"
+  },
+  {
+    "product_id": "PROD994",
+    "name": "Product 85",
+    "category": "Home",
+    "price": 173.44,
+    "stock_quantity": 900,
+    "supplier_id": "SUP63",
+    "rating": 1.6,
+    "created_date": "2024-07-12T15:48:36.282590"
+  },
+  {
+    "product_id": "PROD851",
+    "name": "Product 92",
+    "category": "Electronics",
+    "price": 274.42,
+    "stock_quantity": 1,
+    "supplier_id": "SUP38",
+    "rating": 3.0,
+    "created_date": "2023-02-26T15:48:36.282592"
+  },
+  {
+    "product_id": "PROD453",
+    "name": "Product 76",
+    "category": "Sports",
+    "price": 231.87,
+    "stock_quantity": 866,
+    "supplier_id": "SUP66",
+    "rating": 1.2,
+    "created_date": "2025-07-15T15:48:36.282596"
+  },
+  {
+    "product_id": "PROD115",
+    "name": "Product 98",
+    "category": "Clothing",
+    "price": 380.31,
+    "stock_quantity": 387,
+    "supplier_id": "SUP37",
+    "rating": 3.2,
+    "created_date": "2024-10-24T15:48:36.282599"
+  },
+  {
+    "product_id": "PROD740",
+    "name": "Product 86",
+    "category": "Clothing",
+    "price": 211.07,
+    "stock_quantity": 317,
+    "supplier_id": "SUP10",
+    "rating": 2.9,
+    "created_date": "2023-02-02T15:48:36.282601"
+  },
+  {
+    "product_id": "PROD941",
+    "name": "Product 85",
+    "category": "Sports",
+    "price": 75.92,
+    "stock_quantity": 696,
+    "supplier_id": "SUP70",
+    "rating": 2.7,
+    "created_date": "2026-01-12T15:48:36.282604"
+  },
+  {
+    "product_id": "PROD803",
+    "name": "Product 24",
+    "category": "Electronics",
+    "price": 317.02,
+    "stock_quantity": 507,
+    "supplier_id": "SUP98",
+    "rating": 3.2,
+    "created_date": "2025-04-11T15:48:36.282607"
+  },
+  {
+    "product_id": "PROD626",
+    "name": "Product 52",
+    "category": "Food",
+    "price": 221.11,
+    "stock_quantity": 785,
+    "supplier_id": "SUP54",
+    "rating": 3.8,
+    "created_date": "2025-05-03T15:48:36.282610"
+  },
+  {
+    "product_id": "PROD864",
+    "name": "Product 48",
+    "category": "Sports",
+    "price": 448.46,
+    "stock_quantity": 870,
+    "supplier_id": "SUP21",
+    "rating": 2.3,
+    "created_date": "2025-04-25T15:48:36.282613"
+  },
+  {
+    "product_id": "PROD221",
+    "name": "Product 20",
+    "category": "Sports",
+    "price": 344.52,
+    "stock_quantity": 768,
+    "supplier_id": "SUP31",
+    "rating": 1.6,
+    "created_date": "2023-02-09T15:48:36.282616"
+  },
+  {
+    "product_id": "PROD481",
+    "name": "Product 8",
+    "category": "Sports",
+    "price": 416.32,
+    "stock_quantity": 421,
+    "supplier_id": "SUP44",
+    "rating": 3.0,
+    "created_date": "2025-02-14T15:48:36.282619"
+  },
+  {
+    "product_id": "PROD736",
+    "name": "Product 40",
+    "category": "Clothing",
+    "price": 266.17,
+    "stock_quantity": 337,
+    "supplier_id": "SUP16",
+    "rating": 2.4,
+    "created_date": "2026-01-09T15:48:36.282621"
+  },
+  {
+    "product_id": "PROD354",
+    "name": "Product 94",
+    "category": "Food",
+    "price": 247.62,
+    "stock_quantity": 814,
+    "supplier_id": "SUP70",
+    "rating": 1.2,
+    "created_date": "2023-08-12T15:48:36.282625"
+  },
+  {
+    "product_id": "PROD687",
+    "name": "Product 95",
+    "category": "Clothing",
+    "price": 170.73,
+    "stock_quantity": 552,
+    "supplier_id": "SUP83",
+    "rating": 2.4,
+    "created_date": "2024-02-08T15:48:36.282627"
+  },
+  {
+    "product_id": "PROD846",
+    "name": "Product 31",
+    "category": "Electronics",
+    "price": 477.27,
+    "stock_quantity": 150,
+    "supplier_id": "SUP15",
+    "rating": 2.1,
+    "created_date": "2024-04-01T15:48:36.282630"
+  },
+  {
+    "product_id": "PROD725",
+    "name": "Product 41",
+    "category": "Food",
+    "price": 123.02,
+    "stock_quantity": 159,
+    "supplier_id": "SUP94",
+    "rating": 2.9,
+    "created_date": "2024-01-12T15:48:36.282633"
+  },
+  {
+    "product_id": "PROD720",
+    "name": "Product 37",
+    "category": "Sports",
+    "price": 386.86,
+    "stock_quantity": 961,
+    "supplier_id": "SUP88",
+    "rating": 4.9,
+    "created_date": "2023-05-17T15:48:36.282636"
+  },
+  {
+    "product_id": "PROD594",
+    "name": "Product 27",
+    "category": "Sports",
+    "price": 88.31,
+    "stock_quantity": 398,
+    "supplier_id": "SUP65",
+    "rating": 1.3,
+    "created_date": "2025-01-10T15:48:36.282639"
+  },
+  {
+    "product_id": "PROD165",
+    "name": "Product 51",
+    "category": "Clothing",
+    "price": 53.88,
+    "stock_quantity": 137,
+    "supplier_id": "SUP55",
+    "rating": 2.9,
+    "created_date": "2025-08-26T15:48:36.282642"
+  },
+  {
+    "product_id": "PROD628",
+    "name": "Product 46",
+    "category": "Sports",
+    "price": 145.13,
+    "stock_quantity": 346,
+    "supplier_id": "SUP43",
+    "rating": 4.4,
+    "created_date": "2025-12-08T15:48:36.282645"
+  },
+  {
+    "product_id": "PROD909",
+    "name": "Product 59",
+    "category": "Clothing",
+    "price": 416.05,
+    "stock_quantity": 462,
+    "supplier_id": "SUP33",
+    "rating": 2.2,
+    "created_date": "2024-11-05T15:48:36.282648"
+  },
+  {
+    "product_id": "PROD462",
+    "name": "Product 15",
+    "category": "Books",
+    "price": 59.87,
+    "stock_quantity": 683,
+    "supplier_id": "SUP33",
+    "rating": 1.6,
+    "created_date": "2023-11-16T15:48:36.282650"
+  },
+  {
+    "product_id": "PROD884",
+    "name": "Product 93",
+    "category": "Clothing",
+    "price": 412.63,
+    "stock_quantity": 868,
+    "supplier_id": "SUP98",
+    "rating": 4.1,
+    "created_date": "2025-01-02T15:48:36.282653"
+  },
+  {
+    "product_id": "PROD800",
+    "name": "Product 57",
+    "category": "Electronics",
+    "price": 325.22,
+    "stock_quantity": 767,
+    "supplier_id": "SUP84",
+    "rating": 1.6,
+    "created_date": "2023-05-15T15:48:36.282656"
+  },
+  {
+    "product_id": "PROD822",
+    "name": "Product 67",
+    "category": "Sports",
+    "price": 28.73,
+    "stock_quantity": 362,
+    "supplier_id": "SUP44",
+    "rating": 3.6,
+    "created_date": "2025-08-11T15:48:36.282659"
+  },
+  {
+    "product_id": "PROD807",
+    "name": "Product 56",
+    "category": "Electronics",
+    "price": 61.93,
+    "stock_quantity": 712,
+    "supplier_id": "SUP43",
+    "rating": 3.8,
+    "created_date": "2023-03-03T15:48:36.282661"
+  },
+  {
+    "product_id": "PROD385",
+    "name": "Product 79",
+    "category": "Clothing",
+    "price": 33.05,
+    "stock_quantity": 472,
+    "supplier_id": "SUP83",
+    "rating": 2.1,
+    "created_date": "2023-05-28T15:48:36.282664"
+  },
+  {
+    "product_id": "PROD646",
+    "name": "Product 56",
+    "category": "Books",
+    "price": 431.21,
+    "stock_quantity": 941,
+    "supplier_id": "SUP21",
+    "rating": 2.2,
+    "created_date": "2024-01-15T15:48:36.282667"
+  },
+  {
+    "product_id": "PROD135",
+    "name": "Product 4",
+    "category": "Books",
+    "price": 256.93,
+    "stock_quantity": 609,
+    "supplier_id": "SUP86",
+    "rating": 3.3,
+    "created_date": "2023-09-08T15:48:36.282670"
+  },
+  {
+    "product_id": "PROD353",
+    "name": "Product 100",
+    "category": "Clothing",
+    "price": 482.58,
+    "stock_quantity": 356,
+    "supplier_id": "SUP75",
+    "rating": 3.7,
+    "created_date": "2024-01-10T15:48:36.282673"
+  },
+  {
+    "product_id": "PROD385",
+    "name": "Product 42",
+    "category": "Food",
+    "price": 39.73,
+    "stock_quantity": 108,
+    "supplier_id": "SUP44",
+    "rating": 4.1,
+    "created_date": "2023-03-24T15:48:36.282676"
+  },
+  {
+    "product_id": "PROD804",
+    "name": "Product 73",
+    "category": "Sports",
+    "price": 375.54,
+    "stock_quantity": 622,
+    "supplier_id": "SUP92",
+    "rating": 2.9,
+    "created_date": "2024-03-12T15:48:36.282679"
+  },
+  {
+    "product_id": "PROD381",
+    "name": "Product 92",
+    "category": "Clothing",
+    "price": 327.25,
+    "stock_quantity": 257,
+    "supplier_id": "SUP29",
+    "rating": 3.5,
+    "created_date": "2023-04-20T15:48:36.282682"
+  },
+  {
+    "product_id": "PROD483",
+    "name": "Product 69",
+    "category": "Sports",
+    "price": 449.59,
+    "stock_quantity": 305,
+    "supplier_id": "SUP64",
+    "rating": 3.3,
+    "created_date": "2024-04-17T15:48:36.282685"
+  },
+  {
+    "product_id": "PROD792",
+    "name": "Product 27",
+    "category": "Electronics",
+    "price": 445.37,
+    "stock_quantity": 922,
+    "supplier_id": "SUP42",
+    "rating": 3.9,
+    "created_date": "2025-10-11T15:48:36.282688"
+  },
+  {
+    "product_id": "PROD185",
+    "name": "Product 87",
+    "category": "Home",
+    "price": 364.98,
+    "stock_quantity": 443,
+    "supplier_id": "SUP94",
+    "rating": 1.2,
+    "created_date": "2024-04-21T15:48:36.282691"
+  },
+  {
+    "product_id": "PROD984",
+    "name": "Product 92",
+    "category": "Clothing",
+    "price": 179.32,
+    "stock_quantity": 865,
+    "supplier_id": "SUP94",
+    "rating": 4.2,
+    "created_date": "2025-01-26T15:48:36.282694"
+  },
+  {
+    "product_id": "PROD435",
+    "name": "Product 49",
+    "category": "Home",
+    "price": 115.67,
+    "stock_quantity": 470,
+    "supplier_id": "SUP16",
+    "rating": 3.7,
+    "created_date": "2025-03-11T15:48:36.282697"
+  },
+  {
+    "product_id": "PROD403",
+    "name": "Product 8",
+    "category": "Electronics",
+    "price": 236.68,
+    "stock_quantity": 374,
+    "supplier_id": "SUP73",
+    "rating": 2.6,
+    "created_date": "2024-10-12T15:48:36.282700"
+  },
+  {
+    "product_id": "PROD756",
+    "name": "Product 45",
+    "category": "Food",
+    "price": 281.77,
+    "stock_quantity": 708,
+    "supplier_id": "SUP68",
+    "rating": 1.8,
+    "created_date": "2024-01-27T15:48:36.282703"
+  },
+  {
+    "product_id": "PROD485",
+    "name": "Product 33",
+    "category": "Food",
+    "price": 145.24,
+    "stock_quantity": 950,
+    "supplier_id": "SUP21",
+    "rating": 1.9,
+    "created_date": "2024-05-31T15:48:36.282706"
+  },
+  {
+    "product_id": "PROD872",
+    "name": "Product 34",
+    "category": "Clothing",
+    "price": 431.43,
+    "stock_quantity": 199,
+    "supplier_id": "SUP53",
+    "rating": 3.2,
+    "created_date": "2025-06-27T15:48:36.282709"
+  },
+  {
+    "product_id": "PROD391",
+    "name": "Product 59",
+    "category": "Books",
+    "price": 453.03,
+    "stock_quantity": 979,
+    "supplier_id": "SUP88",
+    "rating": 3.4,
+    "created_date": "2025-06-03T15:48:36.282712"
+  },
+  {
+    "product_id": "PROD264",
+    "name": "Product 74",
+    "category": "Books",
+    "price": 23.98,
+    "stock_quantity": 856,
+    "supplier_id": "SUP31",
+    "rating": 2.0,
+    "created_date": "2024-12-07T15:48:36.282716"
+  },
+  {
+    "product_id": "PROD420",
+    "name": "Product 44",
+    "category": "Sports",
+    "price": 181.4,
+    "stock_quantity": 18,
+    "supplier_id": "SUP59",
+    "rating": 3.0,
+    "created_date": "2023-03-02T15:48:36.282719"
+  },
+  {
+    "product_id": "PROD327",
+    "name": "Product 12",
+    "category": "Books",
+    "price": 64.63,
+    "stock_quantity": 143,
+    "supplier_id": "SUP44",
+    "rating": 2.1,
+    "created_date": "2023-05-28T15:48:36.282722"
+  },
+  {
+    "product_id": "PROD942",
+    "name": "Product 5",
+    "category": "Home",
+    "price": 324.77,
+    "stock_quantity": 668,
+    "supplier_id": "SUP62",
+    "rating": 1.6,
+    "created_date": "2025-04-24T15:48:36.282725"
+  },
+  {
+    "product_id": "PROD432",
+    "name": "Product 70",
+    "category": "Sports",
+    "price": 21.12,
+    "stock_quantity": 581,
+    "supplier_id": "SUP54",
+    "rating": 4.7,
+    "created_date": "2023-04-24T15:48:36.282729"
+  },
+  {
+    "product_id": "PROD788",
+    "name": "Product 77",
+    "category": "Food",
+    "price": 71.59,
+    "stock_quantity": 853,
+    "supplier_id": "SUP56",
+    "rating": 4.0,
+    "created_date": "2025-08-01T15:48:36.282737"
+  },
+  {
+    "product_id": "PROD683",
+    "name": "Product 8",
+    "category": "Clothing",
+    "price": 99.29,
+    "stock_quantity": 333,
+    "supplier_id": "SUP83",
+    "rating": 1.2,
+    "created_date": "2023-04-21T15:48:36.282740"
+  },
+  {
+    "product_id": "PROD675",
+    "name": "Product 7",
+    "category": "Home",
+    "price": 36.68,
+    "stock_quantity": 551,
+    "supplier_id": "SUP23",
+    "rating": 3.9,
+    "created_date": "2023-11-30T15:48:36.282743"
+  },
+  {
+    "product_id": "PROD294",
+    "name": "Product 6",
+    "category": "Home",
+    "price": 201.4,
+    "stock_quantity": 147,
+    "supplier_id": "SUP20",
+    "rating": 2.5,
+    "created_date": "2023-10-29T15:48:36.282746"
+  },
+  {
+    "product_id": "PROD999",
+    "name": "Product 56",
+    "category": "Home",
+    "price": 300.55,
+    "stock_quantity": 272,
+    "supplier_id": "SUP76",
+    "rating": 3.9,
+    "created_date": "2025-08-07T15:48:36.282749"
+  },
+  {
+    "product_id": "PROD219",
+    "name": "Product 59",
+    "category": "Books",
+    "price": 449.27,
+    "stock_quantity": 272,
+    "supplier_id": "SUP79",
+    "rating": 1.8,
+    "created_date": "2024-08-09T15:48:36.282753"
+  },
+  {
+    "product_id": "PROD313",
+    "name": "Product 7",
+    "category": "Electronics",
+    "price": 181.09,
+    "stock_quantity": 807,
+    "supplier_id": "SUP57",
+    "rating": 1.4,
+    "created_date": "2025-03-21T15:48:36.282756"
+  },
+  {
+    "product_id": "PROD867",
+    "name": "Product 97",
+    "category": "Clothing",
+    "price": 222.5,
+    "stock_quantity": 947,
+    "supplier_id": "SUP29",
+    "rating": 3.4,
+    "created_date": "2023-12-28T15:48:36.282759"
+  },
+  {
+    "product_id": "PROD373",
+    "name": "Product 40",
+    "category": "Clothing",
+    "price": 79.78,
+    "stock_quantity": 659,
+    "supplier_id": "SUP87",
+    "rating": 3.8,
+    "created_date": "2025-03-28T15:48:36.282762"
+  },
+  {
+    "product_id": "PROD838",
+    "name": "Product 21",
+    "category": "Clothing",
+    "price": 256.47,
+    "stock_quantity": 149,
+    "supplier_id": "SUP99",
+    "rating": 2.0,
+    "created_date": "2024-01-05T15:48:36.282765"
+  },
+  {
+    "product_id": "PROD853",
+    "name": "Product 72",
+    "category": "Electronics",
+    "price": 290.4,
+    "stock_quantity": 683,
+    "supplier_id": "SUP75",
+    "rating": 3.7,
+    "created_date": "2023-06-27T15:48:36.282768"
+  },
+  {
+    "product_id": "PROD912",
+    "name": "Product 39",
+    "category": "Clothing",
+    "price": 266.36,
+    "stock_quantity": 279,
+    "supplier_id": "SUP46",
+    "rating": 1.7,
+    "created_date": "2023-04-25T15:48:36.282770"
+  },
+  {
+    "product_id": "PROD675",
+    "name": "Product 37",
+    "category": "Electronics",
+    "price": 348.45,
+    "stock_quantity": 328,
+    "supplier_id": "SUP54",
+    "rating": 3.1,
+    "created_date": "2025-02-24T15:48:36.282773"
+  },
+  {
+    "product_id": "PROD194",
+    "name": "Product 28",
+    "category": "Electronics",
+    "price": 291.57,
+    "stock_quantity": 338,
+    "supplier_id": "SUP28",
+    "rating": 1.8,
+    "created_date": "2024-04-18T15:48:36.282776"
+  },
+  {
+    "product_id": "PROD915",
+    "name": "Product 5",
+    "category": "Food",
+    "price": 358.22,
+    "stock_quantity": 858,
+    "supplier_id": "SUP74",
+    "rating": 2.7,
+    "created_date": "2024-10-09T15:48:36.282779"
+  },
+  {
+    "product_id": "PROD238",
+    "name": "Product 78",
+    "category": "Clothing",
+    "price": 345.33,
+    "stock_quantity": 119,
+    "supplier_id": "SUP87",
+    "rating": 4.1,
+    "created_date": "2023-05-14T15:48:36.282782"
+  },
+  {
+    "product_id": "PROD481",
+    "name": "Product 90",
+    "category": "Electronics",
+    "price": 31.5,
+    "stock_quantity": 457,
+    "supplier_id": "SUP65",
+    "rating": 3.4,
+    "created_date": "2023-04-01T15:48:36.282785"
+  },
+  {
+    "product_id": "PROD500",
+    "name": "Product 38",
+    "category": "Home",
+    "price": 260.72,
+    "stock_quantity": 381,
+    "supplier_id": "SUP15",
+    "rating": 1.9,
+    "created_date": "2024-02-10T15:48:36.282787"
+  },
+  {
+    "product_id": "PROD177",
+    "name": "Product 78",
+    "category": "Home",
+    "price": 178.94,
+    "stock_quantity": 608,
+    "supplier_id": "SUP91",
+    "rating": 4.7,
+    "created_date": "2024-10-30T15:48:36.282790"
+  },
+  {
+    "product_id": "PROD302",
+    "name": "Product 11",
+    "category": "Books",
+    "price": 334.61,
+    "stock_quantity": 422,
+    "supplier_id": "SUP51",
+    "rating": 3.6,
+    "created_date": "2025-01-21T15:48:36.282793"
+  },
+  {
+    "product_id": "PROD829",
+    "name": "Product 38",
+    "category": "Food",
+    "price": 265.78,
+    "stock_quantity": 2,
+    "supplier_id": "SUP73",
+    "rating": 3.5,
+    "created_date": "2025-11-07T15:48:36.282796"
+  },
+  {
+    "product_id": "PROD701",
+    "name": "Product 8",
+    "category": "Sports",
+    "price": 316.71,
+    "stock_quantity": 907,
+    "supplier_id": "SUP92",
+    "rating": 1.3,
+    "created_date": "2025-12-07T15:48:36.282799"
+  },
+  {
+    "product_id": "PROD114",
+    "name": "Product 96",
+    "category": "Electronics",
+    "price": 408.98,
+    "stock_quantity": 709,
+    "supplier_id": "SUP58",
+    "rating": 2.8,
+    "created_date": "2023-08-18T15:48:36.282802"
+  },
+  {
+    "product_id": "PROD366",
+    "name": "Product 59",
+    "category": "Home",
+    "price": 473.74,
+    "stock_quantity": 461,
+    "supplier_id": "SUP74",
+    "rating": 2.9,
+    "created_date": "2025-11-12T15:48:36.282805"
+  },
+  {
+    "product_id": "PROD416",
+    "name": "Product 25",
+    "category": "Sports",
+    "price": 415.01,
+    "stock_quantity": 316,
+    "supplier_id": "SUP51",
+    "rating": 1.6,
+    "created_date": "2024-10-13T15:48:36.282808"
+  },
+  {
+    "product_id": "PROD949",
+    "name": "Product 1",
+    "category": "Clothing",
+    "price": 131.47,
+    "stock_quantity": 584,
+    "supplier_id": "SUP54",
+    "rating": 2.3,
+    "created_date": "2023-07-03T15:48:36.282810"
+  },
+  {
+    "product_id": "PROD683",
+    "name": "Product 1",
+    "category": "Clothing",
+    "price": 429.95,
+    "stock_quantity": 466,
+    "supplier_id": "SUP85",
+    "rating": 3.9,
+    "created_date": "2024-11-21T15:48:36.282814"
+  },
+  {
+    "product_id": "PROD850",
+    "name": "Product 93",
+    "category": "Electronics",
+    "price": 422.18,
+    "stock_quantity": 692,
+    "supplier_id": "SUP98",
+    "rating": 2.8,
+    "created_date": "2024-03-12T15:48:36.282817"
+  },
+  {
+    "product_id": "PROD977",
+    "name": "Product 28",
+    "category": "Electronics",
+    "price": 98.84,
+    "stock_quantity": 516,
+    "supplier_id": "SUP30",
+    "rating": 1.6,
+    "created_date": "2023-02-02T15:48:36.282819"
+  },
+  {
+    "product_id": "PROD624",
+    "name": "Product 65",
+    "category": "Clothing",
+    "price": 10.33,
+    "stock_quantity": 583,
+    "supplier_id": "SUP52",
+    "rating": 4.3,
+    "created_date": "2023-07-05T15:48:36.282822"
+  },
+  {
+    "product_id": "PROD500",
+    "name": "Product 20",
+    "category": "Food",
+    "price": 416.28,
+    "stock_quantity": 696,
+    "supplier_id": "SUP65",
+    "rating": 3.4,
+    "created_date": "2023-05-23T15:48:36.282825"
+  },
+  {
+    "product_id": "PROD957",
+    "name": "Product 83",
+    "category": "Electronics",
+    "price": 403.1,
+    "stock_quantity": 843,
+    "supplier_id": "SUP88",
+    "rating": 2.5,
+    "created_date": "2023-08-20T15:48:36.282828"
+  },
+  {
+    "product_id": "PROD299",
+    "name": "Product 86",
+    "category": "Clothing",
+    "price": 175.95,
+    "stock_quantity": 476,
+    "supplier_id": "SUP31",
+    "rating": 1.3,
+    "created_date": "2025-10-10T15:48:36.282831"
+  },
+  {
+    "product_id": "PROD126",
+    "name": "Product 1",
+    "category": "Home",
+    "price": 248.38,
+    "stock_quantity": 181,
+    "supplier_id": "SUP41",
+    "rating": 3.8,
+    "created_date": "2024-06-03T15:48:36.282833"
+  },
+  {
+    "product_id": "PROD638",
+    "name": "Product 8",
+    "category": "Home",
+    "price": 98.3,
+    "stock_quantity": 421,
+    "supplier_id": "SUP93",
+    "rating": 1.9,
+    "created_date": "2023-06-23T15:48:36.282836"
+  },
+  {
+    "product_id": "PROD627",
+    "name": "Product 68",
+    "category": "Clothing",
+    "price": 423.19,
+    "stock_quantity": 589,
+    "supplier_id": "SUP36",
+    "rating": 2.6,
+    "created_date": "2024-01-20T15:48:36.282839"
+  },
+  {
+    "product_id": "PROD325",
+    "name": "Product 69",
+    "category": "Home",
+    "price": 173.17,
+    "stock_quantity": 670,
+    "supplier_id": "SUP28",
+    "rating": 1.9,
+    "created_date": "2025-06-22T15:48:36.282842"
+  },
+  {
+    "product_id": "PROD574",
+    "name": "Product 26",
+    "category": "Food",
+    "price": 126.63,
+    "stock_quantity": 387,
+    "supplier_id": "SUP20",
+    "rating": 4.1,
+    "created_date": "2024-10-30T15:48:36.282845"
+  },
+  {
+    "product_id": "PROD329",
+    "name": "Product 1",
+    "category": "Home",
+    "price": 272.23,
+    "stock_quantity": 67,
+    "supplier_id": "SUP68",
+    "rating": 5.0,
+    "created_date": "2025-08-05T15:48:36.282847"
+  },
+  {
+    "product_id": "PROD602",
+    "name": "Product 50",
+    "category": "Home",
+    "price": 291.04,
+    "stock_quantity": 640,
+    "supplier_id": "SUP11",
+    "rating": 2.2,
+    "created_date": "2023-02-10T15:48:36.282851"
+  },
+  {
+    "product_id": "PROD389",
+    "name": "Product 92",
+    "category": "Clothing",
+    "price": 430.36,
+    "stock_quantity": 488,
+    "supplier_id": "SUP60",
+    "rating": 3.8,
+    "created_date": "2025-07-29T15:48:36.282854"
+  },
+  {
+    "product_id": "PROD872",
+    "name": "Product 47",
+    "category": "Electronics",
+    "price": 201.79,
+    "stock_quantity": 873,
+    "supplier_id": "SUP59",
+    "rating": 3.5,
+    "created_date": "2023-07-06T15:48:36.282857"
+  },
+  {
+    "product_id": "PROD106",
+    "name": "Product 43",
+    "category": "Food",
+    "price": 72.58,
+    "stock_quantity": 136,
+    "supplier_id": "SUP84",
+    "rating": 3.6,
+    "created_date": "2025-11-05T15:48:36.282860"
+  },
+  {
+    "product_id": "PROD103",
+    "name": "Product 25",
+    "category": "Electronics",
+    "price": 5.64,
+    "stock_quantity": 197,
+    "supplier_id": "SUP50",
+    "rating": 4.3,
+    "created_date": "2023-09-10T15:48:36.282863"
+  },
+  {
+    "product_id": "PROD937",
+    "name": "Product 91",
+    "category": "Home",
+    "price": 212.93,
+    "stock_quantity": 755,
+    "supplier_id": "SUP18",
+    "rating": 4.7,
+    "created_date": "2023-11-22T15:48:36.282870"
+  },
+  {
+    "product_id": "PROD179",
+    "name": "Product 76",
+    "category": "Food",
+    "price": 459.43,
+    "stock_quantity": 68,
+    "supplier_id": "SUP10",
+    "rating": 1.8,
+    "created_date": "2023-02-04T15:48:36.282873"
+  },
+  {
+    "product_id": "PROD730",
+    "name": "Product 97",
+    "category": "Electronics",
+    "price": 325.87,
+    "stock_quantity": 646,
+    "supplier_id": "SUP82",
+    "rating": 1.5,
+    "created_date": "2024-10-15T15:48:36.282876"
+  },
+  {
+    "product_id": "PROD939",
+    "name": "Product 21",
+    "category": "Books",
+    "price": 451.83,
+    "stock_quantity": 817,
+    "supplier_id": "SUP68",
+    "rating": 1.8,
+    "created_date": "2024-01-26T15:48:36.282879"
+  },
+  {
+    "product_id": "PROD685",
+    "name": "Product 77",
+    "category": "Sports",
+    "price": 297.88,
+    "stock_quantity": 533,
+    "supplier_id": "SUP91",
+    "rating": 4.4,
+    "created_date": "2024-05-01T15:48:36.282882"
+  },
+  {
+    "product_id": "PROD834",
+    "name": "Product 51",
+    "category": "Electronics",
+    "price": 16.61,
+    "stock_quantity": 556,
+    "supplier_id": "SUP55",
+    "rating": 3.1,
+    "created_date": "2024-07-11T15:48:36.282885"
+  },
+  {
+    "product_id": "PROD718",
+    "name": "Product 32",
+    "category": "Sports",
+    "price": 245.35,
+    "stock_quantity": 130,
+    "supplier_id": "SUP83",
+    "rating": 4.3,
+    "created_date": "2025-08-12T15:48:36.282888"
+  },
+  {
+    "product_id": "PROD817",
+    "name": "Product 41",
+    "category": "Books",
+    "price": 426.96,
+    "stock_quantity": 737,
+    "supplier_id": "SUP63",
+    "rating": 3.9,
+    "created_date": "2025-08-07T15:48:36.282891"
+  },
+  {
+    "product_id": "PROD874",
+    "name": "Product 36",
+    "category": "Electronics",
+    "price": 327.89,
+    "stock_quantity": 484,
+    "supplier_id": "SUP38",
+    "rating": 4.1,
+    "created_date": "2025-11-12T15:48:36.282894"
+  },
+  {
+    "product_id": "PROD526",
+    "name": "Product 26",
+    "category": "Sports",
+    "price": 312.68,
+    "stock_quantity": 731,
+    "supplier_id": "SUP32",
+    "rating": 4.0,
+    "created_date": "2024-08-11T15:48:36.282897"
+  },
+  {
+    "product_id": "PROD478",
+    "name": "Product 22",
+    "category": "Sports",
+    "price": 35.6,
+    "stock_quantity": 364,
+    "supplier_id": "SUP71",
+    "rating": 4.8,
+    "created_date": "2025-03-10T15:48:36.282900"
+  },
+  {
+    "product_id": "PROD699",
+    "name": "Product 67",
+    "category": "Books",
+    "price": 75.28,
+    "stock_quantity": 10,
+    "supplier_id": "SUP56",
+    "rating": 2.0,
+    "created_date": "2025-02-25T15:48:36.282903"
+  },
+  {
+    "product_id": "PROD514",
+    "name": "Product 48",
+    "category": "Home",
+    "price": 223.21,
+    "stock_quantity": 40,
+    "supplier_id": "SUP91",
+    "rating": 4.9,
+    "created_date": "2024-06-27T15:48:36.282906"
+  },
+  {
+    "product_id": "PROD198",
+    "name": "Product 71",
+    "category": "Books",
+    "price": 186.78,
+    "stock_quantity": 364,
+    "supplier_id": "SUP48",
+    "rating": 2.3,
+    "created_date": "2024-01-27T15:48:36.282909"
+  },
+  {
+    "product_id": "PROD687",
+    "name": "Product 7",
+    "category": "Home",
+    "price": 333.39,
+    "stock_quantity": 811,
+    "supplier_id": "SUP52",
+    "rating": 3.4,
+    "created_date": "2024-11-06T15:48:36.282912"
+  },
+  {
+    "product_id": "PROD429",
+    "name": "Product 87",
+    "category": "Clothing",
+    "price": 145.81,
+    "stock_quantity": 196,
+    "supplier_id": "SUP78",
+    "rating": 4.7,
+    "created_date": "2025-05-07T15:48:36.282914"
+  },
+  {
+    "product_id": "PROD263",
+    "name": "Product 87",
+    "category": "Books",
+    "price": 81.67,
+    "stock_quantity": 210,
+    "supplier_id": "SUP13",
+    "rating": 2.1,
+    "created_date": "2024-06-28T15:48:36.282917"
+  },
+  {
+    "product_id": "PROD382",
+    "name": "Product 93",
+    "category": "Food",
+    "price": 188.07,
+    "stock_quantity": 62,
+    "supplier_id": "SUP67",
+    "rating": 4.5,
+    "created_date": "2023-07-18T15:48:36.282920"
+  },
+  {
+    "product_id": "PROD785",
+    "name": "Product 21",
+    "category": "Books",
+    "price": 406.92,
+    "stock_quantity": 940,
+    "supplier_id": "SUP34",
+    "rating": 1.7,
+    "created_date": "2023-04-14T15:48:36.282923"
+  },
+  {
+    "product_id": "PROD958",
+    "name": "Product 24",
+    "category": "Clothing",
+    "price": 299.23,
+    "stock_quantity": 498,
+    "supplier_id": "SUP48",
+    "rating": 3.6,
+    "created_date": "2025-04-03T15:48:36.282926"
+  },
+  {
+    "product_id": "PROD779",
+    "name": "Product 72",
+    "category": "Electronics",
+    "price": 399.97,
+    "stock_quantity": 470,
+    "supplier_id": "SUP13",
+    "rating": 3.7,
+    "created_date": "2024-10-18T15:48:36.282929"
+  },
+  {
+    "product_id": "PROD141",
+    "name": "Product 27",
+    "category": "Electronics",
+    "price": 427.14,
+    "stock_quantity": 493,
+    "supplier_id": "SUP54",
+    "rating": 3.5,
+    "created_date": "2023-09-07T15:48:36.282932"
+  },
+  {
+    "product_id": "PROD473",
+    "name": "Product 45",
+    "category": "Food",
+    "price": 431.37,
+    "stock_quantity": 153,
+    "supplier_id": "SUP65",
+    "rating": 3.0,
+    "created_date": "2024-08-09T15:48:36.282935"
+  },
+  {
+    "product_id": "PROD397",
+    "name": "Product 32",
+    "category": "Home",
+    "price": 20.68,
+    "stock_quantity": 330,
+    "supplier_id": "SUP39",
+    "rating": 4.5,
+    "created_date": "2023-03-15T15:48:36.282938"
+  },
+  {
+    "product_id": "PROD105",
+    "name": "Product 55",
+    "category": "Sports",
+    "price": 88.54,
+    "stock_quantity": 759,
+    "supplier_id": "SUP39",
+    "rating": 3.0,
+    "created_date": "2024-08-22T15:48:36.282941"
+  },
+  {
+    "product_id": "PROD263",
+    "name": "Product 82",
+    "category": "Sports",
+    "price": 263.72,
+    "stock_quantity": 878,
+    "supplier_id": "SUP84",
+    "rating": 4.1,
+    "created_date": "2025-09-21T15:48:36.282944"
+  },
+  {
+    "product_id": "PROD790",
+    "name": "Product 4",
+    "category": "Clothing",
+    "price": 409.79,
+    "stock_quantity": 9,
+    "supplier_id": "SUP50",
+    "rating": 3.3,
+    "created_date": "2025-08-30T15:48:36.282947"
+  },
+  {
+    "product_id": "PROD346",
+    "name": "Product 71",
+    "category": "Home",
+    "price": 332.49,
+    "stock_quantity": 186,
+    "supplier_id": "SUP96",
+    "rating": 3.1,
+    "created_date": "2024-07-16T15:48:36.282950"
+  },
+  {
+    "product_id": "PROD592",
+    "name": "Product 58",
+    "category": "Books",
+    "price": 246.77,
+    "stock_quantity": 731,
+    "supplier_id": "SUP72",
+    "rating": 4.4,
+    "created_date": "2025-05-13T15:48:36.282953"
+  },
+  {
+    "product_id": "PROD804",
+    "name": "Product 19",
+    "category": "Books",
+    "price": 292.59,
+    "stock_quantity": 461,
+    "supplier_id": "SUP60",
+    "rating": 4.7,
+    "created_date": "2023-04-28T15:48:36.282956"
+  },
+  {
+    "product_id": "PROD629",
+    "name": "Product 2",
+    "category": "Books",
+    "price": 430.91,
+    "stock_quantity": 358,
+    "supplier_id": "SUP99",
+    "rating": 3.7,
+    "created_date": "2023-10-28T15:48:36.282959"
+  },
+  {
+    "product_id": "PROD788",
+    "name": "Product 6",
+    "category": "Sports",
+    "price": 103.2,
+    "stock_quantity": 543,
+    "supplier_id": "SUP95",
+    "rating": 4.2,
+    "created_date": "2024-04-23T15:48:36.282962"
+  },
+  {
+    "product_id": "PROD711",
+    "name": "Product 88",
+    "category": "Electronics",
+    "price": 361.95,
+    "stock_quantity": 707,
+    "supplier_id": "SUP32",
+    "rating": 5.0,
+    "created_date": "2025-12-08T15:48:36.282965"
+  }
+]
