@@ -83,6 +83,7 @@ wxData-Bob/
 │   ├── deploy-github.sh      # Deploy to GitHub
 │   └── generate-data.py      # Generate sample data
 ├── docs/                      # Documentation
+│   ├── QUICKSTART.md         # Quick start guide (START HERE!)
 │   ├── API.md                # API documentation
 │   ├── ARCHITECTURE.md       # Architecture details
 │   └── DEPLOYMENT.md         # Deployment guide
@@ -93,6 +94,8 @@ wxData-Bob/
 ```
 
 ## Quick Start
+
+> 📚 **New to this application?** Check out the comprehensive [**Quick Start Guide**](docs/QUICKSTART.md) for step-by-step instructions on using the UI and testing watsonx.data capabilities!
 
 ### 1. Clone and Setup
 

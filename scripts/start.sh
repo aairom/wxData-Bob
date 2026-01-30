@@ -128,7 +128,7 @@ npm start > "$PROJECT_ROOT/backend.log" 2>&1 &
 BACKEND_PID=$!
 echo $BACKEND_PID > "$PROJECT_ROOT/.backend.pid"
 echo -e "${GREEN}✓ Backend server started (PID: $BACKEND_PID)${NC}"
-echo -e "${BLUE}  Backend URL: http://localhost:5000${NC}"
+echo -e "${BLUE}  Backend URL: http://localhost:5001${NC}"
 echo -e "${BLUE}  Backend logs: $PROJECT_ROOT/backend.log${NC}"
 echo ""
 
