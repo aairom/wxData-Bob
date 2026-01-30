@@ -22,6 +22,8 @@ PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
 SAMPLE_DATA_DIR="$PROJECT_ROOT/sample-data"
 
 # Default configuration (can be overridden by environment variables)
+# These are the default credentials for watsonx.data Developer Edition
+# For custom credentials, see: docs/MINIO_CREDENTIALS.md
 MINIO_ALIAS="${MINIO_ALIAS:-watsonx}"
 MINIO_ENDPOINT="${MINIO_ENDPOINT:-https://localhost:9000}"
 MINIO_ACCESS_KEY="${MINIO_ACCESS_KEY:-admin}"
@@ -108,6 +110,9 @@ else
     echo "  export MINIO_ENDPOINT=https://your-endpoint:9000"
     echo "  export MINIO_ACCESS_KEY=your-access-key"
     echo "  export MINIO_SECRET_KEY=your-secret-key"
+    echo ""
+    echo "For help finding your credentials, see:"
+    echo "  docs/MINIO_CREDENTIALS.md"
     echo ""
     exit 1
 fi

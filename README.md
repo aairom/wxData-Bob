@@ -111,6 +111,8 @@ chmod +x scripts/*.sh
 ./scripts/generate-data.sh
 
 # Upload sample data to MinIO (optional)
+# Uses default credentials: admin/password
+# For custom credentials, see: docs/MINIO_CREDENTIALS.md
 ./scripts/upload-sample-data.sh
 ```
 

@@ -30,10 +30,12 @@ node --version  # Should show v18 or higher
 # Generate sample data locally
 ./scripts/generate-data.sh
 
-# Upload to MinIO/S3 (optional)
+# Upload to MinIO/S3 (uses default credentials: admin/password)
 ./scripts/upload-sample-data.sh
 ```
 These scripts automatically handle data generation and upload to watsonx.data storage.
+
+> 📝 **Need custom credentials?** See [`docs/MINIO_CREDENTIALS.md`](MINIO_CREDENTIALS.md) for help finding your MinIO access keys.
 
 ---
 
