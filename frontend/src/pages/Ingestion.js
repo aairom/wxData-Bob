@@ -15,8 +15,12 @@ import {
   Grid,
   MenuItem,
   Alert,
+  LinearProgress,
+  Chip,
+  IconButton,
+  Divider,
 } from '@mui/material';
-import { CloudUpload } from '@mui/icons-material';
+import { CloudUpload, Close, AttachFile } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import axios from 'axios';
@@ -26,6 +30,10 @@ const fileTypes = ['json', 'csv', 'parquet', 'avro', 'orc'];
 export default function Ingestion() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
+  const [uploading, setUploading] = useState(false);
+  const [uploadProgress, setUploadProgress] = useState(0);
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [uploadedFilePath, setUploadedFilePath] = useState('');
   const [formData, setFormData] = useState({
     catalog: 'iceberg_data',
     schema: '',
@@ -39,6 +47,63 @@ export default function Ingestion() {
 
   const handleChange = (field) => (event) => {
     setFormData({ ...formData, [field]: event.target.value });
+  };
+
+  const handleFileSelect = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      setSelectedFile(file);
+      // Auto-detect file type from extension
+      const extension = file.name.split('.').pop().toLowerCase();
+      if (fileTypes.includes(extension)) {
+        setFormData({ ...formData, fileType: extension });
+      }
+    }
+  };
+
+  const handleFileRemove = () => {
+    setSelectedFile(null);
+    setUploadedFilePath('');
+    setUploadProgress(0);
+  };
+
+  const handleFileUpload = async () => {
+    if (!selectedFile) {
+      toast.error('Please select a file first');
+      return;
+    }
+
+    setUploading(true);
+    setUploadProgress(0);
+
+    try {
+      const formDataUpload = new FormData();
+      formDataUpload.append('file', selectedFile);
+      formDataUpload.append('bucket', formData.bucketName);
+      formDataUpload.append('path', 'uploads');
+
+      const response = await axios.post('/api/upload', formDataUpload, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+        onUploadProgress: (progressEvent) => {
+          const percentCompleted = Math.round(
+            (progressEvent.loaded * 100) / progressEvent.total
+          );
+          setUploadProgress(percentCompleted);
+        },
+      });
+
+      const uploadedPath = response.data.data.s3Path;
+      setUploadedFilePath(uploadedPath);
+      setFormData({ ...formData, filePath: uploadedPath });
+      toast.success(`File uploaded successfully: ${selectedFile.name}`);
+    } catch (error) {
+      const errorMsg = error.response?.data?.error || error.message;
+      toast.error(`Upload failed: ${errorMsg}`);
+    } finally {
+      setUploading(false);
+    }
   };
 
   const handleSubmit = async (event) => {
@@ -141,16 +206,91 @@ export default function Ingestion() {
                 </Typography>
               </Grid>
 
+              {/* File Upload Section */}
               <Grid item xs={12}>
-                <TextField
-                  fullWidth
-                  required
-                  label="File Path"
-                  value={formData.filePath}
-                  onChange={handleChange('filePath')}
-                  helperText="S3/MinIO path (e.g., s3://bucket-name/path/to/file.json)"
-                  placeholder="s3://my-bucket/data/file.json"
-                />
+                <Card variant="outlined" sx={{ p: 2, bgcolor: 'background.default' }}>
+                  <Typography variant="subtitle2" gutterBottom>
+                    Option 1: Upload File
+                  </Typography>
+                  <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                    <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
+                      <Button
+                        variant="outlined"
+                        component="label"
+                        startIcon={<AttachFile />}
+                        disabled={uploading}
+                      >
+                        Select File
+                        <input
+                          type="file"
+                          hidden
+                          accept=".json,.csv,.parquet,.avro,.orc"
+                          onChange={handleFileSelect}
+                        />
+                      </Button>
+                      
+                      {selectedFile && (
+                        <>
+                          <Chip
+                            label={selectedFile.name}
+                            onDelete={handleFileRemove}
+                            deleteIcon={<Close />}
+                            color="primary"
+                            variant="outlined"
+                          />
+                          <Button
+                            variant="contained"
+                            startIcon={<CloudUpload />}
+                            onClick={handleFileUpload}
+                            disabled={uploading || !selectedFile}
+                          >
+                            Upload to MinIO
+                          </Button>
+                        </>
+                      )}
+                    </Box>
+                    
+                    {uploading && (
+                      <Box sx={{ width: '100%' }}>
+                        <LinearProgress variant="determinate" value={uploadProgress} />
+                        <Typography variant="caption" color="text.secondary">
+                          Uploading... {uploadProgress}%
+                        </Typography>
+                      </Box>
+                    )}
+                    
+                    {uploadedFilePath && (
+                      <Alert severity="success">
+                        File uploaded successfully! Path: {uploadedFilePath}
+                      </Alert>
+                    )}
+                  </Box>
+                </Card>
+              </Grid>
+
+              <Grid item xs={12}>
+                <Divider>
+                  <Chip label="OR" />
+                </Divider>
+              </Grid>
+
+              {/* Manual Path Entry */}
+              <Grid item xs={12}>
+                <Card variant="outlined" sx={{ p: 2, bgcolor: 'background.default' }}>
+                  <Typography variant="subtitle2" gutterBottom>
+                    Option 2: Enter File Path Manually
+                  </Typography>
+                  <TextField
+                    fullWidth
+                    required
+                    label="File Path"
+                    value={formData.filePath}
+                    onChange={handleChange('filePath')}
+                    helperText="S3/MinIO path (e.g., s3://bucket-name/path/to/file.json)"
+                    placeholder="s3://my-bucket/data/file.json"
+                    sx={{ mt: 1 }}
+                  />
+                </Card>
               </Grid>
 
               <Grid item xs={12} md={4}>

@@ -3,16 +3,17 @@
 ## Table of Contents
 1. [Overview](#overview)
 2. [Authentication](#authentication)
-3. [Ingestion API](#ingestion-api)
-4. [Error Handling](#error-handling)
-5. [Rate Limiting](#rate-limiting)
-6. [Examples](#examples)
+3. [Upload API](#upload-api)
+4. [Ingestion API](#ingestion-api)
+5. [Error Handling](#error-handling)
+6. [Rate Limiting](#rate-limiting)
+7. [Examples](#examples)
 
 ## Overview
 
 The watsonx.data Demo Application provides a RESTful API for interacting with IBM watsonx.data Developer Edition. All API endpoints are prefixed with `/api`.
 
-**Base URL**: `http://localhost:5000/api`
+**Base URL**: `http://localhost:5001/api`
 
 **Content Type**: `application/json`
 
@@ -69,6 +70,139 @@ Manually refresh the bearer token.
 **Response**: Same as login
 
 **Example**:
+
+## Upload API
+
+### Upload Single File
+
+Upload a file to MinIO/S3 storage.
+
+**Endpoint**: `POST /api/upload`
+
+**Content-Type**: `multipart/form-data`
+
+**Request Parameters**:
+- `file` (file, required): The file to upload
+- `bucket` (string, required): Target bucket name
+- `path` (string, optional): Path within bucket (default: root)
+
+**Supported File Types**:
+- JSON (`.json`)
+- CSV (`.csv`)
+- Parquet (`.parquet`)
+- Avro (`.avro`)
+- ORC (`.orc`)
+
+**File Size Limit**: 100MB
+
+**Example Request** (using curl):
+```bash
+curl -X POST http://localhost:5001/api/upload \
+  -F "file=@/path/to/data.json" \
+  -F "bucket=iceberg-bucket" \
+  -F "path=uploads"
+```
+
+**Example Request** (using JavaScript):
+```javascript
+const formData = new FormData();
+formData.append('file', fileInput.files[0]);
+formData.append('bucket', 'iceberg-bucket');
+formData.append('path', 'uploads');
+
+const response = await axios.post('/api/upload', formData, {
+  headers: {
+    'Content-Type': 'multipart/form-data',
+  },
+  onUploadProgress: (progressEvent) => {
+    const percentCompleted = Math.round(
+      (progressEvent.loaded * 100) / progressEvent.total
+    );
+    console.log(`Upload progress: ${percentCompleted}%`);
+  },
+});
+```
+
+**Response**:
+```json
+{
+  "success": true,
+  "data": {
+    "fileName": "data.json",
+    "bucket": "iceberg-bucket",
+    "key": "uploads/data.json",
+    "size": 1024567,
+    "contentType": "application/json",
+    "s3Path": "s3://iceberg-bucket/uploads/data.json"
+  }
+}
+```
+
+**Error Response**:
+```json
+{
+  "success": false,
+  "error": "File type not allowed. Allowed types: .json, .csv, .parquet, .avro, .orc"
+}
+```
+
+---
+
+### Upload Multiple Files
+
+Upload multiple files to MinIO/S3 storage in a single request.
+
+**Endpoint**: `POST /api/upload/multiple`
+
+**Content-Type**: `multipart/form-data`
+
+**Request Parameters**:
+- `files` (files, required): Array of files to upload (max 10)
+- `bucket` (string, required): Target bucket name
+- `path` (string, optional): Path within bucket
+
+**Example Request** (using curl):
+```bash
+curl -X POST http://localhost:5001/api/upload/multiple \
+  -F "files=@/path/to/data1.json" \
+  -F "files=@/path/to/data2.csv" \
+  -F "bucket=iceberg-bucket" \
+  -F "path=uploads"
+```
+
+**Response**:
+```json
+{
+  "success": true,
+  "data": {
+    "uploaded": [
+      {
+        "fileName": "data1.json",
+        "bucket": "iceberg-bucket",
+        "key": "uploads/data1.json",
+        "size": 1024567,
+        "s3Path": "s3://iceberg-bucket/uploads/data1.json",
+        "success": true
+      },
+      {
+        "fileName": "data2.csv",
+        "bucket": "iceberg-bucket",
+        "key": "uploads/data2.csv",
+        "size": 2048123,
+        "s3Path": "s3://iceberg-bucket/uploads/data2.csv",
+        "success": true
+      }
+    ],
+    "failed": [],
+    "total": 2,
+    "successful": 2,
+    "failed": 0
+  }
+}
+```
+
+---
+
 ```bash
 curl -X POST http://localhost:5000/api/auth/refresh
 ```

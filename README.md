@@ -6,7 +6,8 @@ A comprehensive demonstration application showcasing IBM watsonx.data Developer 
 
 This application demonstrates the key features of watsonx.data Developer Edition:
 - **Authentication & Authorization**: Bearer token-based API authentication
-- **Data Ingestion**: Automated data ingestion from various sources (S3, MinIO, local files)
+- **File Upload**: Upload data files directly from browser to MinIO/S3
+- **Data Ingestion**: Automated data ingestion from various sources (S3, MinIO, uploaded files)
 - **Catalog Management**: Create and manage Iceberg and Hive catalogs
 - **Query Execution**: Execute Presto/Spark queries against data lakehouse
 - **Monitoring**: Track ingestion jobs and query performance
@@ -81,7 +82,9 @@ wxData-Bob/
 │   ├── start.sh              # Start application
 │   ├── stop.sh               # Stop application
 │   ├── deploy-github.sh      # Deploy to GitHub
-│   └── generate-data.py      # Generate sample data
+│   ├── generate-data.sh      # Generate sample data with venv
+│   ├── upload-sample-data.sh # Upload data to MinIO
+│   └── detect-minio-endpoint.sh # Detect MinIO endpoint
 ├── docs/                      # Documentation
 │   ├── QUICKSTART.md         # Quick start guide (START HERE!)
 │   ├── API.md                # API documentation
@@ -141,11 +144,13 @@ The application will be available at:
 - Token refresh mechanism
 - Secure credential management
 
-### 2. Data Ingestion
-- Support for multiple file formats (JSON, CSV, Parquet, Avro)
+### 2. File Upload & Data Ingestion
+- **Browser-based file upload** to MinIO/S3
+- Support for multiple file formats (JSON, CSV, Parquet, Avro, ORC)
+- Upload progress tracking
+- Automatic file type detection
 - Batch and streaming ingestion
 - S3/MinIO integration
-- Local file upload
 - Job monitoring and status tracking
 
 ### 3. Catalog Management

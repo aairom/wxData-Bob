@@ -15,6 +15,7 @@ const logger = require('./src/utils/logger');
 // Import routes
 const authRoutes = require('./src/routes/authRoutes');
 const ingestionRoutes = require('./src/routes/ingestionRoutes');
+const uploadRoutes = require('./src/routes/uploadRoutes');
 
 // Initialize Express app
 const app = express();
@@ -60,6 +61,7 @@ app.get('/health', (req, res) => {
 // API routes
 app.use('/api/auth', authRoutes);
 app.use('/api/ingestion', ingestionRoutes);
+app.use('/api/upload', uploadRoutes);
 
 // Root endpoint
 app.get('/', (req, res) => {
@@ -70,7 +72,8 @@ app.get('/', (req, res) => {
     endpoints: {
       health: '/health',
       auth: '/api/auth',
-      ingestion: '/api/ingestion'
+      ingestion: '/api/ingestion',
+      upload: '/api/upload'
     },
     documentation: '/docs'
   });

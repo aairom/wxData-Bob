@@ -107,17 +107,40 @@ The **Dashboard** is your command center for monitoring watsonx.data operations.
 
 The **Ingestion Page** lets you create data ingestion jobs to load data into watsonx.data.
 
+#### Two Ways to Provide Source Data:
+
+**Option 1: Upload File (NEW!)** 🎉
+- Click **"Select File"** button
+- Choose your data file (JSON, CSV, Parquet, Avro, ORC)
+- Click **"Upload to MinIO"**
+- Watch upload progress bar
+- File path auto-fills after upload
+
+**Option 2: Enter Path Manually**
+- Type S3/MinIO path directly
+- For files already in storage
+
 #### Step-by-Step Guide:
 
 **Step 1: Configure Source**
+
+*Using File Upload:*
 ```
 ┌─────────────────────────────────────┐
-│ Source Configuration                │
+│ Option 1: Upload File               │
 ├─────────────────────────────────────┤
-│ Source Type: [S3/MinIO ▼]          │
-│ Bucket: iceberg-bucket              │
-│ Path: /data/sales/2024/             │
-│ Format: [Parquet ▼]                 │
+│ [Select File] [data.json] [Upload]  │
+│ ▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░ 50%           │
+│ ✓ Uploaded: s3://bucket/data.json   │
+└─────────────────────────────────────┘
+```
+
+*Or Manual Entry:*
+```
+┌─────────────────────────────────────┐
+│ Option 2: Enter Path Manually       │
+├─────────────────────────────────────┤
+│ Path: s3://iceberg-bucket/data.json │
 └─────────────────────────────────────┘
 ```
 
@@ -201,35 +224,45 @@ Target: iceberg_data.sales.transactions
 
 ## Testing watsonx.data Capabilities
 
-### Test 1: Basic Data Ingestion
+### Test 1: Basic Data Ingestion (with File Upload)
 
-**Objective**: Load sample data into watsonx.data
+**Objective**: Load sample data into watsonx.data using the new upload feature
 
 **Steps**:
-1. Generate and upload sample data:
+1. Generate sample data:
    ```bash
    ./scripts/generate-data.sh
-   ./scripts/upload-sample-data.sh
    ```
 
 2. Navigate to **Ingestion** page
 
-3. Create a job with these settings:
-   - **Source Type**: S3/MinIO
-   - **Bucket**: `iceberg-bucket`
-   - **Path**: `/sample-data/customers.parquet`
-   - **Format**: Parquet
+3. **Upload a file**:
+   - Click **"Select File"**
+   - Choose `sample-data/customers.json`
+   - Click **"Upload to MinIO"**
+   - Wait for upload to complete
+   - File path will auto-fill
+
+4. Complete the job settings:
+   - **File Path**: (auto-filled after upload)
+   - **Format**: JSON (auto-detected)
    - **Catalog**: `iceberg_data`
    - **Schema**: `demo`
    - **Table**: `customers`
    - **Engine**: `spark158`
    - **Mode**: `append`
 
-4. Click **"Create Ingestion Job"**
+5. Click **"Create Ingestion Job"**
 
-5. Go to **Jobs** page and monitor progress
+6. Go to **Jobs** page and monitor progress
 
 **Expected Result**: Job completes successfully, data loaded into `iceberg_data.demo.customers`
+
+**Alternative**: You can also use the script method:
+```bash
+./scripts/upload-sample-data.sh
+# Then manually enter the S3 path in the form
+```
 
 ---
 

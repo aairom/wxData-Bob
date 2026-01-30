@@ -19,6 +19,8 @@ The watsonx.data Demo Application is a full-stack web application designed to de
 - Node.js v18+
 - Express.js (REST API framework)
 - Axios (HTTP client)
+- Multer (File upload handling)
+- AWS SDK S3 Client (MinIO/S3 integration)
 - Winston (Logging)
 - Helmet (Security)
 
@@ -56,7 +58,7 @@ The watsonx.data Demo Application is a full-stack web application designed to de
 │  └──────────────────────────────────────────────────────────┘  │
 └────────────────────────────┬────────────────────────────────────┘
                              │ REST API
-                             │ Port 5000
+                             │ Port 5001
                              │
 ┌────────────────────────────▼────────────────────────────────────┐
 │                       Backend API Server                        │
@@ -64,8 +66,8 @@ The watsonx.data Demo Application is a full-stack web application designed to de
 │  ┌──────────────────────────────────────────────────────────┐  │
 │  │  Services:                                               │  │
 │  │  - Auth Service      - Ingestion Service                │  │
-│  │  - Catalog Service   - Query Service                    │  │
-│  │  - Monitoring Service                                   │  │
+│  │  - Upload Service    - Catalog Service                  │  │
+│  │  - Query Service     - Monitoring Service               │  │
 │  └──────────────────────────────────────────────────────────┘  │
 │  ┌──────────────────────────────────────────────────────────┐  │
 │  │  Middleware:                                             │  │
@@ -209,6 +211,24 @@ class IngestionService {
 - Monitor job progress
 - Handle job cancellation
 
+#### 3. Upload Service
+```javascript
+class UploadService {
+  - uploadFile()            // Upload single file to MinIO
+  - uploadMultipleFiles()   // Upload multiple files
+  - validateFile()          // Validate file type and size
+  - generateS3Path()        // Generate S3 path for file
+}
+```
+
+**Responsibilities:**
+- Handle file uploads from browser
+- Validate file types (JSON, CSV, Parquet, Avro, ORC)
+- Upload files to MinIO/S3 storage
+- Generate S3 paths for uploaded files
+- Provide upload progress feedback
+
+
 #### 3. Catalog Service (Future)
 ```javascript
 class CatalogService {
@@ -262,6 +282,32 @@ sequenceDiagram
         IngestionService->>watsonx.data: GET /ingestions/:id
         watsonx.data-->>IngestionService: Job Status
         IngestionService-->>Backend: Status
+
+### File Upload Flow
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Frontend
+    participant Backend
+    participant UploadService
+    participant MinIO
+    
+    User->>Frontend: Select File
+    Frontend->>Frontend: Validate File Type
+    User->>Frontend: Click Upload
+    Frontend->>Backend: POST /api/upload (multipart/form-data)
+    Backend->>UploadService: uploadFile()
+    UploadService->>UploadService: Validate File
+    UploadService->>MinIO: PUT Object
+    Note over UploadService,MinIO: Upload with progress tracking
+    MinIO-->>UploadService: Upload Complete
+    UploadService-->>Backend: S3 Path
+    Backend-->>Frontend: Upload Response
+    Frontend->>Frontend: Auto-fill File Path
+    Frontend-->>User: Show Success + S3 Path
+```
+
         Backend-->>Frontend: Status Update
         Frontend-->>User: Update UI
     end
