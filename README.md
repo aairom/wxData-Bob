@@ -106,6 +106,9 @@ cd wxData-Bob
 
 # Make scripts executable
 chmod +x scripts/*.sh
+
+# Generate sample data (optional but recommended)
+./scripts/generate-data.sh
 ```
 
 ### 2. Start the Application
@@ -117,7 +120,7 @@ chmod +x scripts/*.sh
 
 The application will be available at:
 - **Frontend**: http://localhost:3000
-- **Backend API**: http://localhost:5000
+- **Backend API**: http://localhost:5001
 - **watsonx.data**: https://localhost:6443
 
 ### 3. Stop the Application

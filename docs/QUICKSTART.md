@@ -27,8 +27,9 @@ node --version  # Should show v18 or higher
 
 ✅ **Sample Data** (optional but recommended)
 ```bash
-python3 scripts/generate-sample-data.py
+./scripts/generate-data.sh
 ```
+This script automatically creates a Python virtual environment, installs dependencies, and generates sample data.
 
 ---
 
