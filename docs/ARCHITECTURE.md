@@ -282,7 +282,10 @@ sequenceDiagram
         IngestionService->>watsonx.data: GET /ingestions/:id
         watsonx.data-->>IngestionService: Job Status
         IngestionService-->>Backend: Status
-
+        Backend-->>Frontend: Status Update
+        Frontend-->>User: Update UI
+    end
+```
 ### File Upload Flow
 
 ```mermaid
@@ -308,10 +311,6 @@ sequenceDiagram
     Frontend-->>User: Show Success + S3 Path
 ```
 
-        Backend-->>Frontend: Status Update
-        Frontend-->>User: Update UI
-    end
-```
 
 ### Authentication Flow
 
