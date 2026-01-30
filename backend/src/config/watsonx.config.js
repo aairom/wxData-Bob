@@ -62,7 +62,7 @@ module.exports = {
   
   // Server configuration
   server: {
-    port: process.env.PORT || 5000,
+    port: process.env.PORT || 5001,
     host: process.env.HOST || '0.0.0.0',
     corsOrigin: process.env.CORS_ORIGIN || 'http://localhost:3000'
   },

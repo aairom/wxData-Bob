@@ -84,7 +84,7 @@ stop_service "Frontend server" "$PROJECT_ROOT/.frontend.pid"
 # Fallback: kill by port if PID files didn't work
 echo ""
 echo -e "${YELLOW}Checking for remaining processes...${NC}"
-kill_by_port 5000 "Backend (port 5000)"
+kill_by_port 5001 "Backend (port 5001)"
 kill_by_port 3000 "Frontend (port 3000)"
 
 # Clean up log files (optional)

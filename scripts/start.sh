@@ -57,9 +57,9 @@ check_port() {
 # Check if ports are available
 echo -e "${YELLOW}Checking port availability...${NC}"
 
-if check_port 5000; then
-    echo -e "${RED}Error: Port 5000 is already in use${NC}"
-    echo "Please stop the service using port 5000 or run: ./scripts/stop.sh"
+if check_port 5001; then
+    echo -e "${RED}Error: Port 5001 is already in use${NC}"
+    echo "Please stop the service using port 5001 or run: ./scripts/stop.sh"
     exit 1
 fi
 
@@ -69,7 +69,7 @@ if check_port 3000; then
     exit 1
 fi
 
-echo -e "${GREEN}✓ Ports 3000 and 5000 are available${NC}"
+echo -e "${GREEN}✓ Ports 3000 and 5001 are available${NC}"
 echo ""
 
 # Install backend dependencies
@@ -109,7 +109,7 @@ WATSONX_ENGINE_ID=spark158
 WATSONX_BUCKET_NAME=iceberg-bucket
 
 # Server Configuration
-PORT=5000
+PORT=5001
 HOST=0.0.0.0
 CORS_ORIGIN=http://localhost:3000
 
@@ -135,7 +135,7 @@ echo ""
 # Wait for backend to be ready
 echo -e "${YELLOW}Waiting for backend to be ready...${NC}"
 for i in {1..30}; do
-    if curl -s http://localhost:5000/health > /dev/null 2>&1; then
+    if curl -s http://localhost:5001/health > /dev/null 2>&1; then
         echo -e "${GREEN}✓ Backend is ready${NC}"
         break
     fi
@@ -168,7 +168,7 @@ echo -e "${GREEN}║                                                           �
 echo -e "${GREEN}║   Application started successfully!                       ║${NC}"
 echo -e "${GREEN}║                                                           ║${NC}"
 echo -e "${GREEN}║   Frontend: http://localhost:3000                         ║${NC}"
-echo -e "${GREEN}║   Backend:  http://localhost:5000                         ║${NC}"
+echo -e "${GREEN}║   Backend:  http://localhost:5001                         ║${NC}"
 echo -e "${GREEN}║                                                           ║${NC}"
 echo -e "${GREEN}║   To stop: ./scripts/stop.sh                              ║${NC}"
 echo -e "${GREEN}║                                                           ║${NC}"
