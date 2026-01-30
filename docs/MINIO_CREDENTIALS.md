@@ -216,11 +216,81 @@ The MinIO endpoint depends on your watsonx.data installation method:
 3. **Access via watsonx.data proxy**: Use port 6443
 4. **Check if MinIO is embedded**: May not have separate endpoint
 
-### Issue: "Bucket Not Found"
+### Issue: "Bucket Not Found" or "405 Not Allowed"
 
-**Solution**: The bucket doesn't exist
-1. The upload script will create it automatically
-2. Or create manually: `mc mb watsonx/iceberg-bucket --insecure`
+**Symptoms**:
+- Error: `Unable to make bucket`
+- HTTP 405 Not Allowed
+- nginx error page
+
+**Root Cause**: You're connecting to watsonx.data UI (port 6443) which proxies to MinIO but doesn't support bucket creation via mc client.
+
+**Solution A: Create bucket via watsonx.data UI (Recommended)**
+
+1. Open https://localhost:6443 in your browser
+2. Login with `ibmlhadmin` / `password`
+3. Navigate to **Infrastructure** → **Buckets** (or **Storage** → **Buckets**)
+4. Click **"Add Bucket"** or **"Create Bucket"**
+5. Enter bucket name: `iceberg-bucket`
+6. Select bucket type: **MinIO** or **S3**
+7. Click **"Create"**
+8. Then run the upload script again:
+   ```bash
+   export MINIO_ENDPOINT=https://localhost:6443
+   ./scripts/upload-sample-data.sh
+   ```
+
+**Solution B: Find and use direct MinIO endpoint**
+
+The watsonx.data UI (port 6443) is a proxy. Find the direct MinIO endpoint:
+
+```bash
+# Check Docker containers for MinIO
+docker ps --format "table {{.Names}}\t{{.Ports}}" | grep minio
+
+# Look for a port mapping like: 0.0.0.0:9000->9000/tcp
+# Example output: ibm-lh-minio  0.0.0.0:9000->9000/tcp
+
+# Use that port directly
+export MINIO_ENDPOINT=https://localhost:9000
+export MINIO_ACCESS_KEY=admin
+export MINIO_SECRET_KEY=password
+./scripts/upload-sample-data.sh
+```
+
+**Solution C: Skip bucket creation (if bucket exists)**
+
+If the bucket already exists in watsonx.data, you can upload directly:
+
+```bash
+# List existing buckets first
+mc ls watsonx/ --insecure
+
+# If iceberg-bucket exists, upload directly
+export MINIO_ENDPOINT=https://localhost:6443
+./scripts/upload-sample-data.sh
+```
+
+**Solution D: Use watsonx.data REST API**
+
+Create bucket programmatically:
+
+```bash
+# Get authentication token first
+TOKEN=$(curl -k -X POST https://localhost:6443/api/v2/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"username":"ibmlhadmin","password":"password"}' \
+  | jq -r '.token')
+
+# Create bucket
+curl -k -X POST https://localhost:6443/api/v2/buckets \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "bucket_name": "iceberg-bucket",
+    "bucket_type": "minio"
+  }'
+```
 
 ---
 
