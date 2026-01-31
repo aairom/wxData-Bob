@@ -5,9 +5,10 @@
 2. [Authentication](#authentication)
 3. [Upload API](#upload-api)
 4. [Ingestion API](#ingestion-api)
-5. [Error Handling](#error-handling)
-6. [Rate Limiting](#rate-limiting)
-7. [Examples](#examples)
+5. [Monitoring API](#monitoring-api)
+6. [Error Handling](#error-handling)
+7. [Rate Limiting](#rate-limiting)
+8. [Examples](#examples)
 
 ## Overview
 
@@ -562,6 +563,252 @@ curl -X POST http://localhost:5000/api/ingestion/validate \
 ```
 
 ---
+## Monitoring API
+
+The Monitoring API provides real-time system metrics, resource utilization, and performance analytics.
+
+### Get System Metrics
+
+Get current system metrics including CPU, memory, and request statistics.
+
+**Endpoint**: `GET /api/monitoring/metrics`
+
+**Response**:
+```json
+{
+  "success": true,
+  "data": {
+    "timestamp": "2024-01-30T14:30:00.000Z",
+    "uptime": 3600,
+    "requests": {
+      "total": 150,
+      "success": 145,
+      "failed": 5,
+      "successRate": "96.67"
+    },
+    "performance": {
+      "avgResponseTime": "125.50",
+      "recentResponseTimes": [120, 130, 115, ...]
+    },
+    "system": {
+      "uptime": 3600,
+      "memory": {
+        "total": 17179869184,
+        "free": 8589934592,
+        "used": 8589934592,
+        "usagePercent": "50.00"
+      },
+      "cpu": {
+        "cores": 8,
+        "model": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
+        "loadAverage": [2.5, 2.3, 2.1],
+        "usage": 45
+      },
+      "platform": {
+        "type": "Darwin",
+        "platform": "darwin",
+        "arch": "x64",
+        "release": "21.6.0"
+      }
+    },
+    "endpoints": [
+      {
+        "endpoint": "/api/ingestion/jobs",
+        "total": 50,
+        "success": 48,
+        "failed": 2,
+        "avgResponseTime": "150.25",
+        "successRate": "96.00"
+      }
+    ]
+  }
+}
+```
+
+**Example**:
+```bash
+curl http://localhost:5001/api/monitoring/metrics
+```
+
+---
+
+### Get Dashboard Data
+
+Get comprehensive dashboard data including system metrics and watsonx.data health.
+
+**Endpoint**: `GET /api/monitoring/dashboard`
+
+**Response**:
+```json
+{
+  "success": true,
+  "data": {
+    "timestamp": "2024-01-30T14:30:00.000Z",
+    "uptime": 3600,
+    "requests": {
+      "total": 150,
+      "success": 145,
+      "failed": 5,
+      "successRate": "96.67"
+    },
+    "performance": {
+      "avgResponseTime": "125.50",
+      "recentResponseTimes": [120, 130, 115, ...]
+    },
+    "system": { ... },
+    "watsonx": {
+      "status": "healthy",
+      "connected": true,
+      "details": { ... }
+    },
+    "health": {
+      "overall": "healthy",
+      "components": {
+        "api": "healthy",
+        "memory": "healthy",
+        "watsonx": "healthy"
+      }
+    },
+    "endpoints": [ ... ]
+  }
+}
+```
+
+**Example**:
+```bash
+curl http://localhost:5001/api/monitoring/dashboard
+```
+
+---
+
+### Get Real-time Metrics
+
+Get real-time metrics for streaming and live updates.
+
+**Endpoint**: `GET /api/monitoring/realtime`
+
+**Response**:
+```json
+{
+  "success": true,
+  "data": {
+    "timestamp": 1706623800000,
+    "cpu": 45,
+    "memory": 50.00,
+    "requests": {
+      "total": 150,
+      "success": 145,
+      "failed": 5
+    },
+    "performance": {
+      "avgResponseTime": "125.50"
+    }
+  }
+}
+```
+
+**Example**:
+```bash
+curl http://localhost:5001/api/monitoring/realtime
+```
+
+**Usage**: Poll this endpoint every 5 seconds for real-time dashboard updates.
+
+---
+
+### Get watsonx.data Health
+
+Check the health status of watsonx.data connection.
+
+**Endpoint**: `GET /api/monitoring/health`
+
+**Response**:
+```json
+{
+  "success": true,
+  "data": {
+    "status": "healthy",
+    "connected": true,
+    "details": {
+      "version": "2.0.0",
+      "services": ["presto", "spark", "minio"]
+    }
+  }
+}
+```
+
+**Example**:
+```bash
+curl http://localhost:5001/api/monitoring/health
+```
+
+---
+
+### Get System Information
+
+Get detailed system information.
+
+**Endpoint**: `GET /api/monitoring/system`
+
+**Response**:
+```json
+{
+  "success": true,
+  "data": {
+    "system": {
+      "uptime": 3600,
+      "memory": {
+        "total": 17179869184,
+        "free": 8589934592,
+        "used": 8589934592,
+        "usagePercent": "50.00"
+      },
+      "cpu": {
+        "cores": 8,
+        "model": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
+        "loadAverage": [2.5, 2.3, 2.1],
+        "usage": 45
+      },
+      "platform": {
+        "type": "Darwin",
+        "platform": "darwin",
+        "arch": "x64",
+        "release": "21.6.0"
+      }
+    },
+    "uptime": 3600
+  }
+}
+```
+
+**Example**:
+```bash
+curl http://localhost:5001/api/monitoring/system
+```
+
+---
+
+### Reset Metrics
+
+Reset all collected metrics (admin operation).
+
+**Endpoint**: `POST /api/monitoring/reset`
+
+**Response**:
+```json
+{
+  "success": true,
+  "message": "Metrics reset successfully"
+}
+```
+
+**Example**:
+```bash
+curl -X POST http://localhost:5001/api/monitoring/reset
+```
+
+---
+
 
 ## Error Handling
 

@@ -54,7 +54,7 @@ The watsonx.data Demo Application is a full-stack web application designed to de
 │  ┌──────────────────────────────────────────────────────────┐  │
 │  │  Components:                                             │  │
 │  │  - Dashboard    - Ingestion UI    - Job Monitor         │  │
-│  │  - Catalog Mgmt - Query Interface - Settings            │  │
+│  │  - Monitoring   - Catalog Mgmt    - Query Interface     │  │
 │  └──────────────────────────────────────────────────────────┘  │
 └────────────────────────────┬────────────────────────────────────┘
                              │ REST API
@@ -167,7 +167,18 @@ graph TB
   - Cancel job functionality
   - Job logs viewer
 
-#### 4. Layout Component
+#### 4. Monitoring Component
+- **Purpose**: Real-time system monitoring and performance analytics
+- **Features**:
+  - Real-time CPU and memory metrics
+  - Request volume tracking
+  - Performance analytics
+  - Component health status
+  - Endpoint performance metrics
+  - Auto-refresh capabilities
+  - Interactive charts and visualizations
+
+#### 5. Layout Component
 - **Purpose**: Application shell and navigation
 - **Features**:
   - Top navigation bar
@@ -228,8 +239,28 @@ class UploadService {
 - Generate S3 paths for uploaded files
 - Provide upload progress feedback
 
+#### 4. Monitoring Service
+```javascript
+class MonitoringService {
+  - getMetrics()            // Get current system metrics
+  - getDashboardData()      // Get comprehensive dashboard data
+  - getRealTimeMetrics()    // Get real-time metrics for streaming
+  - getWatsonxHealth()      // Get watsonx.data health status
+  - recordRequest()         // Record API request metrics
+  - resetMetrics()          // Reset all metrics
+  - updateSystemMetrics()   // Update system resource metrics
+}
+```
 
-#### 3. Catalog Service (Future)
+**Responsibilities:**
+- Collect and track system metrics
+- Monitor CPU, memory, and resource utilization
+- Track API request performance
+- Monitor watsonx.data health status
+- Provide real-time metrics for dashboard
+- Calculate performance analytics
+
+#### 5. Catalog Service (Future)
 ```javascript
 class CatalogService {
   - listCatalogs()          // List all catalogs
@@ -240,7 +271,7 @@ class CatalogService {
 }
 ```
 
-#### 4. Query Service (Future)
+#### 6. Query Service (Future)
 ```javascript
 class QueryService {
   - executeQuery()          // Execute SQL query
@@ -410,6 +441,14 @@ Body:
 - `GET /api/ingestion/file-types` - Get supported file types
 - `POST /api/ingestion/validate` - Validate config
 
+#### Monitoring
+- `GET /api/monitoring/metrics` - Get current system metrics
+- `GET /api/monitoring/dashboard` - Get comprehensive dashboard data
+- `GET /api/monitoring/realtime` - Get real-time metrics
+- `GET /api/monitoring/health` - Get watsonx.data health status
+- `GET /api/monitoring/system` - Get system information
+- `POST /api/monitoring/reset` - Reset metrics (admin)
+
 ## Security
 
 ### Authentication & Authorization
@@ -443,11 +482,27 @@ Body:
 - Lazy loading
 - Code splitting
 
-### Monitoring
-- Winston logging
-- Health check endpoints
-- Error tracking
-- Performance metrics
+### Monitoring & Observability
+- **Real-time Monitoring Dashboard**
+  - CPU and memory utilization tracking
+  - Request volume and success rate metrics
+  - Performance analytics with response times
+  - Component health status monitoring
+  - Endpoint-level performance tracking
+- **Logging**
+  - Winston logging framework
+  - Structured log format
+  - Log levels (error, warn, info, debug)
+  - Request/response logging
+- **Health Checks**
+  - Application health endpoint
+  - watsonx.data connectivity check
+  - Component health status
+- **Metrics Collection**
+  - Automatic request tracking
+  - Performance metrics calculation
+  - System resource monitoring
+  - Historical data retention
 
 ## Deployment Architecture
 
@@ -473,10 +528,13 @@ localhost:3000 (Frontend) → localhost:5000 (Backend) → localhost:6443 (watso
    - Query history
    - Result export
 
-3. **Monitoring Dashboard**
-   - Real-time metrics
-   - Resource utilization
-   - Performance analytics
+3. **Monitoring Dashboard** ✅ **IMPLEMENTED**
+   - Real-time CPU and memory metrics
+   - Request volume and performance tracking
+   - Component health monitoring
+   - Endpoint performance analytics
+   - Auto-refresh capabilities
+   - Interactive charts and visualizations
 
 4. **User Management**
    - Multi-user support

@@ -16,6 +16,10 @@ const logger = require('./src/utils/logger');
 const authRoutes = require('./src/routes/authRoutes');
 const ingestionRoutes = require('./src/routes/ingestionRoutes');
 const uploadRoutes = require('./src/routes/uploadRoutes');
+const monitoringRoutes = require('./src/routes/monitoringRoutes');
+
+// Import monitoring service
+const monitoringService = require('./src/services/monitoringService');
 
 // Initialize Express app
 const app = express();
@@ -48,6 +52,28 @@ app.use(morgan('combined', {
   }
 }));
 
+// Monitoring middleware - track all API requests
+app.use('/api/', (req, res, next) => {
+  const startTime = Date.now();
+  
+  // Capture response
+  const originalSend = res.send;
+  res.send = function(data) {
+    const responseTime = Date.now() - startTime;
+    const success = res.statusCode >= 200 && res.statusCode < 400;
+    
+    monitoringService.recordRequest(
+      req.path,
+      success,
+      responseTime
+    );
+    
+    originalSend.call(this, data);
+  };
+  
+  next();
+});
+
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.json({
@@ -62,6 +88,7 @@ app.get('/health', (req, res) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/ingestion', ingestionRoutes);
 app.use('/api/upload', uploadRoutes);
+app.use('/api/monitoring', monitoringRoutes);
 
 // Root endpoint
 app.get('/', (req, res) => {
@@ -73,7 +100,8 @@ app.get('/', (req, res) => {
       health: '/health',
       auth: '/api/auth',
       ingestion: '/api/ingestion',
-      upload: '/api/upload'
+      upload: '/api/upload',
+      monitoring: '/api/monitoring'
     },
     documentation: '/docs'
   });

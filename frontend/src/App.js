@@ -15,6 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Dashboard from './pages/Dashboard';
 import Ingestion from './pages/Ingestion';
 import Jobs from './pages/Jobs';
+import Monitoring from './pages/Monitoring';
 import Layout from './components/Layout';
 
 // Create theme
@@ -105,6 +106,7 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/ingestion" element={<Ingestion />} />
             <Route path="/jobs" element={<Jobs />} />
+            <Route path="/monitoring" element={<Monitoring />} />
             <Route path="*" element={<Navigate to="/dashboard" replace />} />
           </Routes>
         </Layout>

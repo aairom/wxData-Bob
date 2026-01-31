@@ -24,6 +24,7 @@ import {
   Dashboard as DashboardIcon,
   CloudUpload as UploadIcon,
   Work as JobsIcon,
+  Analytics as MonitoringIcon,
   Menu as MenuIcon,
 } from '@mui/icons-material';
 
@@ -33,6 +34,7 @@ const menuItems = [
   { text: 'Dashboard', icon: <DashboardIcon />, path: '/dashboard' },
   { text: 'Ingestion', icon: <UploadIcon />, path: '/ingestion' },
   { text: 'Jobs', icon: <JobsIcon />, path: '/jobs' },
+  { text: 'Monitoring', icon: <MonitoringIcon />, path: '/monitoring' },
 ];
 
 export default function Layout({ children }) {
