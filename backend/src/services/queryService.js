@@ -1,6 +1,6 @@
 /**
  * Query Service
- * 
+ *
  * Handles SQL query execution against watsonx.data
  */
 
@@ -9,10 +9,86 @@ const config = require('../config/watsonx.config');
 const authService = require('./authService');
 const logger = require('../utils/logger');
 
+// Constants for query polling
+const MAX_POLL_ATTEMPTS = 60;
+const INITIAL_POLL_DELAY_MS = 1000;
+const BACKOFF_MULTIPLIER = 1.5;
+const MAX_POLL_DELAY_MS = 5000;
+const QUERY_TIMEOUT_MS = 300000; // 5 minutes
+const MAX_HISTORY_SIZE = 100;
+const DEFAULT_ENGINE = 'presto-01';
+
+// Dangerous SQL patterns to block
+const DANGEROUS_SQL_PATTERNS = [
+  /DROP\s+DATABASE/i,
+  /DROP\s+SCHEMA/i,
+  /DROP\s+TABLE/i,
+  /TRUNCATE\s+TABLE/i,
+  /DELETE\s+FROM\s+\w+\s*;/i, // DELETE without WHERE
+  /UPDATE\s+\w+\s+SET\s+.*\s*;/i, // UPDATE without WHERE
+];
+
 class QueryService {
   constructor() {
     this.queryHistory = [];
-    this.maxHistorySize = 100;
+    this.maxHistorySize = MAX_HISTORY_SIZE;
+  }
+
+  /**
+   * Validate SQL query for dangerous patterns
+   */
+  validateSQL(sql) {
+    if (!sql || typeof sql !== 'string') {
+      throw new Error('SQL query must be a non-empty string');
+    }
+
+    const trimmedSQL = sql.trim();
+    if (trimmedSQL.length === 0) {
+      throw new Error('SQL query cannot be empty');
+    }
+
+    // Check for dangerous patterns
+    for (const pattern of DANGEROUS_SQL_PATTERNS) {
+      if (pattern.test(trimmedSQL)) {
+        throw new Error('Query contains potentially dangerous operations. Please contact an administrator for destructive operations.');
+      }
+    }
+
+    return trimmedSQL;
+  }
+
+  /**
+   * Validate identifier (catalog, schema, table names)
+   */
+  validateIdentifier(identifier, name = 'identifier') {
+    if (!identifier || typeof identifier !== 'string') {
+      throw new Error(`${name} must be a non-empty string`);
+    }
+
+    // Only allow alphanumeric, underscore, and hyphen
+    const validPattern = /^[a-zA-Z0-9_-]+$/;
+    if (!validPattern.test(identifier)) {
+      throw new Error(`${name} contains invalid characters. Only alphanumeric, underscore, and hyphen are allowed.`);
+    }
+
+    return identifier;
+  }
+
+  /**
+   * Sanitize SQL for logging (truncate and remove sensitive data)
+   */
+  sanitizeSQLForLogging(sql) {
+    if (!sql) return '';
+    
+    // Truncate long queries
+    const maxLength = 200;
+    let sanitized = sql.length > maxLength ? sql.substring(0, maxLength) + '...' : sql;
+    
+    // Mask potential sensitive data patterns
+    sanitized = sanitized.replace(/password\s*=\s*['"][^'"]*['"]/gi, "password='***'");
+    sanitized = sanitized.replace(/token\s*=\s*['"][^'"]*['"]/gi, "token='***'");
+    
+    return sanitized;
   }
 
   /**
@@ -20,21 +96,26 @@ class QueryService {
    */
   async executeQuery(sql, catalog = 'iceberg_data', schema = 'default') {
     try {
+      // Validate inputs
+      const validatedSQL = this.validateSQL(sql);
+      const validatedCatalog = this.validateIdentifier(catalog, 'catalog');
+      const validatedSchema = this.validateIdentifier(schema, 'schema');
+      
       const token = await authService.getToken();
       
-      logger.info('Executing query', { 
-        catalog, 
-        schema, 
-        sqlLength: sql.length 
+      logger.info('Executing query', {
+        catalog: validatedCatalog,
+        schema: validatedSchema,
+        sqlPreview: this.sanitizeSQLForLogging(validatedSQL)
       });
 
       const response = await axios.post(
         `${config.watsonxData.baseUrl}/lakehouse/api/v2/queries`,
         {
-          catalog,
-          schema,
-          sql,
-          engine: 'presto-01'
+          catalog: validatedCatalog,
+          schema: validatedSchema,
+          sql: validatedSQL,
+          engine: DEFAULT_ENGINE
         },
         {
           headers: {
@@ -43,7 +124,7 @@ class QueryService {
             'Content-Type': 'application/json'
           },
           httpsAgent: config.watsonxData.httpsAgent,
-          timeout: 300000 // 5 minutes for long queries
+          timeout: QUERY_TIMEOUT_MS
         }
       );
 
@@ -69,9 +150,9 @@ class QueryService {
         ...results
       };
     } catch (error) {
-      logger.error('Query execution failed', { 
+      logger.error('Query execution failed', {
         error: error.message,
-        sql: sql.substring(0, 100)
+        sqlPreview: this.sanitizeSQLForLogging(sql)
       });
       
       // Add failed query to history
@@ -92,8 +173,9 @@ class QueryService {
   /**
    * Poll for query results
    */
-  async pollQueryResults(queryId, token, maxAttempts = 60) {
+  async pollQueryResults(queryId, token, maxAttempts = MAX_POLL_ATTEMPTS) {
     const startTime = Date.now();
+    let lastError = null;
     
     for (let attempt = 0; attempt < maxAttempts; attempt++) {
       try {
@@ -125,17 +207,33 @@ class QueryService {
         }
         
         // Wait before next poll (exponential backoff)
-        const waitTime = Math.min(1000 * Math.pow(1.5, attempt), 5000);
+        const waitTime = Math.min(INITIAL_POLL_DELAY_MS * Math.pow(BACKOFF_MULTIPLIER, attempt), MAX_POLL_DELAY_MS);
         await new Promise(resolve => setTimeout(resolve, waitTime));
         
       } catch (error) {
-        if (attempt === maxAttempts - 1) {
+        lastError = error;
+        
+        // Log intermediate errors for debugging
+        if (attempt < maxAttempts - 1) {
+          logger.warn('Query polling error (will retry)', {
+            queryId,
+            attempt: attempt + 1,
+            maxAttempts,
+            error: error.message
+          });
+          
+          // For API errors (non-network), fail immediately
+          if (error.response && error.response.status >= 400 && error.response.status < 500) {
+            throw error;
+          }
+        } else {
+          // Last attempt, throw the error
           throw error;
         }
       }
     }
     
-    throw new Error('Query timeout: exceeded maximum polling attempts');
+    throw new Error(`Query timeout: exceeded maximum polling attempts (${maxAttempts}). Last error: ${lastError?.message || 'Unknown'}`);
   }
 
   /**
@@ -227,10 +325,11 @@ class QueryService {
    */
   async listSchemas(catalog) {
     try {
+      const validatedCatalog = this.validateIdentifier(catalog, 'catalog');
       const token = await authService.getToken();
       
       const response = await axios.get(
-        `${config.watsonxData.baseUrl}/lakehouse/api/v2/catalogs/${catalog}/schemas`,
+        `${config.watsonxData.baseUrl}/lakehouse/api/v2/catalogs/${validatedCatalog}/schemas`,
         {
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -243,7 +342,7 @@ class QueryService {
 
       return response.data.schemas || [];
     } catch (error) {
-      logger.error('Failed to list schemas', { catalog, error: error.message });
+      logger.error('Failed to list schemas', { catalog: this.validateIdentifier(catalog, 'catalog'), error: error.message });
       throw new Error(`Failed to list schemas: ${error.message}`);
     }
   }
@@ -253,10 +352,12 @@ class QueryService {
    */
   async listTables(catalog, schema) {
     try {
+      const validatedCatalog = this.validateIdentifier(catalog, 'catalog');
+      const validatedSchema = this.validateIdentifier(schema, 'schema');
       const token = await authService.getToken();
       
       const response = await axios.get(
-        `${config.watsonxData.baseUrl}/lakehouse/api/v2/catalogs/${catalog}/schemas/${schema}/tables`,
+        `${config.watsonxData.baseUrl}/lakehouse/api/v2/catalogs/${validatedCatalog}/schemas/${validatedSchema}/tables`,
         {
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -269,7 +370,11 @@ class QueryService {
 
       return response.data.tables || [];
     } catch (error) {
-      logger.error('Failed to list tables', { catalog, schema, error: error.message });
+      logger.error('Failed to list tables', {
+        catalog: this.validateIdentifier(catalog, 'catalog'),
+        schema: this.validateIdentifier(schema, 'schema'),
+        error: error.message
+      });
       throw new Error(`Failed to list tables: ${error.message}`);
     }
   }
@@ -279,10 +384,13 @@ class QueryService {
    */
   async getTableSchema(catalog, schema, table) {
     try {
+      const validatedCatalog = this.validateIdentifier(catalog, 'catalog');
+      const validatedSchema = this.validateIdentifier(schema, 'schema');
+      const validatedTable = this.validateIdentifier(table, 'table');
       const token = await authService.getToken();
       
       const response = await axios.get(
-        `${config.watsonxData.baseUrl}/lakehouse/api/v2/catalogs/${catalog}/schemas/${schema}/tables/${table}`,
+        `${config.watsonxData.baseUrl}/lakehouse/api/v2/catalogs/${validatedCatalog}/schemas/${validatedSchema}/tables/${validatedTable}`,
         {
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -295,7 +403,12 @@ class QueryService {
 
       return response.data;
     } catch (error) {
-      logger.error('Failed to get table schema', { catalog, schema, table, error: error.message });
+      logger.error('Failed to get table schema', {
+        catalog: this.validateIdentifier(catalog, 'catalog'),
+        schema: this.validateIdentifier(schema, 'schema'),
+        table: this.validateIdentifier(table, 'table'),
+        error: error.message
+      });
       throw new Error(`Failed to get table schema: ${error.message}`);
     }
   }

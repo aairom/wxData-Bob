@@ -23,6 +23,9 @@ yarn.lock
 .env.test.local
 .env.production.local
 
+# Kubernetes secrets (use templates instead)
+k8s/secret.yaml
+
 # IDE
 .vscode/
 .idea/

@@ -20,7 +20,7 @@ Before you begin, ensure you have:
 
 ✅ **watsonx.data Developer Edition** running on your laptop
 - Access URL: https://localhost:6443
-- Default credentials: `ibmlhadmin` / `password`
+- You'll need valid credentials (configure in backend/src/config/watsonx.config.js)
 
 ✅ **Node.js v18+** installed
 ```bash

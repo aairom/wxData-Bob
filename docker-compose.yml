@@ -15,10 +15,10 @@ services:
       - NODE_ENV=production
       - PORT=3001
       - HOST=0.0.0.0
-      - WATSONX_BASE_URL=${WATSONX_BASE_URL:-https://localhost:9443}
-      - WATSONX_USERNAME=${WATSONX_USERNAME:-ibmlhadmin}
-      - WATSONX_PASSWORD=${WATSONX_PASSWORD:-password}
-      - WATSONX_INSTANCE_ID=${WATSONX_INSTANCE_ID:-1234567890}
+      - WATSONX_BASE_URL=${WATSONX_BASE_URL}
+      - WATSONX_USERNAME=${WATSONX_USERNAME}
+      - WATSONX_PASSWORD=${WATSONX_PASSWORD}
+      - WATSONX_INSTANCE_ID=${WATSONX_INSTANCE_ID}
       - CORS_ORIGIN=http://localhost:3000
     volumes:
       - ./backend/logs:/app/logs

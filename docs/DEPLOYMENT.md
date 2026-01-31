@@ -34,6 +34,8 @@ This guide covers deployment options for the watsonx.data Demo Application.
 
 ### Using Docker Compose
 
+**⚠️ SECURITY NOTE:** Never commit credentials to version control. Always use environment variables.
+
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
@@ -42,14 +44,21 @@ This guide covers deployment options for the watsonx.data Demo Application.
 
 2. **Configure environment variables**
    
-   Create a `.env` file in the root directory:
+   Copy the example file and configure with your credentials:
+   ```bash
+   cp .env.example .env
+   ```
+   
+   Edit `.env` with your actual values:
    ```bash
    # watsonx.data Configuration
    WATSONX_BASE_URL=https://your-watsonx-host:9443
-   WATSONX_USERNAME=ibmlhadmin
-   WATSONX_PASSWORD=your-password
+   WATSONX_USERNAME=your_username
+   WATSONX_PASSWORD=your_secure_password
    WATSONX_INSTANCE_ID=your-instance-id
    ```
+   
+   **IMPORTANT:** The `.env` file is in `.gitignore` and should never be committed.
 
 3. **Build and start services**
    ```bash
@@ -95,8 +104,9 @@ docker run -d \
   --name wxdata-backend \
   -p 3001:3001 \
   -e WATSONX_BASE_URL=https://your-host:9443 \
-  -e WATSONX_USERNAME=ibmlhadmin \
-  -e WATSONX_PASSWORD=your-password \
+  -e WATSONX_USERNAME=your_username \
+  -e WATSONX_PASSWORD=your_secure_password \
+  -e WATSONX_INSTANCE_ID=your-instance-id \
   wxdata-backend:latest
 
 # Frontend
@@ -131,6 +141,8 @@ docker-compose exec backend sh
 
 ## Kubernetes Deployment
 
+**⚠️ SECURITY NOTE:** See `k8s/README.md` for detailed security best practices.
+
 ### Prerequisites
 
 1. **Ensure cluster is ready**
@@ -149,30 +161,39 @@ docker-compose exec backend sh
 1. **Build and push Docker images**
    
    ```bash
-   # Tag images for your registry
-   docker tag wxdata-backend:latest your-registry/wxdata-backend:latest
-   docker tag wxdata-frontend:latest your-registry/wxdata-frontend:latest
+   # Build with version tags (not 'latest')
+   docker build -t your-registry/wxdata-backend:1.0.0 ./backend
+   docker build -t your-registry/wxdata-frontend:1.0.0 ./frontend
    
    # Push to registry
-   docker push your-registry/wxdata-backend:latest
-   docker push your-registry/wxdata-frontend:latest
+   docker push your-registry/wxdata-backend:1.0.0
+   docker push your-registry/wxdata-frontend:1.0.0
    ```
 
 2. **Update image references**
    
    Edit `k8s/backend-deployment.yaml` and `k8s/frontend-deployment.yaml`:
    ```yaml
-   image: your-registry/wxdata-backend:latest
+   image: your-registry/wxdata-backend:1.0.0  # Use specific version, not 'latest'
    ```
 
-3. **Configure secrets**
+3. **Configure secrets (IMPORTANT)**
    
-   Edit `k8s/secret.yaml` with your credentials:
+   **Never commit actual secrets to version control!**
+   
+   Create your secret from the template:
+   ```bash
+   cp k8s/secret.yaml.template k8s/secret.yaml
+   ```
+   
+   Edit `k8s/secret.yaml` with your actual credentials:
    ```yaml
    stringData:
-     WATSONX_USERNAME: "your-username"
-     WATSONX_PASSWORD: "your-password"
+     WATSONX_USERNAME: "your-actual-username"
+     WATSONX_PASSWORD: "your-secure-password"
    ```
+   
+   **Note:** `k8s/secret.yaml` is in `.gitignore` and should never be committed.
 
 4. **Update ConfigMap**
    
@@ -180,6 +201,7 @@ docker-compose exec backend sh
    ```yaml
    data:
      WATSONX_BASE_URL: "https://your-watsonx-host:9443"
+     WATSONX_INSTANCE_ID: "your-instance-id"
    ```
 
 5. **Deploy to Kubernetes**
@@ -198,7 +220,7 @@ docker-compose exec backend sh
    # Deploy frontend
    kubectl apply -f k8s/frontend-deployment.yaml
    
-   # Deploy ingress
+   # Deploy ingress (optional)
    kubectl apply -f k8s/ingress.yaml
    ```
 

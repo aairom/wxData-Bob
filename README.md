@@ -54,10 +54,11 @@ This application demonstrates the key features of watsonx.data Developer Edition
 
 - **watsonx.data Developer Edition** running locally
   - Default URL: `https://localhost:6443`
-  - Default credentials: `ibmlhadmin` / `password`
+  - You'll need valid credentials (see Quick Start for setup)
 - **Node.js** v18+ and npm
 - **Python** 3.8+ (for data generation scripts)
 - **Docker** (optional, for containerized deployment)
+- **Kubernetes** (optional, for production deployment)
 
 ## Project Structure
 
@@ -92,9 +93,20 @@ wxData-Bob/
 │   ├── API.md                # API documentation
 │   ├── ARCHITECTURE.md       # Architecture details
 │   └── DEPLOYMENT.md         # Deployment guide
+├── k8s/                       # Kubernetes manifests
+│   ├── README.md             # Kubernetes deployment guide
+│   ├── namespace.yaml
+│   ├── configmap.yaml
+│   ├── secret.yaml.template  # Secret template (copy to secret.yaml)
+│   ├── backend-deployment.yaml
+│   ├── frontend-deployment.yaml
+│   └── ingress.yaml
 ├── sample-data/               # Sample datasets
+├── .env.example              # Environment variables template
 ├── .gitignore
-├── docker-compose.yml
+├── docker-compose.yml        # Docker Compose configuration
+├── DOCKER_SETUP.md          # Docker deployment guide
+├── SECURITY_FIXES.md        # Security enhancements documentation
 └── README.md
 ```
 
