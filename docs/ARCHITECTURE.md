@@ -275,16 +275,29 @@ class MonitoringService {
 - Provide real-time metrics for dashboard
 - Calculate performance analytics
 
-#### 5. Catalog Service (Future)
+#### 5. Catalog Service ✅ **IMPLEMENTED**
 ```javascript
 class CatalogService {
   - listCatalogs()          // List all catalogs
+  - getCatalog()            // Get catalog details
   - createCatalog()         // Create new catalog
-  - listSchemas()           // List schemas
-  - createSchema()          // Create schema
-  - listTables()            // List tables
+  - updateCatalog()         // Update catalog
+  - deleteCatalog()         // Delete catalog
+  - getCatalogStats()       // Get catalog statistics
+  - getSchemaTree()         // Get hierarchical schema tree
+  - getTableMetadata()      // Get detailed table metadata
+  - validateCatalogName()   // Validate catalog name
+  - validateIdentifier()    // Validate identifiers
 }
 ```
+
+**Responsibilities:**
+- Full CRUD operations for catalogs
+- Input validation and sanitization
+- Catalog statistics calculation (schema/table counts)
+- Hierarchical schema tree generation
+- Detailed table metadata retrieval
+- Support for multiple catalog types (Iceberg, Hive, Delta Lake)
 
 #### 6. Query Service ✅ **IMPLEMENTED**
 ```javascript
