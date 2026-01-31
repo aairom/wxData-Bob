@@ -619,12 +619,7 @@ Kubernetes Cluster:
 
 ## Future Enhancements
 
-1. **Catalog Management**
-   - Full CRUD operations
-   - Schema visualization
-   - Advanced table metadata viewer
-
-2. **User Management**
+1. **User Management**
    - Multi-user support
    - Role-based access control
    - Audit logging

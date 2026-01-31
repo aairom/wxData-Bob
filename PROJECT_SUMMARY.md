@@ -423,12 +423,7 @@ See [DEPLOYMENT.md](docs/DEPLOYMENT.md) for detailed instructions.
 ## Future Enhancements
 
 ### Planned Features
-1. **Catalog Management**
-   - Full CRUD operations for catalogs
-   - Advanced schema visualization
-   - Enhanced table metadata viewer
-
-2. **User Management**
+1. **User Management**
    - Multi-user support
    - Role-based access control
    - Audit logging
