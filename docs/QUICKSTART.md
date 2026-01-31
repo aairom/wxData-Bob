@@ -6,9 +6,11 @@ This guide will help you get started with the watsonx.data Demo Application and 
 1. [Prerequisites](#prerequisites)
 2. [Starting the Application](#starting-the-application)
 3. [Understanding the UI](#understanding-the-ui)
-4. [Testing watsonx.data Capabilities](#testing-watsonxdata-capabilities)
-5. [Common Use Cases](#common-use-cases)
-6. [Troubleshooting](#troubleshooting)
+4. [Using the Query Interface](#using-the-query-interface)
+5. [Monitoring System Performance](#monitoring-system-performance)
+6. [Testing watsonx.data Capabilities](#testing-watsonxdata-capabilities)
+7. [Common Use Cases](#common-use-cases)
+8. [Troubleshooting](#troubleshooting)
 
 ---
 
@@ -218,6 +220,236 @@ Duration: 2m 34s
 Engine: spark158
 Source: s3://iceberg-bucket/data/sales/
 Target: iceberg_data.sales.transactions
+---
+
+## Using the Query Interface
+
+### Query Page (`/query`)
+
+The **Query Page** provides an interactive SQL editor for querying data in watsonx.data.
+
+#### Key Features:
+
+1. **SQL Editor**
+   - Monospace font for better code readability
+   - Multi-line query support
+   - Copy SQL to clipboard
+
+2. **Catalog Browser**
+   - Select catalog (e.g., `iceberg_data`)
+   - Choose schema (e.g., `default`, `sales`)
+   - Browse available tables
+
+3. **Schema Browser (Right Panel)**
+   - View all tables in selected schema
+   - Click table name to see details
+   - Insert table name into query with one click
+
+4. **Query History**
+   - View all previously executed queries
+   - One-click reload of past queries
+   - See execution time and row counts
+   - Filter by status (completed/failed)
+
+5. **Result Visualization**
+   - Tabular display of query results
+   - Column names and data types
+   - NULL value highlighting
+   - Pagination for large result sets
+
+6. **Export Results**
+   - Download as CSV
+   - Download as JSON
+   - Preserve column names and data types
+
+#### Step-by-Step Guide:
+
+**Step 1: Select Catalog and Schema**
+```
+┌─────────────────────────────────────┐
+│ Catalog: [iceberg_data ▼]          │
+│ Schema:  [default ▼]                │
+└─────────────────────────────────────┘
+```
+
+**Step 2: Write Your Query**
+```sql
+SELECT * FROM iceberg_data.default.customers 
+WHERE country = 'USA' 
+LIMIT 10;
+```
+
+**Step 3: Execute**
+- Click **"Execute Query"** button
+- Watch execution progress
+- View results in table below
+
+**Step 4: Export (Optional)**
+- Click **"Export"** dropdown
+- Choose CSV or JSON format
+- File downloads automatically
+
+#### Quick Examples:
+
+The Query page includes pre-built examples:
+
+1. **Select from customers**
+   ```sql
+   SELECT * FROM iceberg_data.default.customers LIMIT 10;
+   ```
+
+2. **Count records**
+   ```sql
+   SELECT COUNT(*) as total FROM iceberg_data.default.customers;
+   ```
+
+3. **Show tables**
+   ```sql
+   SHOW TABLES FROM iceberg_data.default;
+   ```
+
+#### Tips:
+
+- Use **Ctrl+Enter** to execute query (coming soon)
+- Click table names in Schema Browser to insert into query
+- Query history persists across sessions
+- Failed queries are saved for debugging
+- Use LIMIT clause for large tables
+
+---
+
+## Monitoring System Performance
+
+### Monitoring Page (`/monitoring`)
+
+The **Monitoring Page** provides real-time insights into system performance and health.
+
+#### Dashboard Sections:
+
+**1. System Status Alert**
+```
+┌─────────────────────────────────────────┐
+│ ✓ System Status: HEALTHY               │
+│ Last updated: 2024-01-30 14:30:00      │
+└─────────────────────────────────────────┘
+```
+
+**2. Key Metrics Cards**
+
+*CPU Usage*
+```
+┌─────────────────────┐
+│ CPU Usage           │
+│ 45%                 │
+│ ▓▓▓▓▓▓▓▓▓░░░░░░░░░ │
+│ 8 cores             │
+└─────────────────────┘
+```
+
+*Memory*
+```
+┌─────────────────────┐
+│ Memory              │
+│ 62%                 │
+│ ▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░ │
+│ 5.2 GB / 8.0 GB     │
+└─────────────────────┘
+```
+
+*Requests*
+```
+┌─────────────────────┐
+│ Requests            │
+│ 1,234               │
+│ Success Rate: 98.5% │
+│ Failed: 18          │
+└─────────────────────┘
+```
+
+*Performance*
+```
+┌─────────────────────┐
+│ Performance         │
+│ 145ms               │
+│ Avg Response Time   │
+│ Uptime: 2d 5h 23m   │
+└─────────────────────┘
+```
+
+**3. Real-time Charts**
+
+*CPU & Memory Usage*
+- Line chart showing last 20 data points
+- Updates every 5 seconds
+- Shows trends over time
+
+*Request Volume*
+- Area chart of total requests
+- Real-time updates
+- Helps identify traffic patterns
+
+**4. Component Health**
+```
+┌─────────────────────────────────────┐
+│ Component Health                    │
+├─────────────────────────────────────┤
+│ ✓ API Server      [healthy]        │
+│ ⚠ Memory          [warning]        │
+│ ✓ watsonx.data    [healthy]        │
+└─────────────────────────────────────┘
+```
+
+**5. Endpoint Performance Table**
+
+| Endpoint | Total | Success | Failed | Success Rate | Avg Time |
+|----------|-------|---------|--------|--------------|----------|
+| /api/query/execute | 234 | 230 | 4 | 98.3% | 234ms |
+| /api/ingestion/jobs | 156 | 156 | 0 | 100% | 89ms |
+| /api/monitoring/dashboard | 89 | 89 | 0 | 100% | 45ms |
+
+#### Features:
+
+1. **Auto-Refresh**
+   - Toggle on/off with button
+   - Updates every 5 seconds when enabled
+   - Manual refresh button available
+
+2. **Health Indicators**
+   - ✅ Green = Healthy
+   - ⚠️ Yellow = Warning
+   - ❌ Red = Unhealthy/Degraded
+
+3. **Performance Tracking**
+   - Response time per endpoint
+   - Success/failure rates
+   - Request volume trends
+
+4. **System Metrics**
+   - CPU utilization
+   - Memory usage
+   - Uptime tracking
+
+#### Use Cases:
+
+**Monitoring During Load**
+1. Navigate to Monitoring page
+2. Enable auto-refresh
+3. Create multiple ingestion jobs
+4. Watch CPU and memory metrics
+5. Monitor request success rates
+
+**Troubleshooting Performance**
+1. Check endpoint performance table
+2. Identify slow endpoints
+3. Review failed request counts
+4. Check component health status
+
+**Capacity Planning**
+1. Monitor resource usage over time
+2. Track request volume trends
+3. Identify peak usage periods
+4. Plan for scaling needs
+
 ```
 
 ---
@@ -251,6 +483,102 @@ Target: iceberg_data.sales.transactions
    - **Table**: `customers`
    - **Engine**: `spark158`
    - **Mode**: `append`
+
+---
+
+### Test 6: Query Interface Testing ✅ **NEW**
+
+**Objective**: Test SQL query execution and result visualization
+
+**Steps**:
+
+1. Navigate to **Query** page
+
+2. **Test Basic Query**:
+   - Select catalog: `iceberg_data`
+   - Select schema: `default`
+   - Enter query:
+     ```sql
+     SELECT * FROM iceberg_data.default.customers LIMIT 5;
+     ```
+   - Click **"Execute Query"**
+   - Verify results display in table
+
+3. **Test Query History**:
+   - Execute multiple queries
+   - Switch to **History** tab
+   - Click on a previous query
+   - Verify it loads into editor
+
+4. **Test Export**:
+   - Execute a query with results
+   - Click **"Export"** dropdown
+   - Choose **CSV**
+   - Verify file downloads
+   - Repeat with **JSON** format
+
+5. **Test Schema Browser**:
+   - View tables in right panel
+   - Click **Insert** icon next to a table
+   - Verify table name added to query
+
+6. **Test Quick Examples**:
+   - Click on "Select from customers" example
+   - Verify query loads
+   - Execute and check results
+
+**Expected Results**:
+- Queries execute successfully
+- Results display in tabular format
+- History saves all queries
+- Export works for both CSV and JSON
+- Schema browser shows all tables
+
+---
+
+### Test 7: Monitoring Dashboard Testing ✅ **NEW**
+
+**Objective**: Verify real-time monitoring and metrics collection
+
+**Steps**:
+
+1. Navigate to **Monitoring** page
+
+2. **Check Initial State**:
+   - Verify system status shows "HEALTHY"
+   - Check all metric cards display values
+   - Confirm component health indicators
+
+3. **Test Auto-Refresh**:
+   - Enable auto-refresh
+   - Watch metrics update every 5 seconds
+   - Verify charts animate with new data
+
+4. **Generate Load**:
+   - Open new tab
+   - Navigate to Query page
+   - Execute several queries
+   - Return to Monitoring page
+   - Verify request count increased
+   - Check endpoint performance table updated
+
+5. **Test Manual Refresh**:
+   - Disable auto-refresh
+   - Click **"Refresh"** button
+   - Verify data updates
+
+6. **Monitor Resource Usage**:
+   - Watch CPU and memory charts
+   - Create an ingestion job
+   - Observe metrics change during processing
+
+**Expected Results**:
+- All metrics display correctly
+- Auto-refresh updates data every 5 seconds
+- Charts show real-time trends
+- Endpoint performance tracks all API calls
+- Component health reflects system state
+
 
 5. Click **"Create Ingestion Job"**
 

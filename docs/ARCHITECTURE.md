@@ -35,6 +35,8 @@ The watsonx.data Demo Application is a full-stack web application designed to de
 - watsonx.data Developer Edition
 - MinIO (Object storage)
 - Presto/Spark (Query engines)
+- Docker (Containerization)
+- Kubernetes (Orchestration)
 
 ## System Architecture
 
@@ -167,7 +169,20 @@ graph TB
   - Cancel job functionality
   - Job logs viewer
 
-#### 4. Monitoring Component
+#### 4. Query Component
+- **Purpose**: Interactive SQL query interface
+- **Features**:
+  - SQL editor with monospace font
+  - Catalog and schema selection
+  - Schema browser with table list
+  - Query execution with real-time feedback
+  - Query history with one-click reload
+  - Result visualization in tabular format
+  - Export results to CSV or JSON
+  - Quick example queries
+  - Copy SQL to clipboard
+
+#### 5. Monitoring Component
 - **Purpose**: Real-time system monitoring and performance analytics
 - **Features**:
   - Real-time CPU and memory metrics
@@ -178,7 +193,7 @@ graph TB
   - Auto-refresh capabilities
   - Interactive charts and visualizations
 
-#### 5. Layout Component
+#### 6. Layout Component
 - **Purpose**: Application shell and navigation
 - **Features**:
   - Top navigation bar
@@ -271,15 +286,31 @@ class CatalogService {
 }
 ```
 
-#### 6. Query Service (Future)
+#### 6. Query Service ✅ **IMPLEMENTED**
 ```javascript
 class QueryService {
   - executeQuery()          // Execute SQL query
+  - pollQueryResults()      // Poll for query completion
   - getQueryStatus()        // Get query status
-  - getQueryResults()       // Get query results
-  - cancelQuery()           // Cancel query
+  - cancelQuery()           // Cancel running query
+  - listCatalogs()          // List available catalogs
+  - listSchemas()           // List schemas in catalog
+  - listTables()            // List tables in schema
+  - getTableSchema()        // Get table schema details
+  - getHistory()            // Get query history
+  - clearHistory()          // Clear query history
+  - exportToCSV()           // Export results to CSV
+  - exportToJSON()          // Export results to JSON
 }
 ```
+
+**Responsibilities:**
+- Execute SQL queries against watsonx.data
+- Poll for query completion with exponential backoff
+- Manage query lifecycle (execute, monitor, cancel)
+- Browse catalog metadata (catalogs, schemas, tables)
+- Maintain query history
+- Export query results in multiple formats
 
 ## Data Flow
 
@@ -441,6 +472,18 @@ Body:
 - `GET /api/ingestion/file-types` - Get supported file types
 - `POST /api/ingestion/validate` - Validate config
 
+#### Query
+- `POST /api/query/execute` - Execute SQL query
+- `GET /api/query/status/:queryId` - Get query status
+- `DELETE /api/query/cancel/:queryId` - Cancel running query
+- `GET /api/query/catalogs` - List available catalogs
+- `GET /api/query/catalogs/:catalog/schemas` - List schemas
+- `GET /api/query/catalogs/:catalog/schemas/:schema/tables` - List tables
+- `GET /api/query/catalogs/:catalog/schemas/:schema/tables/:table` - Get table schema
+- `GET /api/query/history` - Get query history
+- `DELETE /api/query/history` - Clear query history
+- `POST /api/query/export` - Export query results (CSV/JSON)
+
 #### Monitoring
 - `GET /api/monitoring/metrics` - Get current system metrics
 - `GET /api/monitoring/dashboard` - Get comprehensive dashboard data
@@ -511,24 +554,42 @@ Body:
 localhost:3000 (Frontend) → localhost:5000 (Backend) → localhost:6443 (watsonx.data)
 ```
 
-### Production
+### Production (Docker)
 ```
-[Load Balancer] → [Frontend Servers] → [Backend Servers] → [watsonx.data Cluster]
+Docker Compose:
+  - Frontend Container (nginx:alpine) → Port 3000
+  - Backend Container (node:18-alpine) → Port 3001
+  - Shared Network: wxdata-network
+  - Health Checks: Enabled
+  - Auto-restart: unless-stopped
 ```
 
-## Future Enhancements
+### Production (Kubernetes)
+```
+Kubernetes Cluster:
+  - Namespace: wxdata-demo
+  - Frontend Deployment (2 replicas) → LoadBalancer Service
+  - Backend Deployment (2 replicas) → ClusterIP Service
+  - ConfigMap: Application configuration
+  - Secret: Sensitive credentials
+  - Ingress: NGINX Ingress Controller
+  - Resource Limits: CPU and Memory constraints
+  - Health Probes: Liveness and Readiness
+  - Security: Non-root containers, fsGroup
+```
 
-1. **Catalog Management**
-   - Full CRUD operations
-   - Schema visualization
-   - Table metadata viewer
+## Implemented Features
 
-2. **Query Interface**
-   - SQL editor with syntax highlighting
-   - Query history
-   - Result export
+1. **Query Interface** ✅ **IMPLEMENTED**
+   - SQL editor with monospace font
+   - Query history with one-click reload
+   - Result export to CSV and JSON
+   - Schema browser for table discovery
+   - Catalog and schema selection
+   - Quick example queries
+   - Real-time query execution feedback
 
-3. **Monitoring Dashboard** ✅ **IMPLEMENTED**
+2. **Monitoring Dashboard** ✅ **IMPLEMENTED**
    - Real-time CPU and memory metrics
    - Request volume and performance tracking
    - Component health monitoring
@@ -536,13 +597,29 @@ localhost:3000 (Frontend) → localhost:5000 (Backend) → localhost:6443 (watso
    - Auto-refresh capabilities
    - Interactive charts and visualizations
 
-4. **User Management**
+3. **Containerization** ✅ **IMPLEMENTED**
+   - Docker support with multi-stage builds
+   - Docker Compose for local deployment
+   - Kubernetes manifests for production
+   - Health checks and auto-restart
+   - Resource limits and security contexts
+
+## Future Enhancements
+
+1. **Catalog Management**
+   - Full CRUD operations
+   - Schema visualization
+   - Advanced table metadata viewer
+
+2. **User Management**
    - Multi-user support
    - Role-based access control
    - Audit logging
 
-5. **Advanced Features**
+3. **Advanced Features**
    - Scheduled ingestion
    - Data quality checks
    - Automated workflows
    - Integration with other IBM services
+   - Advanced SQL syntax highlighting
+   - Query optimization suggestions

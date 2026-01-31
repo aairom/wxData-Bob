@@ -1,0 +1,126 @@
+# Backend Deployment for watsonx.data Demo Application
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wxdata-backend
+  namespace: wxdata-demo
+  labels:
+    app: wxdata-demo
+    component: backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: wxdata-demo
+      component: backend
+  template:
+    metadata:
+      labels:
+        app: wxdata-demo
+        component: backend
+    spec:
+      containers:
+      - name: backend
+        image: wxdata-backend:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3001
+          name: http
+          protocol: TCP
+        env:
+        - name: NODE_ENV
+          valueFrom:
+            configMapKeyRef:
+              name: wxdata-config
+              key: NODE_ENV
+        - name: PORT
+          valueFrom:
+            configMapKeyRef:
+              name: wxdata-config
+              key: PORT
+        - name: HOST
+          valueFrom:
+            configMapKeyRef:
+              name: wxdata-config
+              key: HOST
+        - name: WATSONX_BASE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: wxdata-config
+              key: WATSONX_BASE_URL
+        - name: WATSONX_INSTANCE_ID
+          valueFrom:
+            configMapKeyRef:
+              name: wxdata-config
+              key: WATSONX_INSTANCE_ID
+        - name: WATSONX_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: wxdata-secret
+              key: WATSONX_USERNAME
+        - name: WATSONX_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: wxdata-secret
+              key: WATSONX_PASSWORD
+        - name: CORS_ORIGIN
+          valueFrom:
+            configMapKeyRef:
+              name: wxdata-config
+              key: CORS_ORIGIN
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 3001
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 3001
+          initialDelaySeconds: 10
+          periodSeconds: 5
+          timeoutSeconds: 3
+          failureThreshold: 3
+        volumeMounts:
+        - name: logs
+          mountPath: /app/logs
+      volumes:
+      - name: logs
+        emptyDir: {}
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1001
+        fsGroup: 1001
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: wxdata-backend
+  namespace: wxdata-demo
+  labels:
+    app: wxdata-demo
+    component: backend
+spec:
+  type: ClusterIP
+  ports:
+  - port: 3001
+    targetPort: 3001
+    protocol: TCP
+    name: http
+  selector:
+    app: wxdata-demo
+    component: backend
+
+# Made with Bob

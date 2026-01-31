@@ -1,0 +1,11 @@
+# Kubernetes Namespace for watsonx.data Demo Application
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: wxdata-demo
+  labels:
+    app: wxdata-demo
+    environment: production
+
+# Made with Bob

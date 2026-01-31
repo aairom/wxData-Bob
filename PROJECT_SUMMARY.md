@@ -16,10 +16,15 @@ wxData-Bob/
 │   │   │   └── watsonx.config.js    # Configuration management
 │   │   ├── services/
 │   │   │   ├── authService.js       # Authentication with watsonx.data
-│   │   │   └── ingestionService.js  # Data ingestion operations
+│   │   │   ├── ingestionService.js  # Data ingestion operations
+│   │   │   ├── monitoringService.js # System monitoring and metrics
+│   │   │   └── queryService.js      # SQL query execution
 │   │   ├── routes/
 │   │   │   ├── authRoutes.js        # Auth API endpoints
-│   │   │   └── ingestionRoutes.js   # Ingestion API endpoints
+│   │   │   ├── ingestionRoutes.js   # Ingestion API endpoints
+│   │   │   ├── monitoringRoutes.js  # Monitoring API endpoints
+│   │   │   ├── queryRoutes.js       # Query API endpoints
+│   │   │   └── uploadRoutes.js      # File upload endpoints
 │   │   └── utils/
 │   │       └── logger.js            # Winston logging
 │   ├── package.json                 # Backend dependencies
@@ -32,7 +37,9 @@ wxData-Bob/
 │   │   ├── pages/
 │   │   │   ├── Dashboard.js         # Main dashboard
 │   │   │   ├── Ingestion.js         # Create ingestion jobs
-│   │   │   └── Jobs.js              # Monitor job status
+│   │   │   ├── Jobs.js              # Monitor job status
+│   │   │   ├── Monitoring.js        # System monitoring dashboard
+│   │   │   └── Query.js             # SQL query interface
 │   │   ├── App.js                   # Root component
 │   │   ├── index.js                 # React entry point
 │   │   └── index.css                # Global styles
@@ -49,9 +56,20 @@ wxData-Bob/
 ├── docs/                            # Documentation
 │   ├── API.md                       # Complete API documentation
 │   ├── ARCHITECTURE.md              # System architecture details
-│   └── DEPLOYMENT.md                # Deployment guide
+│   ├── DEPLOYMENT.md                # Deployment guide (Docker & Kubernetes)
+│   ├── QUICKSTART.md                # Quick start guide
+│   └── MINIO_CREDENTIALS.md         # MinIO configuration guide
+│
+├── k8s/                             # Kubernetes Manifests
+│   ├── namespace.yaml               # Namespace definition
+│   ├── configmap.yaml               # Configuration
+│   ├── secret.yaml                  # Secrets
+│   ├── backend-deployment.yaml      # Backend deployment & service
+│   ├── frontend-deployment.yaml     # Frontend deployment & service
+│   └── ingress.yaml                 # Ingress configuration
 │
 ├── .gitignore                       # Git ignore rules (excludes _* folders)
+├── docker-compose.yml               # Docker Compose configuration
 ├── README.md                        # Main project documentation
 └── PROJECT_SUMMARY.md               # This file
 ```
@@ -67,9 +85,27 @@ wxData-Bob/
 ### 📊 Data Ingestion
 - **Multiple File Formats**: JSON, CSV, Parquet, Avro, ORC
 - **S3/MinIO Integration**: Direct integration with object storage
+- **File Upload**: Browser-based file upload to MinIO
 - **Job Management**: Create, monitor, and cancel ingestion jobs
 - **Configuration Validation**: Pre-submission validation
 - **Real-time Monitoring**: Live job status updates
+
+### 🔍 Query Interface ✅ **NEW**
+- **SQL Editor**: Monospace font editor for SQL queries
+- **Schema Browser**: Browse catalogs, schemas, and tables
+- **Query History**: Save and reload previous queries
+- **Result Visualization**: Tabular display of query results
+- **Export Results**: Download results as CSV or JSON
+- **Quick Examples**: Pre-built query templates
+- **Real-time Execution**: Live query status and feedback
+
+### 📈 Monitoring Dashboard ✅ **NEW**
+- **Real-time Metrics**: CPU, memory, and request tracking
+- **System Health**: Component status monitoring
+- **Performance Analytics**: Response times and success rates
+- **Endpoint Metrics**: Per-endpoint performance tracking
+- **Auto-refresh**: Live data updates every 5 seconds
+- **Interactive Charts**: Line charts and area charts for visualization
 
 ### 🎨 User Interface
 - **Modern Design**: Material-UI (MUI) components
@@ -77,6 +113,8 @@ wxData-Bob/
 - **Dashboard**: System overview and quick actions
 - **Ingestion Form**: Intuitive job creation interface
 - **Jobs Monitor**: Real-time job tracking with details
+- **Query Interface**: Interactive SQL editor
+- **Monitoring Dashboard**: Real-time system metrics
 
 ### 🛠️ Backend API
 - **RESTful Design**: Clean, well-documented API
@@ -138,6 +176,27 @@ wxData-Bob/
 - `GET /api/ingestion/config/default` - Get default config
 - `GET /api/ingestion/file-types` - Get supported file types
 - `POST /api/ingestion/validate` - Validate configuration
+
+### Upload
+- `POST /api/upload` - Upload file to MinIO
+- `POST /api/upload/multiple` - Upload multiple files
+
+### Query ✅ **NEW**
+- `POST /api/query/execute` - Execute SQL query
+- `GET /api/query/status/:queryId` - Get query status
+- `DELETE /api/query/cancel/:queryId` - Cancel running query
+- `GET /api/query/catalogs` - List available catalogs
+- `GET /api/query/catalogs/:catalog/schemas` - List schemas
+- `GET /api/query/catalogs/:catalog/schemas/:schema/tables` - List tables
+- `GET /api/query/history` - Get query history
+- `POST /api/query/export` - Export query results
+
+### Monitoring ✅ **NEW**
+- `GET /api/monitoring/metrics` - Get current system metrics
+- `GET /api/monitoring/dashboard` - Get comprehensive dashboard data
+- `GET /api/monitoring/realtime` - Get real-time metrics
+- `GET /api/monitoring/health` - Get watsonx.data health status
+- `GET /api/monitoring/system` - Get system information
 
 ### System
 - `GET /health` - Health check endpoint
@@ -296,33 +355,80 @@ Response:
 }
 ```
 
+## Deployment Options ✅ **NEW**
+
+### Docker Deployment
+```bash
+# Using Docker Compose
+docker-compose up -d
+
+# View logs
+docker-compose logs -f
+
+# Stop services
+docker-compose down
+```
+
+### Kubernetes Deployment
+```bash
+# Deploy all resources
+kubectl apply -f k8s/
+
+# Check status
+kubectl get pods -n wxdata-demo
+kubectl get svc -n wxdata-demo
+
+# Access application
+kubectl port-forward svc/wxdata-frontend 3000:80 -n wxdata-demo
+```
+
+See [DEPLOYMENT.md](docs/DEPLOYMENT.md) for detailed instructions.
+
+## Implemented Features ✅
+
+1. **Query Interface** ✅ **COMPLETED**
+   - SQL editor with monospace font
+   - Query history with one-click reload
+   - Result visualization and export (CSV/JSON)
+   - Schema browser for table discovery
+   - Catalog and schema selection
+
+2. **Monitoring Dashboard** ✅ **COMPLETED**
+   - Real-time performance metrics
+   - Resource utilization tracking
+   - Component health monitoring
+   - Endpoint performance analytics
+   - Auto-refresh capabilities
+
+3. **Containerization** ✅ **COMPLETED**
+   - Docker support with multi-stage builds
+   - Docker Compose for local deployment
+   - Kubernetes manifests for production
+   - Health checks and auto-restart
+   - Resource limits and security contexts
+
 ## Future Enhancements
 
 ### Planned Features
 1. **Catalog Management**
-   - Create/manage Iceberg and Hive catalogs
-   - Schema visualization
-   - Table metadata viewer
+   - Full CRUD operations for catalogs
+   - Advanced schema visualization
+   - Enhanced table metadata viewer
 
-2. **Query Interface**
-   - SQL editor with syntax highlighting
-   - Query history
-   - Result visualization and export
-
-3. **Advanced Monitoring**
-   - Performance metrics dashboard
-   - Resource utilization graphs
-   - Job execution analytics
-
-4. **User Management**
+2. **User Management**
    - Multi-user support
    - Role-based access control
    - Audit logging
 
-5. **Workflow Automation**
+3. **Workflow Automation**
    - Scheduled ingestion jobs
    - Data quality checks
    - Automated data pipelines
+
+4. **Advanced Features**
+   - Advanced SQL syntax highlighting
+   - Query optimization suggestions
+   - Data lineage tracking
 
 ## Troubleshooting
 

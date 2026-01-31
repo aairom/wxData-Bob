@@ -1,533 +1,445 @@
-# watsonx.data Demo Application - Deployment Guide
+# Deployment Guide
+
+This guide covers deployment options for the watsonx.data Demo Application.
 
 ## Table of Contents
-1. [Prerequisites](#prerequisites)
-2. [Local Development Setup](#local-development-setup)
-3. [Configuration](#configuration)
-4. [Running the Application](#running-the-application)
-5. [Testing](#testing)
-6. [Troubleshooting](#troubleshooting)
-7. [Production Deployment](#production-deployment)
+
+- [Prerequisites](#prerequisites)
+- [Docker Deployment](#docker-deployment)
+- [Kubernetes Deployment](#kubernetes-deployment)
+- [Production Considerations](#production-considerations)
 
 ## Prerequisites
 
-### Required Software
+### General Requirements
+- watsonx.data Developer Edition installed and running
+- Network access to watsonx.data instance
+- Valid credentials for watsonx.data
 
-1. **watsonx.data Developer Edition**
-   - Download from IBM website
-   - Running on `https://localhost:6443`
-   - Default credentials: `ibmlhadmin` / `password`
+### Docker Deployment
+- Docker Engine 20.10+
+- Docker Compose 2.0+
+- 4GB RAM minimum
+- 10GB disk space
 
-2. **Node.js and npm**
-   - Version: 18.x or higher
-   - Download: https://nodejs.org/
+### Kubernetes Deployment
+- Kubernetes cluster 1.24+
+- kubectl configured
+- Helm 3.0+ (optional)
+- NGINX Ingress Controller (for ingress)
+- 8GB RAM minimum across cluster
+- 20GB disk space
 
-3. **Git**
-   - For version control and deployment
-   - Download: https://git-scm.com/
+## Docker Deployment
 
-4. **Python 3.8+** (Optional)
-   - For sample data generation
-   - Download: https://python.org/
+### Using Docker Compose
 
-### System Requirements
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd wxData-Bob
+   ```
 
-- **OS**: macOS, Linux, or Windows
-- **RAM**: 4GB minimum, 8GB recommended
-- **Disk Space**: 2GB for application and dependencies
-- **Network**: Access to watsonx.data instance
+2. **Configure environment variables**
+   
+   Create a `.env` file in the root directory:
+   ```bash
+   # watsonx.data Configuration
+   WATSONX_BASE_URL=https://your-watsonx-host:9443
+   WATSONX_USERNAME=ibmlhadmin
+   WATSONX_PASSWORD=your-password
+   WATSONX_INSTANCE_ID=your-instance-id
+   ```
 
-## Local Development Setup
+3. **Build and start services**
+   ```bash
+   docker-compose up -d
+   ```
 
-### 1. Clone the Repository
+4. **Verify deployment**
+   ```bash
+   # Check service status
+   docker-compose ps
+   
+   # View logs
+   docker-compose logs -f
+   
+   # Test backend health
+   curl http://localhost:3001/health
+   
+   # Test frontend
+   curl http://localhost:3000/health
+   ```
 
+5. **Access the application**
+   - Frontend: http://localhost:3000
+   - Backend API: http://localhost:3001
+
+### Individual Docker Containers
+
+**Build images:**
 ```bash
-git clone <repository-url>
-cd wxData-Bob
-```
-
-### 2. Install Dependencies
-
-#### Backend
-```bash
+# Backend
 cd backend
-npm install
-cd ..
+docker build -t wxdata-backend:latest .
+
+# Frontend
+cd ../frontend
+docker build -t wxdata-frontend:latest .
 ```
 
-#### Frontend
+**Run containers:**
 ```bash
-cd frontend
-npm install
-cd ..
+# Backend
+docker run -d \
+  --name wxdata-backend \
+  -p 3001:3001 \
+  -e WATSONX_BASE_URL=https://your-host:9443 \
+  -e WATSONX_USERNAME=ibmlhadmin \
+  -e WATSONX_PASSWORD=your-password \
+  wxdata-backend:latest
+
+# Frontend
+docker run -d \
+  --name wxdata-frontend \
+  -p 3000:3000 \
+  --link wxdata-backend:backend \
+  wxdata-frontend:latest
 ```
 
-### 3. Configure Environment
-
-Create backend environment file:
-
-```bash
-cat > backend/.env << EOF
-# watsonx.data Configuration
-WATSONX_BASE_URL=https://localhost:6443
-WATSONX_USERNAME=ibmlhadmin
-WATSONX_PASSWORD=password
-WATSONX_INSTANCE_ID=0000-0000-0000-0000
-WATSONX_ENGINE_ID=spark158
-WATSONX_BUCKET_NAME=iceberg-bucket
-
-# Server Configuration
-PORT=5000
-HOST=0.0.0.0
-CORS_ORIGIN=http://localhost:3000
-
-# Environment
-NODE_ENV=development
-LOG_LEVEL=info
-EOF
-```
-
-### 4. Verify watsonx.data Connection
-
-Test connection to watsonx.data:
+### Docker Commands
 
 ```bash
-curl -k https://localhost:6443/lakehouse/api/v3/auth/authenticate \
-  -H "Content-Type: application/json" \
-  -d '{
-    "username": "ibmlhadmin",
-    "password": "password",
-    "instance_id": "0000-0000-0000-0000",
-    "instance_name": ""
-  }'
+# Stop services
+docker-compose down
+
+# Stop and remove volumes
+docker-compose down -v
+
+# Rebuild images
+docker-compose build --no-cache
+
+# View logs
+docker-compose logs -f [service-name]
+
+# Scale services
+docker-compose up -d --scale backend=3
+
+# Execute commands in container
+docker-compose exec backend sh
 ```
 
-Expected response should include a bearer token.
+## Kubernetes Deployment
 
-## Configuration
+### Prerequisites
 
-### Backend Configuration
+1. **Ensure cluster is ready**
+   ```bash
+   kubectl cluster-info
+   kubectl get nodes
+   ```
 
-Edit `backend/src/config/watsonx.config.js`:
+2. **Install NGINX Ingress Controller** (if not installed)
+   ```bash
+   kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.1/deploy/static/provider/cloud/deploy.yaml
+   ```
 
-```javascript
-module.exports = {
-  watsonxData: {
-    baseUrl: process.env.WATSONX_BASE_URL || 'https://localhost:6443',
-    username: process.env.WATSONX_USERNAME || 'ibmlhadmin',
-    password: process.env.WATSONX_PASSWORD || 'password',
-    instanceId: process.env.WATSONX_INSTANCE_ID || '0000-0000-0000-0000',
-    // ... other settings
-  }
-};
-```
+### Deployment Steps
 
-### Frontend Configuration
+1. **Build and push Docker images**
+   
+   ```bash
+   # Tag images for your registry
+   docker tag wxdata-backend:latest your-registry/wxdata-backend:latest
+   docker tag wxdata-frontend:latest your-registry/wxdata-frontend:latest
+   
+   # Push to registry
+   docker push your-registry/wxdata-backend:latest
+   docker push your-registry/wxdata-frontend:latest
+   ```
 
-The frontend uses proxy configuration in `package.json`:
+2. **Update image references**
+   
+   Edit `k8s/backend-deployment.yaml` and `k8s/frontend-deployment.yaml`:
+   ```yaml
+   image: your-registry/wxdata-backend:latest
+   ```
 
-```json
-{
-  "proxy": "http://localhost:5000"
-}
-```
+3. **Configure secrets**
+   
+   Edit `k8s/secret.yaml` with your credentials:
+   ```yaml
+   stringData:
+     WATSONX_USERNAME: "your-username"
+     WATSONX_PASSWORD: "your-password"
+   ```
 
-For production, update API calls to use full backend URL.
+4. **Update ConfigMap**
+   
+   Edit `k8s/configmap.yaml` with your watsonx.data URL:
+   ```yaml
+   data:
+     WATSONX_BASE_URL: "https://your-watsonx-host:9443"
+   ```
 
-## Running the Application
+5. **Deploy to Kubernetes**
+   
+   ```bash
+   # Create namespace
+   kubectl apply -f k8s/namespace.yaml
+   
+   # Deploy ConfigMap and Secret
+   kubectl apply -f k8s/configmap.yaml
+   kubectl apply -f k8s/secret.yaml
+   
+   # Deploy backend
+   kubectl apply -f k8s/backend-deployment.yaml
+   
+   # Deploy frontend
+   kubectl apply -f k8s/frontend-deployment.yaml
+   
+   # Deploy ingress
+   kubectl apply -f k8s/ingress.yaml
+   ```
 
-### Quick Start (Recommended)
+6. **Verify deployment**
+   
+   ```bash
+   # Check pods
+   kubectl get pods -n wxdata-demo
+   
+   # Check services
+   kubectl get svc -n wxdata-demo
+   
+   # Check ingress
+   kubectl get ingress -n wxdata-demo
+   
+   # View logs
+   kubectl logs -f deployment/wxdata-backend -n wxdata-demo
+   kubectl logs -f deployment/wxdata-frontend -n wxdata-demo
+   ```
 
-Use the automated start script:
+7. **Access the application**
+   
+   ```bash
+   # Get ingress IP
+   kubectl get ingress -n wxdata-demo
+   
+   # Add to /etc/hosts
+   echo "<INGRESS-IP> wxdata-demo.local" | sudo tee -a /etc/hosts
+   
+   # Access application
+   # http://wxdata-demo.local
+   ```
+
+### Kubernetes Commands
 
 ```bash
-./scripts/start.sh
+# Scale deployments
+kubectl scale deployment wxdata-backend --replicas=3 -n wxdata-demo
+
+# Update deployment
+kubectl set image deployment/wxdata-backend backend=your-registry/wxdata-backend:v2 -n wxdata-demo
+
+# Rollback deployment
+kubectl rollout undo deployment/wxdata-backend -n wxdata-demo
+
+# View deployment history
+kubectl rollout history deployment/wxdata-backend -n wxdata-demo
+
+# Port forward for testing
+kubectl port-forward svc/wxdata-backend 3001:3001 -n wxdata-demo
+kubectl port-forward svc/wxdata-frontend 3000:80 -n wxdata-demo
+
+# Execute commands in pod
+kubectl exec -it deployment/wxdata-backend -n wxdata-demo -- sh
+
+# Delete all resources
+kubectl delete namespace wxdata-demo
 ```
 
-This will:
-1. Check prerequisites
-2. Install dependencies (if needed)
-3. Start backend server on port 5000
-4. Start frontend server on port 3000
-5. Open browser automatically
+### Helm Deployment (Optional)
 
-### Manual Start
-
-#### Start Backend
-```bash
-cd backend
-npm start
-```
-
-Backend will be available at: http://localhost:5000
-
-#### Start Frontend (in new terminal)
-```bash
-cd frontend
-npm start
-```
-
-Frontend will be available at: http://localhost:3000
-
-### Stop Application
-
-Use the automated stop script:
+Create a Helm chart for easier management:
 
 ```bash
-./scripts/stop.sh
+# Create Helm chart
+helm create wxdata-demo
+
+# Install chart
+helm install wxdata-demo ./wxdata-demo -n wxdata-demo --create-namespace
+
+# Upgrade chart
+helm upgrade wxdata-demo ./wxdata-demo -n wxdata-demo
+
+# Uninstall chart
+helm uninstall wxdata-demo -n wxdata-demo
 ```
 
-Or manually:
-```bash
-# Find and kill processes
-lsof -ti:5000 | xargs kill -9
-lsof -ti:3000 | xargs kill -9
-```
+## Production Considerations
 
-## Testing
+### Security
 
-### 1. Generate Sample Data
+1. **Use Secrets Management**
+   - Use Kubernetes Secrets or external secret managers (Vault, AWS Secrets Manager)
+   - Never commit secrets to version control
+   - Rotate credentials regularly
 
-```bash
-./scripts/generate-sample-data.py
-```
+2. **Network Security**
+   - Enable TLS/SSL for all communications
+   - Use Network Policies to restrict pod-to-pod communication
+   - Configure firewall rules
 
-This creates sample JSON, CSV, and Parquet files in `sample-data/` directory.
+3. **Container Security**
+   - Run containers as non-root users
+   - Use minimal base images
+   - Scan images for vulnerabilities
+   - Keep images updated
 
-### 2. Upload to MinIO
+### High Availability
 
-If using MinIO with watsonx.data:
+1. **Multiple Replicas**
+   ```yaml
+   spec:
+     replicas: 3
+   ```
 
-```bash
-# Install MinIO client
-brew install minio/stable/mc  # macOS
-# or download from https://min.io/docs/minio/linux/reference/minio-mc.html
+2. **Pod Disruption Budgets**
+   ```yaml
+   apiVersion: policy/v1
+   kind: PodDisruptionBudget
+   metadata:
+     name: wxdata-backend-pdb
+   spec:
+     minAvailable: 2
+     selector:
+       matchLabels:
+         app: wxdata-demo
+         component: backend
+   ```
 
-# Configure MinIO
-mc alias set myminio http://localhost:9000 minioadmin minioadmin
+3. **Resource Limits**
+   ```yaml
+   resources:
+     requests:
+       memory: "256Mi"
+       cpu: "250m"
+     limits:
+       memory: "512Mi"
+       cpu: "500m"
+   ```
 
-# Create bucket
-mc mb myminio/test-bucket
+### Monitoring
 
-# Upload sample data
-mc cp sample-data/*.json myminio/test-bucket/data/
-```
+1. **Health Checks**
+   - Liveness probes configured
+   - Readiness probes configured
+   - Startup probes for slow-starting containers
 
-### 3. Test Ingestion
+2. **Logging**
+   - Centralized logging (ELK, Splunk, CloudWatch)
+   - Structured logging format
+   - Log rotation and retention policies
 
-1. Open http://localhost:3000
-2. Navigate to "Ingestion" page
-3. Fill in the form:
-   - Catalog: `iceberg_data`
-   - Schema: `test_schema`
-   - Table: `test_table`
-   - File Path: `s3://test-bucket/data/transactions.json`
-   - File Type: `json`
-4. Click "Create Job"
-5. Monitor progress in "Jobs" page
+3. **Metrics**
+   - Prometheus metrics endpoint
+   - Grafana dashboards
+   - Alert rules for critical metrics
 
-### 4. API Testing
+### Backup and Recovery
 
-Test backend API directly:
+1. **Database Backups**
+   - Regular automated backups
+   - Test restore procedures
+   - Off-site backup storage
 
-```bash
-# Health check
-curl http://localhost:5000/health
+2. **Configuration Backups**
+   - Version control for all configurations
+   - Document deployment procedures
+   - Maintain rollback plans
 
-# Get auth status
-curl http://localhost:5000/api/auth/status
+### Performance Optimization
 
-# List jobs
-curl http://localhost:5000/api/ingestion/jobs
+1. **Caching**
+   - Enable Redis for session storage
+   - Configure CDN for static assets
+   - Implement API response caching
 
-# Get default config
-curl http://localhost:5000/api/ingestion/config/default
-```
+2. **Load Balancing**
+   - Use Kubernetes Service load balancing
+   - Configure external load balancer
+   - Implement connection pooling
+
+3. **Auto-scaling**
+   ```yaml
+   apiVersion: autoscaling/v2
+   kind: HorizontalPodAutoscaler
+   metadata:
+     name: wxdata-backend-hpa
+   spec:
+     scaleTargetRef:
+       apiVersion: apps/v1
+       kind: Deployment
+       name: wxdata-backend
+     minReplicas: 2
+     maxReplicas: 10
+     metrics:
+     - type: Resource
+       resource:
+         name: cpu
+         target:
+           type: Utilization
+           averageUtilization: 70
+   ```
 
 ## Troubleshooting
 
 ### Common Issues
 
-#### 1. Port Already in Use
+1. **Connection to watsonx.data fails**
+   - Verify network connectivity
+   - Check credentials
+   - Verify SSL certificate trust
 
-**Error**: `Port 5000 is already in use`
+2. **Pods not starting**
+   ```bash
+   kubectl describe pod <pod-name> -n wxdata-demo
+   kubectl logs <pod-name> -n wxdata-demo
+   ```
 
-**Solution**:
-```bash
-# Find process using port
-lsof -ti:5000
+3. **Service not accessible**
+   ```bash
+   kubectl get svc -n wxdata-demo
+   kubectl describe svc <service-name> -n wxdata-demo
+   ```
 
-# Kill process
-kill -9 <PID>
+4. **Image pull errors**
+   - Verify image exists in registry
+   - Check image pull secrets
+   - Verify registry credentials
 
-# Or use stop script
-./scripts/stop.sh
-```
-
-#### 2. Cannot Connect to watsonx.data
-
-**Error**: `Authentication failed: connect ECONNREFUSED`
-
-**Solutions**:
-- Verify watsonx.data is running: `docker ps`
-- Check URL in configuration
-- Verify credentials
-- Check SSL certificate settings
-
-#### 3. Module Not Found
-
-**Error**: `Cannot find module 'express'`
-
-**Solution**:
-```bash
-cd backend
-rm -rf node_modules package-lock.json
-npm install
-```
-
-#### 4. CORS Errors
-
-**Error**: `Access-Control-Allow-Origin`
-
-**Solution**:
-- Verify `CORS_ORIGIN` in backend `.env`
-- Check frontend is running on correct port
-- Clear browser cache
-
-#### 5. Token Expired
-
-**Error**: `Token expired`
-
-**Solution**:
-- Token auto-refreshes every 55 minutes
-- Manually refresh: `curl -X POST http://localhost:5000/api/auth/refresh`
-- Restart backend if issues persist
-
-### Debug Mode
-
-Enable debug logging:
+### Debug Commands
 
 ```bash
-# Backend
-cd backend
-LOG_LEVEL=debug npm start
+# Check pod events
+kubectl get events -n wxdata-demo --sort-by='.lastTimestamp'
 
-# Check logs
-tail -f logs/combined.log
+# Check resource usage
+kubectl top pods -n wxdata-demo
+kubectl top nodes
+
+# Network debugging
+kubectl run -it --rm debug --image=nicolaka/netshoot --restart=Never -- /bin/bash
+
+# DNS debugging
+kubectl run -it --rm debug --image=busybox --restart=Never -- nslookup wxdata-backend.wxdata-demo.svc.cluster.local
 ```
-
-### Check Logs
-
-```bash
-# Backend logs
-tail -f backend.log
-tail -f backend/logs/combined.log
-tail -f backend/logs/error.log
-
-# Frontend logs
-tail -f frontend.log
-```
-
-## Production Deployment
-
-### 1. Build Frontend
-
-```bash
-cd frontend
-npm run build
-```
-
-This creates optimized production build in `frontend/build/`.
-
-### 2. Configure Production Environment
-
-```bash
-# Backend .env
-NODE_ENV=production
-WATSONX_BASE_URL=https://your-watsonx-instance:6443
-CORS_ORIGIN=https://your-domain.com
-LOG_LEVEL=warn
-```
-
-### 3. Serve Frontend
-
-Option A: Using Express (Backend serves frontend)
-
-```javascript
-// Add to backend/server.js
-const path = require('path');
-app.use(express.static(path.join(__dirname, '../frontend/build')));
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
-});
-```
-
-Option B: Using Nginx
-
-```nginx
-server {
-    listen 80;
-    server_name your-domain.com;
-
-    # Frontend
-    location / {
-        root /path/to/frontend/build;
-        try_files $uri /index.html;
-    }
-
-    # Backend API
-    location /api {
-        proxy_pass http://localhost:5000;
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection 'upgrade';
-        proxy_set_header Host $host;
-        proxy_cache_bypass $http_upgrade;
-    }
-}
-```
-
-### 4. Process Management
-
-Use PM2 for production:
-
-```bash
-# Install PM2
-npm install -g pm2
-
-# Start backend
-cd backend
-pm2 start server.js --name wxdata-backend
-
-# Save configuration
-pm2 save
-
-# Setup startup script
-pm2 startup
-```
-
-### 5. SSL/TLS Configuration
-
-For production, use proper SSL certificates:
-
-```bash
-# Using Let's Encrypt
-sudo certbot --nginx -d your-domain.com
-```
-
-### 6. Monitoring
-
-Setup monitoring:
-
-```bash
-# PM2 monitoring
-pm2 monit
-
-# View logs
-pm2 logs wxdata-backend
-
-# Check status
-pm2 status
-```
-
-## Docker Deployment (Optional)
-
-### Build Docker Images
-
-```bash
-# Backend
-docker build -t wxdata-backend ./backend
-
-# Frontend
-docker build -t wxdata-frontend ./frontend
-```
-
-### Run with Docker Compose
-
-```bash
-docker-compose up -d
-```
-
-### Docker Compose Configuration
-
-```yaml
-version: '3.8'
-
-services:
-  backend:
-    build: ./backend
-    ports:
-      - "5000:5000"
-    environment:
-      - WATSONX_BASE_URL=https://host.docker.internal:6443
-      - NODE_ENV=production
-    restart: unless-stopped
-
-  frontend:
-    build: ./frontend
-    ports:
-      - "3000:80"
-    depends_on:
-      - backend
-    restart: unless-stopped
-```
-
-## GitHub Deployment
-
-Deploy to GitHub:
-
-```bash
-./scripts/deploy-github.sh
-```
-
-Or manually:
-
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin <your-repo-url>
-git push -u origin main
-```
-
-## Security Checklist
-
-- [ ] Change default watsonx.data credentials
-- [ ] Use environment variables for sensitive data
-- [ ] Enable HTTPS in production
-- [ ] Configure proper CORS origins
-- [ ] Set up rate limiting
-- [ ] Enable security headers (Helmet)
-- [ ] Regular dependency updates
-- [ ] Implement authentication for production
-- [ ] Set up monitoring and alerting
-- [ ] Regular backups
-
-## Performance Optimization
-
-1. **Frontend**
-   - Enable code splitting
-   - Optimize images
-   - Use CDN for static assets
-   - Enable gzip compression
-
-2. **Backend**
-   - Enable response caching
-   - Use connection pooling
-   - Optimize database queries
-   - Implement request queuing
-
-3. **watsonx.data**
-   - Optimize Spark configurations
-   - Use appropriate file formats (Parquet)
-   - Partition large datasets
-   - Monitor resource usage
 
 ## Support
 
 For issues and questions:
-- Check [Troubleshooting](#troubleshooting) section
-- Review logs in `backend/logs/`
-- Consult [API Documentation](API.md)
-- Consult [Architecture Documentation](ARCHITECTURE.md)
-- IBM watsonx.data Documentation: https://www.ibm.com/docs/en/watsonxdata
+- Check application logs
+- Review watsonx.data documentation
+- Contact support team
+
+## Made with Bob

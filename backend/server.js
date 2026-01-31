@@ -17,6 +17,7 @@ const authRoutes = require('./src/routes/authRoutes');
 const ingestionRoutes = require('./src/routes/ingestionRoutes');
 const uploadRoutes = require('./src/routes/uploadRoutes');
 const monitoringRoutes = require('./src/routes/monitoringRoutes');
+const queryRoutes = require('./src/routes/queryRoutes');
 
 // Import monitoring service
 const monitoringService = require('./src/services/monitoringService');
@@ -89,6 +90,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/ingestion', ingestionRoutes);
 app.use('/api/upload', uploadRoutes);
 app.use('/api/monitoring', monitoringRoutes);
+app.use('/api/query', queryRoutes);
 
 // Root endpoint
 app.get('/', (req, res) => {
@@ -101,7 +103,8 @@ app.get('/', (req, res) => {
       auth: '/api/auth',
       ingestion: '/api/ingestion',
       upload: '/api/upload',
-      monitoring: '/api/monitoring'
+      monitoring: '/api/monitoring',
+      query: '/api/query'
     },
     documentation: '/docs'
   });

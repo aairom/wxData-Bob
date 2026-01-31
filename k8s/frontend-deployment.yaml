@@ -1,0 +1,79 @@
+# Frontend Deployment for watsonx.data Demo Application
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wxdata-frontend
+  namespace: wxdata-demo
+  labels:
+    app: wxdata-demo
+    component: frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: wxdata-demo
+      component: frontend
+  template:
+    metadata:
+      labels:
+        app: wxdata-demo
+        component: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: wxdata-frontend:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3000
+          name: http
+          protocol: TCP
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "200m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 3000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 3000
+          initialDelaySeconds: 10
+          periodSeconds: 5
+          timeoutSeconds: 3
+          failureThreshold: 3
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1001
+        fsGroup: 1001
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: wxdata-frontend
+  namespace: wxdata-demo
+  labels:
+    app: wxdata-demo
+    component: frontend
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 3000
+    protocol: TCP
+    name: http
+  selector:
+    app: wxdata-demo
+    component: frontend
+
+# Made with Bob

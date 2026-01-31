@@ -1,0 +1,34 @@
+# Ingress for watsonx.data Demo Application
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: wxdata-ingress
+  namespace: wxdata-demo
+  labels:
+    app: wxdata-demo
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: wxdata-demo.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: wxdata-frontend
+            port:
+              number: 80
+      - path: /api
+        pathType: Prefix
+        backend:
+          service:
+            name: wxdata-backend
+            port:
+              number: 3001
+
+# Made with Bob

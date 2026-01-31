@@ -1,0 +1,19 @@
+# ConfigMap for watsonx.data Demo Application
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: wxdata-config
+  namespace: wxdata-demo
+  labels:
+    app: wxdata-demo
+data:
+  NODE_ENV: "production"
+  PORT: "3001"
+  HOST: "0.0.0.0"
+  CORS_ORIGIN: "http://localhost:3000"
+  # watsonx.data connection details (non-sensitive)
+  WATSONX_BASE_URL: "https://watsonx-data-service:9443"
+  WATSONX_INSTANCE_ID: "1234567890"
+
+# Made with Bob

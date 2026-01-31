@@ -9,43 +9,45 @@ This application demonstrates the key features of watsonx.data Developer Edition
 - **File Upload**: Upload data files directly from browser to MinIO/S3
 - **Data Ingestion**: Automated data ingestion from various sources (S3, MinIO, uploaded files)
 - **Catalog Management**: Create and manage Iceberg and Hive catalogs
+- **Query Interface**: Interactive SQL editor with syntax highlighting, query history, and result visualization
 - **Query Execution**: Execute Presto/Spark queries against data lakehouse
-- **Monitoring**: Track ingestion jobs and query performance
+- **Monitoring**: Real-time system monitoring with metrics and performance analytics
 - **Web UI**: Interactive dashboard for managing watsonx.data operations
+- **Containerization**: Docker and Kubernetes deployment support
 
 ## Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                     Web UI (React)                          │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐     │
-│  │Dashboard │  │Ingestion │  │ Catalogs │  │ Queries  │     │
-│  └──────────┘  └──────────┘  └──────────┘  └──────────┘     │
-└────────────────────────┬────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────┐
+│                        Web UI (React)                               │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────┐ │
+│  │Dashboard │  │Ingestion │  │  Query   │  │   Jobs   │  │Monitor│ │
+│  └──────────┘  └──────────┘  └──────────┘  └──────────┘  └──────┘ │
+└────────────────────────┬────────────────────────────────────────────┘
                          │
                          │ REST API
                          │
-┌────────────────────────▼────────────────────────────────────┐
-│              Backend API Server (Node.js/Express)           │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
-│  │ Auth Service │  │ Ingestion    │  │ Query        │       │
-│  │              │  │ Service      │  │ Service      │       │
-│  └──────────────┘  └──────────────┘  └──────────────┘       │
-└────────────────────────┬────────────────────────────────────┘
+┌────────────────────────▼────────────────────────────────────────────┐
+│              Backend API Server (Node.js/Express)                   │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  ┌─────────┐│
+│  │ Auth Service │  │ Ingestion    │  │ Query        │  │Monitoring││
+│  │              │  │ Service      │  │ Service      │  │ Service  ││
+│  └──────────────┘  └──────────────┘  └──────────────┘  └─────────┘│
+└────────────────────────┬────────────────────────────────────────────┘
                          │
                          │ HTTPS/REST
                          │
-┌────────────────────────▼────────────────────────────────────┐
-│           watsonx.data Developer Edition                    │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
-│  │ Presto       │  │ Spark        │  │ MinIO        │       │
-│  │ Engine       │  │ Engine       │  │ Storage      │       │
-│  └──────────────┘  └──────────────┘  └──────────────┘       │
-│  ┌──────────────┐  ┌──────────────┐                         │
-│  │ Iceberg      │  │ Hive         │                         │
-│  │ Catalog      │  │ Catalog      │                         │
-│  └──────────────┘  └──────────────┘                         │
-└─────────────────────────────────────────────────────────────┘
+┌────────────────────────▼────────────────────────────────────────────┐
+│           watsonx.data Developer Edition                            │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐              │
+│  │ Presto       │  │ Spark        │  │ MinIO        │              │
+│  │ Engine       │  │ Engine       │  │ Storage      │              │
+│  └──────────────┘  └──────────────┘  └──────────────┘              │
+│  ┌──────────────┐  ┌──────────────┐                                │
+│  │ Iceberg      │  │ Hive         │                                │
+│  │ Catalog      │  │ Catalog      │                                │
+│  └──────────────┘  └──────────────┘                                │
+└─────────────────────────────────────────────────────────────────────┘
 ```
 
 ## Prerequisites
@@ -159,17 +161,22 @@ The application will be available at:
 - Schema creation and modification
 - Table metadata viewing
 
-### 4. Query Execution
-- Interactive SQL query interface
-- Query history
-- Result visualization
-- Export results (CSV, JSON)
+### 4. Query Interface
+- **SQL Editor** with syntax highlighting
+- **Schema Browser** for easy table discovery
+- **Query History** with one-click reload
+- **Result Visualization** in tabular format
+- **Export Results** to CSV or JSON
+- **Quick Examples** for common queries
+- Support for multiple catalogs and schemas
 
 ### 5. Monitoring Dashboard
-- Real-time job status
-- Performance metrics
-- Resource utilization
-- Error tracking
+- **Real-time Metrics**: CPU, memory, and request tracking
+- **System Health**: Component status monitoring
+- **Performance Analytics**: Response times and success rates
+- **Endpoint Metrics**: Per-endpoint performance tracking
+- **Auto-refresh**: Live data updates every 5 seconds
+- **Historical Data**: Query and request history
 
 ## Configuration
 
@@ -214,10 +221,22 @@ export const API_BASE_URL = 'http://localhost:5000';
 - `GET /api/catalogs/:name/schemas` - List schemas
 - `POST /api/catalogs/:name/schemas` - Create schema
 
-### Queries
-- `POST /api/queries/execute` - Execute query
-- `GET /api/queries/history` - Query history
-- `GET /api/queries/:id/results` - Get query results
+### Query
+- `POST /api/query/execute` - Execute SQL query
+- `GET /api/query/status/:queryId` - Get query status
+- `DELETE /api/query/cancel/:queryId` - Cancel running query
+- `GET /api/query/catalogs` - List available catalogs
+- `GET /api/query/catalogs/:catalog/schemas` - List schemas
+- `GET /api/query/catalogs/:catalog/schemas/:schema/tables` - List tables
+- `GET /api/query/history` - Get query history
+- `POST /api/query/export` - Export query results
+
+### Monitoring
+- `GET /api/monitoring/metrics` - Get current system metrics
+- `GET /api/monitoring/dashboard` - Get comprehensive dashboard data
+- `GET /api/monitoring/realtime` - Get real-time metrics
+- `GET /api/monitoring/health` - Get watsonx.data health status
+- `GET /api/monitoring/system` - Get system information
 
 See [API Documentation](docs/API.md) for complete details.
 
@@ -288,11 +307,46 @@ npm test
 
 ## Deployment
 
+### Local Development
+
+```bash
+# Start all services
+./scripts/start.sh
+
+# Stop all services
+./scripts/stop.sh
+```
+
 ### Docker Deployment
 
 ```bash
+# Using Docker Compose
 docker-compose up -d
+
+# View logs
+docker-compose logs -f
+
+# Stop services
+docker-compose down
 ```
+
+### Kubernetes Deployment
+
+```bash
+# Deploy to Kubernetes
+kubectl apply -f k8s/namespace.yaml
+kubectl apply -f k8s/configmap.yaml
+kubectl apply -f k8s/secret.yaml
+kubectl apply -f k8s/backend-deployment.yaml
+kubectl apply -f k8s/frontend-deployment.yaml
+kubectl apply -f k8s/ingress.yaml
+
+# Check deployment status
+kubectl get pods -n wxdata-demo
+kubectl get svc -n wxdata-demo
+```
+
+See [Deployment Guide](docs/DEPLOYMENT.md) for detailed instructions on Docker and Kubernetes deployments, including production considerations, monitoring, and troubleshooting.
 
 ### GitHub Deployment
 

@@ -26,6 +26,7 @@ import {
   Work as JobsIcon,
   Analytics as MonitoringIcon,
   Menu as MenuIcon,
+  Code,
 } from '@mui/icons-material';
 
 const drawerWidth = 240;
@@ -33,6 +34,7 @@ const drawerWidth = 240;
 const menuItems = [
   { text: 'Dashboard', icon: <DashboardIcon />, path: '/dashboard' },
   { text: 'Ingestion', icon: <UploadIcon />, path: '/ingestion' },
+  { text: 'Query', icon: <Code />, path: '/query' },
   { text: 'Jobs', icon: <JobsIcon />, path: '/jobs' },
   { text: 'Monitoring', icon: <MonitoringIcon />, path: '/monitoring' },
 ];
