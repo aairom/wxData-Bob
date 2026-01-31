@@ -3,12 +3,14 @@
 ## Table of Contents
 1. [Overview](#overview)
 2. [Authentication](#authentication)
-3. [Upload API](#upload-api)
-4. [Ingestion API](#ingestion-api)
-5. [Monitoring API](#monitoring-api)
-6. [Error Handling](#error-handling)
-7. [Rate Limiting](#rate-limiting)
-8. [Examples](#examples)
+3. [Catalog API](#catalog-api)
+4. [Upload API](#upload-api)
+5. [Ingestion API](#ingestion-api)
+6. [Query API](#query-api)
+7. [Monitoring API](#monitoring-api)
+8. [Error Handling](#error-handling)
+9. [Rate Limiting](#rate-limiting)
+10. [Examples](#examples)
 
 ## Overview
 
@@ -67,6 +69,292 @@ Manually refresh the bearer token.
 **Endpoint**: `POST /api/auth/refresh`
 
 **Request Body**: None
+
+---
+
+## Catalog API
+
+### List All Catalogs
+
+Get a list of all available catalogs.
+
+**Endpoint**: `GET /api/catalog`
+
+**Response**:
+```json
+{
+  "success": true,
+  "data": [
+    {
+      "name": "iceberg_data",
+      "type": "iceberg",
+      "description": "Iceberg catalog for data lakehouse"
+    }
+  ]
+}
+```
+
+**Example**:
+```bash
+curl http://localhost:3001/api/catalog
+```
+
+---
+
+### Get Catalog Details
+
+Get detailed information about a specific catalog.
+
+**Endpoint**: `GET /api/catalog/:name`
+
+**Parameters**:
+- `name` (path, required): Catalog name
+
+**Response**:
+```json
+{
+  "success": true,
+  "data": {
+    "name": "iceberg_data",
+    "type": "iceberg",
+    "description": "Iceberg catalog",
+    "properties": {}
+  }
+}
+```
+
+**Example**:
+```bash
+curl http://localhost:3001/api/catalog/iceberg_data
+```
+
+---
+
+### Create Catalog
+
+Create a new catalog.
+
+**Endpoint**: `POST /api/catalog`
+
+**Request Body**:
+```json
+{
+  "name": "my_catalog",
+  "type": "iceberg",
+  "description": "My new catalog",
+  "properties": {}
+}
+```
+
+**Parameters**:
+- `name` (string, required): Catalog name (alphanumeric, underscore, hyphen only)
+- `type` (string, required): Catalog type (iceberg, hive, delta)
+- `description` (string, optional): Catalog description
+- `properties` (object, optional): Additional properties
+
+**Response**:
+```json
+{
+  "success": true,
+  "data": {
+    "name": "my_catalog",
+    "type": "iceberg",
+    "message": "Catalog created successfully"
+  }
+}
+```
+
+**Example**:
+```bash
+curl -X POST http://localhost:3001/api/catalog \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "my_catalog",
+    "type": "iceberg",
+    "description": "My new catalog"
+  }'
+```
+
+---
+
+### Update Catalog
+
+Update an existing catalog.
+
+**Endpoint**: `PATCH /api/catalog/:name`
+
+**Parameters**:
+- `name` (path, required): Catalog name
+
+**Request Body**:
+```json
+{
+  "description": "Updated description",
+  "properties": {
+    "key": "value"
+  }
+}
+```
+
+**Response**:
+```json
+{
+  "success": true,
+  "data": {
+    "message": "Catalog updated successfully"
+  }
+}
+```
+
+**Example**:
+```bash
+curl -X PATCH http://localhost:3001/api/catalog/my_catalog \
+  -H "Content-Type: application/json" \
+  -d '{
+    "description": "Updated description"
+  }'
+```
+
+---
+
+### Delete Catalog
+
+Delete a catalog.
+
+**Endpoint**: `DELETE /api/catalog/:name`
+
+**Parameters**:
+- `name` (path, required): Catalog name
+
+**Response**:
+```json
+{
+  "success": true,
+  "data": {
+    "success": true,
+    "message": "Catalog deleted successfully"
+  }
+}
+```
+
+**Example**:
+```bash
+curl -X DELETE http://localhost:3001/api/catalog/my_catalog
+```
+
+---
+
+### Get Catalog Statistics
+
+Get statistics for a catalog (schema count, table count).
+
+**Endpoint**: `GET /api/catalog/:name/stats`
+
+**Parameters**:
+- `name` (path, required): Catalog name
+
+**Response**:
+```json
+{
+  "success": true,
+  "data": {
+    "catalogName": "iceberg_data",
+    "schemaCount": 3,
+    "tableCount": 15
+  }
+}
+```
+
+**Example**:
+```bash
+curl http://localhost:3001/api/catalog/iceberg_data/stats
+```
+
+---
+
+### Get Schema Tree
+
+Get hierarchical view of schemas and tables in a catalog.
+
+**Endpoint**: `GET /api/catalog/:name/tree`
+
+**Parameters**:
+- `name` (path, required): Catalog name
+
+**Response**:
+```json
+{
+  "success": true,
+  "data": [
+    {
+      "name": "default",
+      "type": "schema",
+      "tables": [
+        {
+          "name": "customers",
+          "type": "TABLE"
+        },
+        {
+          "name": "orders",
+          "type": "TABLE"
+        }
+      ]
+    }
+  ]
+}
+```
+
+**Example**:
+```bash
+curl http://localhost:3001/api/catalog/iceberg_data/tree
+```
+
+---
+
+### Get Table Metadata
+
+Get detailed metadata for a specific table.
+
+**Endpoint**: `GET /api/catalog/:catalog/schema/:schema/table/:table/metadata`
+
+**Parameters**:
+- `catalog` (path, required): Catalog name
+- `schema` (path, required): Schema name
+- `table` (path, required): Table name
+
+**Response**:
+```json
+{
+  "success": true,
+  "data": {
+    "name": "customers",
+    "type": "TABLE",
+    "columns": [
+      {
+        "name": "id",
+        "type": "bigint",
+        "nullable": false
+      },
+      {
+        "name": "name",
+        "type": "varchar",
+        "nullable": true
+      }
+    ],
+    "properties": {
+      "format": "parquet",
+      "location": "s3://bucket/path"
+    }
+  }
+}
+```
+
+**Example**:
+```bash
+curl http://localhost:3001/api/catalog/iceberg_data/schema/default/table/customers/metadata
+```
+
+---
 
 **Response**: Same as login
 

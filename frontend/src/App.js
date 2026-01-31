@@ -17,6 +17,7 @@ import Ingestion from './pages/Ingestion';
 import Jobs from './pages/Jobs';
 import Monitoring from './pages/Monitoring';
 import Query from './pages/Query';
+import Catalogs from './pages/Catalogs';
 import Layout from './components/Layout';
 
 // Create theme
@@ -105,6 +106,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Navigate to="/dashboard" replace />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/catalogs" element={<Catalogs />} />
             <Route path="/ingestion" element={<Ingestion />} />
             <Route path="/query" element={<Query />} />
             <Route path="/jobs" element={<Jobs />} />

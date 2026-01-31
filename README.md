@@ -6,14 +6,14 @@ A comprehensive demonstration application showcasing IBM watsonx.data Developer 
 
 This application demonstrates the key features of watsonx.data Developer Edition:
 - **Authentication & Authorization**: Bearer token-based API authentication
+- **Catalog Management**: Full CRUD operations for catalogs with schema visualization and table metadata viewer
 - **File Upload**: Upload data files directly from browser to MinIO/S3
 - **Data Ingestion**: Automated data ingestion from various sources (S3, MinIO, uploaded files)
-- **Catalog Management**: Create and manage Iceberg and Hive catalogs
 - **Query Interface**: Interactive SQL editor with syntax highlighting, query history, and result visualization
-- **Query Execution**: Execute Presto/Spark queries against data lakehouse
+- **Query Execution**: Execute Presto/Spark queries against data lakehouse with SQL injection protection
 - **Monitoring**: Real-time system monitoring with metrics and performance analytics
 - **Web UI**: Interactive dashboard for managing watsonx.data operations
-- **Containerization**: Docker and Kubernetes deployment support
+- **Containerization**: Docker and Kubernetes deployment support with security best practices
 
 ## Architecture
 

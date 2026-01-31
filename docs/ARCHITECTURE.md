@@ -55,8 +55,8 @@ The watsonx.data Demo Application is a full-stack web application designed to de
 │                    (React Dev Server)                           │
 │  ┌──────────────────────────────────────────────────────────┐  │
 │  │  Components:                                             │  │
-│  │  - Dashboard    - Ingestion UI    - Job Monitor         │  │
-│  │  - Monitoring   - Catalog Mgmt    - Query Interface     │  │
+│  │  - Dashboard    - Catalog Mgmt    - Ingestion UI        │  │
+│  │  - Query UI     - Job Monitor     - Monitoring          │  │
 │  └──────────────────────────────────────────────────────────┘  │
 └────────────────────────────┬────────────────────────────────────┘
                              │ REST API
@@ -67,9 +67,9 @@ The watsonx.data Demo Application is a full-stack web application designed to de
 │                      (Express.js/Node.js)                       │
 │  ┌──────────────────────────────────────────────────────────┐  │
 │  │  Services:                                               │  │
-│  │  - Auth Service      - Ingestion Service                │  │
-│  │  - Upload Service    - Catalog Service                  │  │
-│  │  - Query Service     - Monitoring Service               │  │
+│  │  - Auth Service      - Catalog Service (CRUD)           │  │
+│  │  - Ingestion Service - Query Service (SQL)              │  │
+│  │  - Upload Service    - Monitoring Service               │  │
 │  └──────────────────────────────────────────────────────────┘  │
 │  ┌──────────────────────────────────────────────────────────┐  │
 │  │  Middleware:                                             │  │

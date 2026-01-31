@@ -27,12 +27,14 @@ import {
   Analytics as MonitoringIcon,
   Menu as MenuIcon,
   Code,
+  Storage,
 } from '@mui/icons-material';
 
 const drawerWidth = 240;
 
 const menuItems = [
   { text: 'Dashboard', icon: <DashboardIcon />, path: '/dashboard' },
+  { text: 'Catalogs', icon: <Storage />, path: '/catalogs' },
   { text: 'Ingestion', icon: <UploadIcon />, path: '/ingestion' },
   { text: 'Query', icon: <Code />, path: '/query' },
   { text: 'Jobs', icon: <JobsIcon />, path: '/jobs' },

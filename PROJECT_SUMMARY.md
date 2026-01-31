@@ -16,11 +16,13 @@ wxData-Bob/
 │   │   │   └── watsonx.config.js    # Configuration management
 │   │   ├── services/
 │   │   │   ├── authService.js       # Authentication with watsonx.data
+│   │   │   ├── catalogService.js    # Catalog management (CRUD)
 │   │   │   ├── ingestionService.js  # Data ingestion operations
 │   │   │   ├── monitoringService.js # System monitoring and metrics
 │   │   │   └── queryService.js      # SQL query execution
 │   │   ├── routes/
 │   │   │   ├── authRoutes.js        # Auth API endpoints
+│   │   │   ├── catalogRoutes.js     # Catalog API endpoints
 │   │   │   ├── ingestionRoutes.js   # Ingestion API endpoints
 │   │   │   ├── monitoringRoutes.js  # Monitoring API endpoints
 │   │   │   ├── queryRoutes.js       # Query API endpoints
@@ -36,6 +38,7 @@ wxData-Bob/
 │   │   │   └── Layout.js            # App layout with navigation
 │   │   ├── pages/
 │   │   │   ├── Dashboard.js         # Main dashboard
+│   │   │   ├── Catalogs.js          # Catalog management (CRUD)
 │   │   │   ├── Ingestion.js         # Create ingestion jobs
 │   │   │   ├── Jobs.js              # Monitor job status
 │   │   │   ├── Monitoring.js        # System monitoring dashboard
@@ -90,7 +93,16 @@ wxData-Bob/
 - **Configuration Validation**: Pre-submission validation
 - **Real-time Monitoring**: Live job status updates
 
-### 🔍 Query Interface ✅ **NEW**
+### 📚 Catalog Management ✅ **NEW**
+- **Full CRUD Operations**: Create, Read, Update, Delete catalogs
+- **Schema Visualization**: Hierarchical tree view of schemas and tables
+- **Table Metadata Viewer**: Detailed column information and properties
+- **Catalog Statistics**: Real-time schema and table counts
+- **Multiple Catalog Types**: Support for Iceberg, Hive, and Delta Lake
+- **Interactive Browser**: Expandable/collapsible schema tree
+- **Validation**: Input validation for catalog names and identifiers
+
+### 🔍 Query Interface
 - **SQL Editor**: Monospace font editor for SQL queries
 - **Schema Browser**: Browse catalogs, schemas, and tables
 - **Query History**: Save and reload previous queries
@@ -98,6 +110,7 @@ wxData-Bob/
 - **Export Results**: Download results as CSV or JSON
 - **Quick Examples**: Pre-built query templates
 - **Real-time Execution**: Live query status and feedback
+- **SQL Injection Protection**: Input validation and dangerous pattern blocking
 
 ### 📈 Monitoring Dashboard ✅ **NEW**
 - **Real-time Metrics**: CPU, memory, and request tracking

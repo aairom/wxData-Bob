@@ -18,6 +18,7 @@ const ingestionRoutes = require('./src/routes/ingestionRoutes');
 const uploadRoutes = require('./src/routes/uploadRoutes');
 const monitoringRoutes = require('./src/routes/monitoringRoutes');
 const queryRoutes = require('./src/routes/queryRoutes');
+const catalogRoutes = require('./src/routes/catalogRoutes');
 
 // Import monitoring service
 const monitoringService = require('./src/services/monitoringService');
@@ -91,6 +92,7 @@ app.use('/api/ingestion', ingestionRoutes);
 app.use('/api/upload', uploadRoutes);
 app.use('/api/monitoring', monitoringRoutes);
 app.use('/api/query', queryRoutes);
+app.use('/api/catalog', catalogRoutes);
 
 // Root endpoint
 app.get('/', (req, res) => {
@@ -104,7 +106,8 @@ app.get('/', (req, res) => {
       ingestion: '/api/ingestion',
       upload: '/api/upload',
       monitoring: '/api/monitoring',
-      query: '/api/query'
+      query: '/api/query',
+      catalog: '/api/catalog'
     },
     documentation: '/docs'
   });
